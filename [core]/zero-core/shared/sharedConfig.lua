@@ -356,7 +356,7 @@ Zero.Config.Jobs = {
 
 Zero.Config.Crews = {
     ['x'] = {
-        ['label'] = "Nibbas",
+        ['label'] = "gang label",
         ['boost'] = 10,
         ['grades'] = {
             [0] = {
