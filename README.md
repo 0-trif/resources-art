@@ -1,6 +1,6 @@
 # resources-artemis
 
-Official framework of artemis.
+Official framework Artemis / Zero.
 Made by : Trif#0270
 
 Selling scripts or claiming to be owner of these codes is not allowed.
