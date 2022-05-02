@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./js/lib/progressbar.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"/>
+
+    <title>townhall</title>
+</head>
+<body>
+    <div class="main-container-townhall" style="display: none;">
+        <div class="townhall-top-bar">
+            <div class="top-bar-inner">Gemeentehuis (Los Santos)</div>
+        </div>
+
+        <div class="townhall-options">
+            <div class="menu-selection">
+                <div class="selection-option">
+                    Hoofdpagina
+                </div>
+
+                <div class="closeMenuButton" onclick="closeTownHall()">Afsluiten</div>
+            </div>
+            <div class="job-selection">
+                <div class="job-select-title">Openstaande vacatures</div>
+                <div class="current-job-info">
+                    <div class="playername" id="playername">Debug Name</div>
+                    <div class="normaltext" id="playerjob">Baan: scrapyard</div>
+                    <div class="normaltext" id="playersalary">Salaris: 200$</div>
+                </div>
+                <div class="job-listing" id="jobs">
+                    
+                </div>
+            </div>
+            <div class="licenses-selection">
+                <div class="job-select-title">Licenties / Kaarten</div>
+                <div class="job-listing">
+                    <div class="job">
+                        <div class="playername">Idkaart</div>
+                        <div class="normaltext">Kosten: 2500$</div>
+                        <div class="setjobbutton" onclick="requestCard('idcard')">Opnieuw aanvragen</div>
+                    </div>
+                    <div class="job">
+                        <div class="playername">Rijbewijs</div>
+                        <div class="normaltext">Kosten: 1500$</div>
+                        <div class="setjobbutton" onclick="requestCard('driverslicense')">Opnieuw aanvragen</div>
+                    </div>
+                </div>
+            </div>
+            <div class="licenses-selection">
+                <div class="job-select-title">Karakter informatie</div>
+                <div class="character-information">
+                    <div class="character-data char-firstname">Voornaam: Debug</div>
+                    <div class="character-data char-lastname">Achternaam: Name</div>
+                    <div class="character-data char-nationality">Nationaliteit: Nederlands</div>
+                    <div class="character-data char-birth">Geboortedatum: 31-10-2002</div>
+                    <div class="character-data char-app">Appartement: Blokkenpark</div>
+                </div>
+                <div class="character-idcard">
+                    <div class="idcard-image"></div>
+                    <div class="idcard-name char-idcard-name">Debug Name</div>
+                    <div class="idcard-birth char-idcard-birth">31-10-200</div>
+                    <div class="idcard-gender char-idcard-gender">Man</div>
+                    <div class="idcard-height">175</div>
+                    <div class="idcard-sign char-idcard-name">Debug Name</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html> 

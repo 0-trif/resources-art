@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="./script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="clothing-cams" style="display: none;">
+        <div class="cam" onclick="setCam(0)"><i class="fas fa-video"></i></div>
+        <div class="cam" onclick="setCam(1)"><i class="fa-solid fa-user-large"></i></div>
+        <div class="cam" onclick="setCam(2)"><i class="fa-solid fa-person"></i></div>
+        <div class="cam" onclick="setCam(3)"><i class="fa-solid fa-shoe-prints"></i></div>
+    </div>
+    <div class="clothing-menu-container" style="display: none;">
+        <div class="clothing-save-container" style="display: none;">
+            <div class="clothing-save-title">Kleding opslaan.</div>
+            <div class="clothing-save-info">Om je outfit op te slaan in je kledingkast moet je een (label) invullen. Annuleren reset je outfit naar de oude gegevens.</div>
+            <div class="clothing-save-input"><input id="save-input" type="text" placeholder="Outfit label?"></div>
+
+            <div class="clothing-save-exit" onclick="Zero.Functions.CloseSave()">Terug</div>
+
+            <div class="clothing-save-buttons">
+                <div class="confirm-button" onclick="Zero.Functions.Close(true)">Opslaan</div>
+                <div class="cancel-button" onclick="Zero.Functions.Close(false)">Annuleren</div>
+            </div>
+        </div>
+
+
+
+        <div class="clothing-menu-info">ESC - Menu sluiten</div>
+        <div class="clothing-menu-title">Kleding menu.</div>
+        <div class="clothing-menu-gender-selection">
+            <div class="gender-option" onclick="Zero.Functions.SetModel('mp_m_freemode_01')">
+                <i class="fas fa-mars"></i>
+                Man
+            </div>
+            <div class="gender-option" onclick="Zero.Functions.SetModel('mp_f_freemode_01')">
+                <i class="fas fa-venus"></i>
+                Vrouw
+            </div>
+        </div>
+        <div class="clothing-model-selection" data-index="model">
+            <div class="button" data-type="left"><i class="fas fa-chevron-left"></i></div>
+            <div class="current-model">mp_m_freemode_01</div>
+            <div class="button" data-type="right"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="clothing-menu-options">
+            <div class="menu-option menu-option-selected" data-menu="face"><i class="fas fa-tshirt"></i></div> 
+            <div class="menu-option" data-menu="face-adjust"><i class="fas fa-sliders"></i></div>
+            <div class="menu-option" data-menu="clothing"><i class="fas fa-user-secret"></i></div>
+            <div class="menu-option" data-menu="extra"><i class="fas fa-glasses"></i></div>
+            <div class="menu-option" data-menu="saved"><i class="fas fa-download"></i></div>
+            <div class="menu-option" data-menu="job"><i class="fas fa-bookmark"></i></div>
+            <div class="menu-option" data-menu="settings"><i class="fa-solid fa-list-check"></i></div>
+
+            <div class="menu-option" id="tattoo-option" data-menu="tattoos"><i class="fa-solid fa-compass-drafting"></i></div>
+        </div>
+        <div class="clothing-menu-current-title">Gezicht.</div>
+
+        <div class="menu" id="face" style="display: none;">
+            <div class="menu-skin-option" data-index="face">
+                <div class="menu-skin-option-label">Gezicht</div>
+                <div class="menu-skin-option-current">0/161</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+
+                <div class="menu-skin-slider-other">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="hair">
+                <div class="menu-skin-option-label">Haar / Dikte</div>
+                <div class="menu-skin-option-current">0/150</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="hair_color">
+                <div class="menu-skin-option-label">Haarkleur / Highlights</div>
+                <div class="menu-skin-option-current">0/150</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="beard">
+                <div class="menu-skin-option-label">Baard</div>
+                <div class="menu-skin-option-current">0/22</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="arms">
+                <div class="menu-skin-option-label">Armen</div>
+                <div class="menu-skin-option-current">0/70</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="makeup">
+                <div class="menu-skin-option-label">Makeup</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="lips">
+                <div class="menu-skin-option-label">Lippen</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="blush">
+                <div class="menu-skin-option-label">Blush</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="blemishes">
+                <div class="menu-skin-option-label">Vlekken</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="eyebrow">
+                <div class="menu-skin-option-label">Wenkbrauw</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="complexion">
+                <div class="menu-skin-option-label">Huidtoon</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="ageing">
+                <div class="menu-skin-option-label">Leeftijd</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+            </div>
+        </div>
+
+        <div class="menu" id="face-adjust" style="display: none;">
+            <div class="menu-skin-option" data-index="Nose_Width">
+                <div class="menu-skin-option-label">Neus breedte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+            <div class="menu-skin-option" data-index="Nose_Peak_Hight">
+                <div class="menu-skin-option-label">Neuspiek hoogte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+            <div class="menu-skin-option" data-index="Nose_Peak_Lowering">
+                <div class="menu-skin-option-label">Neuspiek verlagen</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+            <div class="menu-skin-option" data-index="Nose_Peak_Lenght">
+                <div class="menu-skin-option-label">Neus pieklengte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+            <div class="menu-skin-option" data-index="Nose_Bone_High">
+                <div class="menu-skin-option-label">Neusbeen hoogte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Nose_Bone_Twist">
+                <div class="menu-skin-option-label">Neusbeen twist</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="EyeBrown_High">
+                <div class="menu-skin-option-label">Wenkbrauw hoogte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+            
+            <div class="menu-skin-option" data-index="EyeBrown_Forward">
+                <div class="menu-skin-option-label">Wenkbrauw afstand</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Cheeks_Bone_High">
+                <div class="menu-skin-option-label">Jukbeenderen Hoogte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Cheeks_Bone_Width">
+                <div class="menu-skin-option-label">Jukbeenderen breedte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Eyes_Openning">
+                <div class="menu-skin-option-label">Oog grootte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Lips_Thickness">
+                <div class="menu-skin-option-label">Lip dikte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Jaw_Bone_Width">
+                <div class="menu-skin-option-label">Kaaklijn breedte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Jaw_Bone_Back_Lenght">
+                <div class="menu-skin-option-label">Kaaklijn lengte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Chimp_Bone_Lowering">
+                <div class="menu-skin-option-label">Kaaklijn hoogte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="Neck_Thikness">
+                <div class="menu-skin-option-label">Nek dikte</div>
+                <div class="menu-skin-option-current">-10/10</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="menu" id="clothing">
+            <div class="menu-skin-option" data-index="jackets">
+                <div class="menu-skin-option-label">Jasjes</div>
+                <div class="menu-skin-option-current">0/161</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+            <div class="menu-skin-option" data-index="shirts">
+                <div class="menu-skin-option-label">Shirts</div>
+                <div class="menu-skin-option-current">0/76</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="pants">
+                <div class="menu-skin-option-label">Broeken</div>
+                <div class="menu-skin-option-current">0/22</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="shoes">
+                <div class="menu-skin-option-label">Schoenen</div>
+                <div class="menu-skin-option-current">0/70</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="bags">
+                <div class="menu-skin-option-label">Tassen</div>
+                <div class="menu-skin-option-current">0/70</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="vest">
+                <div class="menu-skin-option-label">Vesten</div>
+                <div class="menu-skin-option-current">0/70</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+        </div>
+
+        <div class="menu" id="extra">
+            <div class="menu-skin-option" data-index="glasses">
+                <div class="menu-skin-option-label">Brillen</div>
+                <div class="menu-skin-option-current">0/161</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+            <div class="menu-skin-option" data-index="hats">
+                <div class="menu-skin-option-label">Hoeden</div>
+                <div class="menu-skin-option-current">0/161</div>
+
+                <div class="menu-skin-slider">
+                    
+                </div>
+
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+            <div class="menu-skin-option" data-index="masks">
+                <div class="menu-skin-option-label">Maskers</div>
+                <div class="menu-skin-option-current">0/76</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+
+            <div class="menu-skin-option" data-index="decals">
+                <div class="menu-skin-option-label">Decals</div>
+                <div class="menu-skin-option-current">0/20</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="accessory">
+                <div class="menu-skin-option-label">Accessoire</div>
+                <div class="menu-skin-option-current">0/55</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="ear">
+                <div class="menu-skin-option-label">Oor</div>
+                <div class="menu-skin-option-current">0/55</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+
+            <div class="menu-skin-option" data-index="watch">
+                <div class="menu-skin-option-label">Horloge</div>
+                <div class="menu-skin-option-current">0/55</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+            
+            <div class="menu-skin-option" data-index="bracelet">
+                <div class="menu-skin-option-label">Armband</div>
+                <div class="menu-skin-option-current">0/55</div>
+                <div class="menu-skin-slider">
+                </div>
+                <div class="menu-skin-slider-other">
+                </div>
+            </div>
+        </div>
+
+        <div class="menu" id="saved">
+       
+        </div>
+
+        <div class="menu" id="job">
+          
+        </div>
+        
+        <div class="menu" id="tattoos" style="display: none;">
+
+        </div>
+
+
+        <div class="menu" id="settings" style="display: none;">
+            <div class="menu-skin-option" data-index="face">
+                <div class="menu-skin-option-label">Skin code bevestigen</div>
+                <input type="text" id="skincode" class="settings-inp" placeholder="['Vul hier je skin code in']">
+                <div class="skin-code-button" onclick="acceptSkinCode()">Accepteer</div>
+            </div>
+            <div class="menu-skin-option" data-index="face">
+                
+                <div class="menu-skin-option-label">Skin code ophalen</div>
+
+                <div class="skin-code-items">
+                    
+                </div>
+
+                <input class="settings-inp" id="getskincode" type="text" placeholder="skincode">
+
+                <div class="skin-code-button" onclick="GetSkinCode()">Krijg skin code</div>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@font-face {
+    font-family:"bold-main";
+    src: url("./fonts/Chivo-Bold.otf") format("truetype");
+}
+
+@font-face {
+    font-family:"chivo";
+    src: url("./fonts/Chivo-Regular.otf") format("truetype");
+}
+
+.scoreboard-border {
+    position: absolute;
+    right: 2vh;
+    top: 50%;
+    transition: 2s;
+    transform: translate(0, -50%);
+    
+    height: fit-content;
+    padding: 1vh;
+    background-color: rgb(52, 53, 77);
+    width: fit-content;
+    width: 30vh;
+
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    border-radius: 0.2rem;
+}
+
+.scoreboard-title {
+    color: white;
+    font-family: "chivo";
+    font-size: 2vh;
+    margin: 1vh;
+    text-transform: uppercase;
+    float: right;
+    font-weight: bold;
+    color: green;
+
+    display: flex;
+}
+.x {
+    color: white;
+    margin-left: 0.5vh;
+}
+
+.scoreboard-jobs {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.job-display {
+    position: relative;
+    width: 30vh;
+    background-color: rgb(64, 66, 90);
+    height: 4vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.job-name {
+    color: white;
+    font-family: "chivo";
+    font-size: 1.2vh;
+    text-transform: uppercase;
+    float: right;
+    margin-left: 1vh;
+    display: flex;
+}
+.job-count {
+    position: absolute;
+    color: white;
+    right: 1vh;
+    font-family: "chivo";
+    font-size: 1.2vh;
+    text-transform: uppercase;
+
+    margin-left: 1vh;
+    display: flex;
+}

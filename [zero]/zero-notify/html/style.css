@@ -1,0 +1,190 @@
+* {
+    user-select: none;
+    font-family: "kankerfont";
+}
+
+body {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family:"NFS";
+    src: url("./fonts/Scada-Bold.woff") format("truetype");
+}
+
+.notification-container {
+    position: absolute;
+    right: 3vh;
+    top: 3vh;
+
+    height: fit-content;
+
+    width: fit-content;
+    max-width: 50vh;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.notification {
+    position: relative;
+
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+ 
+    min-width: 20vh;
+    padding: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.33);
+   
+    width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.notification-title {
+    position: relative;
+    margin-left: 0.5vh;
+    border-radius: 0.3rem;
+
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7vh;
+    width: fit-content;
+
+    font-size: 1.3vh;
+    color: white;
+    text-transform: uppercase;
+    font-family: "NFS";
+
+    background-color: white;
+ 
+}
+
+.notification-text-container {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    min-height: 3vh;
+    display: flex;
+    align-items: center;
+    
+    margin-right: 1vh;
+    max-width: 100%;
+    margin-left: 1vh;
+    margin-top: 0.1vh;
+
+
+    font-size: 1vh;
+    color: white;
+    text-transform: uppercase;
+    font-family: "NFS";
+
+    
+}
+
+.error-title {
+    background-color: rgb(189, 60, 60);
+}
+
+.info-title {
+    background-color: rgb(46, 105, 199);
+}
+
+.success-title {
+    background-color: rgb(97, 150, 54);
+}
+
+.warning-title {
+    background-color: rgb(212, 153, 24);
+}
+
+.noodknop {
+    border-left: rgb(46, 105, 199) solid 2px;
+    animation: Emergency-border 3s infinite;
+}
+
+.noodknop-title {
+    background-color: rgb(46, 105, 199);
+    animation: Emergency-title 3s infinite;
+}
+
+@keyframes Emergency-border {
+    0% {
+        border-left: rgba(211, 4, 4, 1) solid 2px;;
+    }
+    25% {
+        border-left: rgba(54, 98, 226, 1) solid 2px;;
+    }
+    50% {
+        border-left: rgba(226, 207, 22, 1) solid 2px;;
+    }
+    75% {
+        border-left: rgba(54, 98, 226, 1) solid 2px;;
+    }
+    100% {
+        border-left: rgba(211, 4, 4, 1) solid 2px;;
+    }
+}
+
+@keyframes Emergency-title {
+    0% {
+        background-color: rgba(211, 4, 4, 1);
+    }
+    25% {
+        background-color: rgba(54, 98, 226, 1);
+    }
+    50% {
+        background-color: rgba(226, 207, 22, 1);
+    }
+    75% {
+        background-color: rgba(54, 98, 226, 1);
+    }
+    100% {
+        background-color: rgba(211, 4, 4, 1);
+    }
+}
+
+.money-notification {
+    position: relative;
+    padding: 1vh;
+    border-radius: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.33);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.35vh;
+    margin-right: 0.5vh;
+}
+.money-symbol {
+    margin-right: 0.4vh;
+    font-size: 2vh;
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600 !important;
+}
+.money-amount {
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600 !important;
+}
+
+.error > .money-amount {
+    color: rgb(161, 41, 41);
+}
+.error > .money-symbol {
+    color: rgb(161, 41, 41);
+}
+.success > .money-amount {
+    color: rgb(46, 155, 46);
+}
+.success > .money-symbol {
+    color: rgb(46, 155, 46);
+}

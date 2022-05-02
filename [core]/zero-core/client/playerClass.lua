@@ -1,0 +1,1 @@
+Zero.Player = Zero.Player ~= nil and Zero.Player or {}  

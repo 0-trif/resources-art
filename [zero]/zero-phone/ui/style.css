@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+
+body {
+    overflow: hidden;
+}
+
+
+.phone-main-container {
+    position: absolute;
+    right: 3vh;
+    height: fit-content;
+
+    width: fit-content;
+    bottom: -110%;
+}
+
+
+.phone-title-elments-x {
+    position: absolute;
+    z-index: 99999998;
+    width: 90%;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+
+    left: 50%;
+    transform: translate(-50%);
+    top: 1.4vh;
+    border-radius: 1rem;
+    height: 1vh;
+    padding: 0.2vh;
+ 
+}
+
+.title-element-brand {
+    position: absolute;
+    
+    left: 0.8vh;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8vh;
+}
+
+.title-element-time {
+    position: absolute;
+    
+    right: 1.5vh;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8vh;
+}
+
+.phone-main-image {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+
+    pointer-events: none;
+    z-index: 999;
+}
+
+.phone-main-image > img {
+    position: relative;
+    width: 30vh !important;
+    height: auto !important;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.phone-content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 97%;
+    border-radius: 2rem;
+    z-index: 0;
+    overflow: hidden;
+    background-color: rgb(255, 251, 251);
+    
+    pointer-events: all;
+}
+
+.phone-content-background {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2rem;
+    height: 100%;
+    background-image: url(https://th.bing.com/th/id/R.ca69c4650b37849f0cdb765702fcb03a?rik=CjiC%2fVzh8d8e0g&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-position: center;
+}
+
+.phone-content-bottom {
+    position: absolute;
+    bottom: 3.6vh;
+    width: 85%;
+    border-radius: 1rem;
+   
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.253);
+    transform: translate(-50%);
+    padding: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-app {
+    position: relative;
+    min-width: 5vh;
+    min-height: 5vh;
+    max-width: 5vh;
+    max-height: 5vh;
+    border-radius: 0.7rem;
+    margin-right: 0.4vh;
+    margin-left: 0.4vh;
+
+}
+
+.phone-app-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    background-size: 110%;
+    background-position: center;
+}
+
+.phone-container-apps {
+    position: relative;
+    width: 91%;
+    display: flex;
+    height: fit-content;
+    flex-flow: row wrap;  
+
+}
+
+.phone-container-apps > .phone-app {
+    margin-top: 0.4vh;
+    margin-bottom: 1.4vh;
+}
+
+.phone-content-top {
+    position: absolute;
+    top: 5vh;
+    width: 95%;
+    border-radius: 1rem;
+    max-width: 100%;
+    left: 50%;
+    pointer-events: all;
+    z-index: 999;
+    transform: translate(-50%);
+    padding: 1vh;
+    display: flex;
+   
+    justify-content: center;
+}
+
+.phone-app-background > i {
+    font-size: 2.5vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.phone-app-name {
+    position: absolute;
+    font-size: 1.1vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 400;
+    color: white;
+    width: fit-content;
+    left: 50%;
+    flex-wrap: nowrap;
+    bottom: -1.3vh;
+    transform: translate(-50%);
+}
+
+.phone-app:hover {
+    transform: scale(1.01);
+}
+
+.phone-app-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    left: 0vh;
+    top: 0vh;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.phone-app-inner {
+    position: absolute;
+    width: 100%;
+    top: -100%;
+    pointer-events: all;
+    overflow: hidden;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 1rem;
+    background-color: rgb(15, 15, 15);
+}
+.show {
+    top: 0vh !important;
+    display: unset !important;
+}
+
+
+.phone-app-subinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    left: 0vh;
+    overflow: hidden;
+    background-color: white;
+    top: 0vh;
+    pointer-events: all;
+    z-index: 999;
+}
+
+
+.background-image {
+    background-position: center;
+    background-size: cover;
+}
+
+.phone-bottom-button {
+    position: absolute;
+    width: 50%;
+    bottom: 2vh;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(83, 83, 83, 0.623);
+    height: 0.6vh;
+    z-index: 9999999;
+    pointer-events: all;
+    border-radius: 1rem;
+}
+
+
+.iphone-view-image {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%);
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    z-index: 9999999;
+    pointer-events: all;
+    
+    border-radius: 1rem;
+}
+.notifications-doc {
+    position: absolute;
+    z-index: 99999999;
+    width: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    height: 60%;
+
+    align-items: center;
+    display: flex;
+    margin-top: 4vh;
+    flex-direction: column;
+    
+}
+.phone-container-notification {
+    position: relative;
+    backdrop-filter: blur(4px);
+    display: none;
+    margin-bottom: 0.3vh;
+    top: -30%;
+    width: 90%;
+    background-color: rgba(53, 51, 51, 0.857);
+    height: fit-content;
+    border-radius: 1rem;
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    position: absolute;
+    margin-left: 1vh;
+    top: 0.8vh;
+
+    margin-top: 0.4vh;
+    width: 2vh;
+    height: 2vh;
+
+    margin-bottom: 0.7vh;
+    background-color: rgb(255, 254, 254);
+    background-position: center;
+    background-size: cover;
+ 
+    border-radius: 0.3rem;
+ 
+    background-repeat: no-repeat;
+   
+}
+.notification-time-stamp {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1vh;
+    color: white;
+}
+.notification-info {
+    margin-left: 1vh;
+    
+}
+
+.notification-title {
+    position: relative;
+    color: rgb(255, 255, 255);
+    left: 2.9vh;
+    top: 1vh;
+    word-break: break-all;
+
+    max-width: 17vh;
+    overflow: hidden;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    font-family: "Open Sans Condensed", sans-serif;
+ 
+}
+.notification-submessage {
+    position: relative;
+    margin-top: 1.5vh;
+    font-size: 1.3vh;
+
+    color: rgb(255, 255, 255);
+    font-size: 1.3vh;
+    font-family: "Open Sans Condensed", sans-serif;
+
+    max-width: 22vh;
+    margin-bottom: 1vh;
+    padding: 0.3vh;
+}
+
+.notification-calling-buttons {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    display: flex;
+    align-items: center;
+    pointer-events: all;
+    justify-content: center;
+}
+
+.calling-button {
+    position: relative;
+    width: 3vh;
+    height: 1.3vh;
+    display: flex;
+    font-size: 0.8vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 1rem;
+    margin-right: 0.3vh;
+    overflow: hidden;
+}
+
+
+.phone-in-call-button {
+    position: absolute;
+    z-index: 99999999;
+    width: 3vh;
+    pointer-events: all;
+    overflow: hidden;
+    background-color: rgb(51, 143, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 2.3vh;
+    top: 1.4vh;
+    border-radius: 1rem;
+    height: 1vh;
+    padding: 0.2vh;
+
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8vh;
+}
+
+#mail {
+    background-color: white;
+}
+
+#mail > .settings-app-title {
+    color: black !important;
+}
+
+.mail-inbox {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+
+
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.mail-item {
+    position: relative;
+    width: 100%;
+    min-height: 8vh;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2px;
+
+}
+
+.mail-icon {
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    background-color: rgb(207, 207, 207);
+    margin-left: 2vh;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3vh;
+    font-weight: bold;
+}
+.mail-data {
+    margin-left: 1vh;
+}
+.main-data {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    font-weight: bold;
+}
+.sub-data {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2vh;
+    font-weight: bold;
+
+    max-width: 90%;
+    
+}
+
+.mail-read-title {
+    position: relative;
+    height: 7vh;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+}
+
+.mail-read-title > i {
+    position: absolute;
+    bottom: 1.1vh;
+    left: 2vh;
+
+    color: rgb(81, 95, 175);
+}
+
+.mail-maintitle {
+    position: absolute;
+    bottom: 1vh;
+    left: 5vh;
+    border-radius: 0.3rem;
+
+    background-color: rgba(0, 0, 0, 0.281);
+    padding: 0.3vh;
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1vh;
+    font-weight: bold;
+}
+
+.mail-display {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.mail-display-title {
+    position: relative;
+    margin-left: 1.3vh;
+
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8vh;
+    margin-bottom: 1vh;
+    max-width: 90%;
+    margin-top: 1vh;
+    font-weight: bold;
+}
+.mail-display-text {
+    position: relative;
+    margin-left: 1.3vh;
+    max-width: 90%;
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1vh;
+    font-weight: bold;
+}
+
+.mail-button-location {
+    position: relative;
+    width: 80%;
+    margin-top: 1vh;
+    left: 1vh;
+    height: 4vh;
+    border-radius: 0.3rem;
+    background-color: rgb(45, 89, 146);
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+.location-icon {
+    position: relative;
+    width: 3vh;
+    height: 3vh;
+    background-color: white;
+    border-radius: 0.3rem;
+    margin-left: 0.8vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-text {
+    position: relative;
+    margin-left: 1.5vh;
+    margin-right: 2vh;
+
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1vh;
+    font-weight: bold;
+}
+
+.notification-calls {
+    position: absolute;
+    bottom: 0.5vh;
+    right: 0.5vh;
+    pointer-events: all;
+    width: fit-content;
+    height: 2vh;
+    border-radius: 0.5rem;
+    background-color: rgb(37, 37, 37);
+    padding: 0.6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    align-items: center;
+}
+
+.notification-calls > i {
+    position: relative;
+    margin-right: 0.5vh;
+    margin-left: 0.5vh;
+    color: white;
+    font-size: 1vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

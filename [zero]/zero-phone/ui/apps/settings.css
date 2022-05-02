@@ -1,0 +1,238 @@
+.settings-app-title {
+    position: relative;
+    margin-top: 4vh;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    width: 87%;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 2.5vh;
+}
+.settings-app-subtitle {
+    position: relative;
+    margin-top: 4vh;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%);
+    color: white;
+   
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 1.4vh;
+}
+.settings-app-playerinfo {
+    position: relative;
+    margin-top: 1vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    background-color: rgb(41, 41, 41);
+    height: 8vh;
+    display: flex;
+    border-radius: 1rem;
+    align-items: center;
+}
+.playerinfo-name-icon {
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+    background-color: rgb(165, 163, 163);
+    border-radius: 50%;
+    margin-left: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 1.9vh;
+}
+.playerinfo-name {
+    margin-left: 1vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 1.9vh;
+}
+
+.settings-app-settings {
+    position: relative;
+    margin-top: 1vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+
+    height: 39vh;
+    overflow: auto;
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+
+.setting {
+    position: relative;
+    width: 100%;
+    height: 3.5vh;
+
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    align-items: center;
+}
+.setting-icon {
+    position: relative;
+    margin-left: 1vh;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 0.3rem;
+    background-position: center;
+    background-size: cover;
+}
+.settings-name {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1..5vh;
+    color: white;
+    margin-left: 1vh;
+}
+
+.settings-toggle {
+    position: absolute;
+    right: 1vh;
+    transition: 1s;
+    width: 2vh;
+    height: 1vh;
+    border-radius: 1rem;
+    border: rgba(128, 128, 128, 0.425) solid 0.1vh;
+}
+.setting-enabled {
+    background-color: rgba(43, 131, 43, 0.815);
+}
+.settings-next {
+    position: absolute;
+    right: 1vh;
+    font-size: 1.3vh;
+    color: white;
+}
+
+.settings-background-display {
+    position: relative;
+    width: 80%;
+    height: 40vh;
+    background-color: rgb(41, 41, 41);
+    left: 50%;
+    top: 2vh;
+    border-radius: 1rem;
+    transform: translate(-50%);
+}
+
+#settings-background {
+    background-color: rgb(15, 15, 15);
+}
+#settings-data {
+    background-color: rgb(15, 15, 15);
+}
+
+.settings-app-back {
+    position: absolute;
+    margin-top: 4vh;
+    width: fit-content;
+    left: 2vh;
+    color: rgb(49, 74, 216);
+    
+    font-family: "Open Sans Condensed", sans-serif;
+
+    font-size: 1.3vh;
+}
+.settings-app-back > i {
+    margin-right: 0.2vh;
+}
+
+.background-title {
+    position: relative;
+    top: 1vh;
+    width: fit-content;
+    left: 2vh;
+    color: white;
+    
+    font-family: "Open Sans Condensed", sans-serif;
+
+    font-size: 1.3vh;
+}
+
+.background-previeuw {
+    position: relative;
+    height: 70%;
+    left: 50%;
+    margin-top: 2vh;
+    transform: translate(-50%);
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+}
+
+.background-input > input {
+    position: relative;
+    height: 3vh;
+    left: 50%;
+    margin-top: 2vh;
+    transform: translate(-50%);
+    
+    font-family: "Open Sans Condensed", sans-serif;
+
+    font-size: 1.3vh;
+    border: none;
+    text-align: center;
+    outline: none;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+}
+
+.settings-data-display {
+    position: relative;
+    width: 90%;
+    height: 86%;
+
+    overflow: auto;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.setting-data-part {
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    background-color: rgb(68, 68, 68);
+    align-items: center;
+    border-radius: 1rem;
+    display: flex;
+    margin-top: 1vh;
+}
+.part-icon {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    width: 3vh;
+    margin-left: 0.6vh;
+    background-position: center;
+    height: 3vh;
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.part-content > input {
+    position: relative;
+    height: 2.5vh;
+
+    margin-left: 1vh;
+    
+    font-family: "Open Sans Condensed", sans-serif;
+    min-width: 18vh;
+    font-size: 1.7vh;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    color: white;
+    background-color: transparent;
+    
+}

@@ -1,0 +1,50 @@
+@font-face {
+    font-family:"DINBold";
+    src: url("./fonts/DINBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family:"DINRegular";
+    src: url("./fonts/DINRegular.ttf") format("truetype");
+}
+
+* {
+    user-select: none;
+}
+
+#body {
+    overflow: hidden;
+}
+
+.lock {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.355);
+    border-radius: 0.1rem;
+    padding: 0.3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.unlocked {
+    border-left: rgb(11, 131, 7) solid 0.3vh !important;
+}
+.locked {
+    border-left: rgb(158, 23, 23) solid 0.3vh !important;
+}
+.lock > i {
+    color: white;
+    font-size: 1.6vh;
+    margin-top: 0.4vh;
+    margin-bottom: 0.4vh;
+    margin-left: 0.5vh;
+    margin-right: 0vh;
+}
+.lock > .text {
+    color: white;
+    text-transform: uppercase;
+    font-family: "DINBold";
+    margin-right: 0.3vh;
+    margin-left: 0.3vh;
+}

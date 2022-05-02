@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"/>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./apps/paypal.css">
+    <link rel="stylesheet" href="./apps/settings.css">
+    <link rel="stylesheet" href="./apps/garage.css">
+    <link rel="stylesheet" href="./apps/contacts.css">
+    <link rel="stylesheet" href="./apps/twitter.css">
+    <link rel="stylesheet" href="./apps/whatsapp.css">
+    <link rel="stylesheet" href="./apps/sos.css">
+    <link rel="stylesheet" href="./apps/lawyer.css">
+    <link rel="stylesheet" href="./apps/meos.css">
+    <link rel="stylesheet" href="./apps/billing.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body id="body">  
+    <div class="phone-main-container ">
+
+        <div class="phone-content-container">
+            <div class="phone-content-background background-image"></div>
+            <div style="display: none;" onclick="Calling()" class="phone-in-call-button">00:00</div>
+
+            <div class="phone-title-elments-x">
+                <div class="title-element-brand">KPN NL <i class="fad fa-wifi"></i></div>
+                <div class="title-element-time">00:00</div>
+            </div>
+
+            <div class="notifications-doc">
+                
+            </div>
+
+            <div class="phone-content-top">
+                <div class="phone-container-apps">
+
+                </div>
+            </div>
+
+            <div class="phone-content-bottom">
+
+            </div>
+
+            <div class="phone-app-content ">
+                <div class="phone-app-inner" id="settings">
+                    <div class="settings-app-title">Instellingen</div>
+                    <div class="settings-app-playerinfo">
+                        <div class="playerinfo-name-icon rp_initials"></div>
+                        <div class="playerinfo-name roleplay_name"></div>
+                    </div>
+
+                    <div class="settings-app-settings">
+                        <div class="setting" onclick="toggleAirplaneMode()">
+                            <div class="setting-icon" style="background-image: url(https://th.bing.com/th/id/R.051f722466d74275a464221d6430b1c6?rik=sJHlMpI6kx9b5A&riu=http%3a%2f%2fmedia.idownloadblog.com%2fwp-content%2fuploads%2f2016%2f04%2fAirplane-Mode-Icon.png&ehk=1ba%2bPTYXQIRf9c8SXXQU%2fIHPiUBWeKUU4JwnCPGEO%2fg%3d&risl=&pid=ImgRaw&r=0);"></div>
+                            <div class="settings-name">Vliegtuigmodus</div>
+                            <div class="settings-toggle"  id="airplanemode"></div>
+                        </div>
+                        <div class="setting" onclick="openBackgroundChange()">
+                            <div class="setting-icon" style="background-image: url(https://cdn.discordapp.com/attachments/762355033630965840/887358244689944596/achtergronden.png);"></div>
+                            <div class="settings-name">Achtergronden</div>
+                            <div class="settings-next">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                        <div class="setting" onclick="openDataPage()">
+                            <div class="setting-icon" style="background-image: url(https://cdn.discordapp.com/attachments/762355033630965840/887358242890580029/notificaties.png);"></div>
+                            <div class="settings-name">Gegevens</div>
+                            <div class="settings-next">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner" id="settings-background">
+                        <div class="settings-app-back" onclick="closeBackground()"><i class="fas fa-chevron-left"></i>Instellingen</div>
+                        <div class="settings-app-subtitle">Achtergrond</div>
+                        <div class="settings-background-display">
+                            <div class="background-title">Kies een nieuwe achtergrond</div>
+                            <div class="background-previeuw background-image"></div>
+                            <div class="background-input">
+                                <input autofocus="autofocus" type="text" id="background-input" oninput="changeBackground()" placeholder="Achtergrond URL">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner" id="settings-data">
+                        <div class="settings-app-back" onclick="closeDataPage()"><i class="fas fa-chevron-left"></i>Instellingen</div>
+                        <div class="settings-app-subtitle">Gegevens</div>
+                        <div class="settings-data-display">
+                            <div class="setting-data-part">
+                                <div class="part-icon" style="background-image: url(https://th.bing.com/th/id/R.3af1d14d19cb685b5034062c25b3c6d0?rik=MHmPj6n9%2fS%2bpdw&riu=http%3a%2f%2fmedia.idownloadblog.com%2fwp-content%2fuploads%2f2016%2f09%2fiOS-9-Mail-app-icon-full-size.jpg&ehk=E%2b%2bhdaD%2fuNleKPhltjp3I85%2byBC6llwLuBcu3pY6MAw%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);"></div>
+                                <div class="part-content">
+                                    <input type="text" id="email-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-app-inner" id="paypal">
+                    <div class="paypal-background">
+                        <div class="paypal-top-account" onclick="openAccountPaypal()">
+                            <div class="icon-logo paypal-acc-img" style="background-image: url(https://th.bing.com/th/id/R.581b47d71bf2e64378ca2a243f4d39e2?rik=oAgzW2AZKN%2bsnA&riu=http%3a%2f%2fscandalplanet.com%2fwp-content%2fuploads%2f2019%2f07%2fBelle-Delphine-Nude-Naked-Porn-Leaked-41.jpg&ehk=up%2bO7Xqn8d4BYrC%2f46ULV3dkE0QXPiWXb8vs90kIwOg%3d&risl=&pid=ImgRaw&r=0);"></div>
+                        </div>
+                        <div class="paypal-send-money" onclick="PayPalTransferPage()">
+                            Geld overmaken
+                        </div>
+                        <div class="paypal-title-container">
+                            Regel snel en makkelijk je geldzaken!
+                        </div>
+
+                        <div class="paypal-saldo-display">
+                            <div class="paypal-logo-icon">
+                                <div class="icon-logo" style="background-image: url(https://raceyaya.com/public/images/paypal.png);"></div>
+                            </div>
+                            <div class="paypal-salod-information">
+                                <div class="bank-saldo">150.00 EUR</div>
+                                <div class="paypal-info">PayPal-saldo</div>
+                            </div>
+                        </div>
+                        <div class="paypal-recent-contacts">
+                            <div class="paypal-title">Opnieuw overmaken</div>
+                            <div class="paypal-recent">
+           
+                            </div>
+                        </div>
+
+                        <div class="paypal-recent-active">
+                            <div class="paypal-title">Recente activiteiten</div>
+                            <div class="paypal-history">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner" id="paypal-account">
+                        <div class="paypal-app-back" onclick="PayPalCloseAccount()"><i class="fas fa-chevron-left"></i></div>
+                        <div class="paypal-account-title">Profiel</div>
+                        <div class="paypal-account-content">
+                            <div class="paypal-account-image paypal-acc-img" style="background-image: url(https://th.bing.com/th/id/R.581b47d71bf2e64378ca2a243f4d39e2?rik=oAgzW2AZKN%2bsnA&riu=http%3a%2f%2fscandalplanet.com%2fwp-content%2fuploads%2f2019%2f07%2fBelle-Delphine-Nude-Naked-Porn-Leaked-41.jpg&ehk=up%2bO7Xqn8d4BYrC%2f46ULV3dkE0QXPiWXb8vs90kIwOg%3d&risl=&pid=ImgRaw&r=0);"></div>
+
+                            <div class="paypal-settings">
+                                <div class="paypal-settings-title">
+                                    Instellingen
+                                </div>
+                                <div class="paypal-settings-container">
+                                    <div class="paypal-setting">
+                                 
+                                        <div class="paypal-input">
+                                            <div class="part-content-name">
+                                                Profiel naam
+                                            </div>
+                                            <input type="text" placeholder="Profiel naam" id="paypal-name">
+                                        </div>
+                                    </div>
+                                    <div class="paypal-setting">
+                                       
+                                        <div class="paypal-input">
+                                            <div class="part-content-name">
+                                                Profielfoto
+                                            </div>
+                                            <input type="text" placeholder="Profielfoto" id="paypal-img">
+                                        </div>
+                                    </div>
+                                    <div class="paypal-setting">
+                                       
+                                        <div class="paypal-input">
+                                            <div class="part-content-name">
+                                                PayPal tag
+                                            </div>
+                                            <input type="text" placeholder="PayPal tag" id="paypal-tag">
+                                        </div>
+                                    </div>
+                                
+
+                                    <div class="paypal-save-button" onclick="savePayPal()">
+                                        Opslaan
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner" id="paypal-transfer">
+                        <div class="paypal-app-back" onclick="PayPalCloseTransfer()"><i class="fas fa-chevron-left"></i></div>
+                        <div class="paypal-account-title">Overmaken</div>
+                        <div class="paypal-account-content">
+                            <div class="paypal-account-image paypal-acc-img" style="background-image: url(https://th.bing.com/th/id/R.581b47d71bf2e64378ca2a243f4d39e2?rik=oAgzW2AZKN%2bsnA&riu=http%3a%2f%2fscandalplanet.com%2fwp-content%2fuploads%2f2019%2f07%2fBelle-Delphine-Nude-Naked-Porn-Leaked-41.jpg&ehk=up%2bO7Xqn8d4BYrC%2f46ULV3dkE0QXPiWXb8vs90kIwOg%3d&risl=&pid=ImgRaw&r=0);"></div>
+
+                            <div class="paypal-settings">
+                                <div class="paypal-settings-title">
+                                    Gegevens invullen.
+                                </div>
+                                <div class="paypal-settings-container">
+                                    <div class="paypal-info-foundtarget">
+                                      
+                                    </div>
+
+                                    <div class="paypal-setting">
+                                        <div class="part-icon" id="sendMoneyTargetImg" style="background-image: url(https://raceyaya.com/public/images/paypal.png);"></div>
+                                        <div class="paypal-input">
+                                            <div class="part-content-name">
+                                                PayPal tag / Burger ID (Ontvanger)
+                                            </div>
+                                            <input type="text" placeholder="Profiel tag" id="paypal-transfer-tag">
+                                        </div>
+                                    </div>
+                                    <div class="paypal-setting">
+                                        <div class="part-icon" style="background-image: url(https://raceyaya.com/public/images/paypal.png);"></div>
+                                        <div class="paypal-input">
+                                            <div class="part-content-name">
+                                                Hoeveelheid (EUR)
+                                            </div>
+                                            <input type="text" placeholder="Hoeveelheid" id="paypal-transfer-amount">
+                                        </div>
+                                    </div>
+                                    <div class="paypal-setting">
+                                        <div class="part-icon" style="background-image: url(https://raceyaya.com/public/images/paypal.png);"></div>
+                                        <div class="paypal-input">
+                                            <div class="part-content-name">
+                                                Reden van transactie (niet verplicht)
+                                            </div>
+                                            <input type="text" placeholder="Reden" id="paypal-transfer-reason">
+                                        </div>
+                                    </div>
+                                
+
+                                    <div class="paypal-save-button" id="send-money-confirm" onclick="SendMoney()">
+                                        Geld versturen
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-app-inner " id="contacts">
+                    <div class="contacten-list">
+                        <div class="settings-app-title">Contacten</div>
+                        <div class="contacts-add-contact" onclick="openAddContact()"><i class="fas fa-plus"></i></div>
+                        <div class="contacts-my-card" onclick="displayMyCard()">
+                            <div class="my-pf" style="background-image: url();"></div>
+                            <div class="my-pf-title">Mijn kaart</div>
+                        </div>
+                        <div class="contacts-contact-list">
+                         
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner" id="contacts-mycard">
+                        <div class="settings-app-back" onclick="closeMyCard()"><i class="fas fa-chevron-left"></i>Contacten</div>
+                        <div class="contact-mycard-pf"></div>
+
+                        <div class="card-options">
+                            <div class="card-display">
+                                <div class="card-title">Iphone</div>
+                                <div class="card-subinfo phone-number-change">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner " id="contacts-contactCard">
+                        <div class="settings-app-back" onclick="closeContactCard()"><i class="fas fa-chevron-left"></i>Contacten</div>
+                        <div class="contact-mycard-pf2"></div>
+                        <div class="contact-add-confirm" onclick="EditContact()">Gereed</div>
+                        <div class="card-options">
+                            <div class="card-display-options">
+                                <div class="contact-opt" onclick="CallPerson()">
+                                    <i class="fas fa-phone-volume"></i>
+                                </div>
+                                <div class="contact-opt" onclick="OpenWhatsapp()">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                            </div>
+                            <div class="card-display">
+                                <div class="card-title">Voornaam</div>
+                                <input type="text" id="contact-firstname-card">
+                            </div>
+                            <div class="card-display">
+                                <div class="card-title">Achternaam</div>
+                                <input type="text" id="contact-lastname-card">
+                            </div>
+                            <div class="card-display">
+                                <div class="card-title">Iphone</div>
+                                <div class="card-subinfo" id="contact-number-card"></div>
+                            </div>
+                            <div class="card-option-button" onclick="DeleteContact()">
+                                Verwijder contact
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner " id="contacts-add">
+                        <div class="settings-app-back" onclick="closeAddContact()"><i class="fas fa-chevron-left"></i>Contacten</div>
+                        <div class="contact-add-mycard-pf"></div>
+                        <div class="contact-add-confirm" onclick="addContact()">Gereed</div>
+                        <div class="add-contacts-inputs">
+                            <input type="text" placeholder="Nummer" id="add-number">
+                            <input type="text" placeholder="Voornaam" id="add-firstname">
+                            <input type="text" placeholder="Achternaam" id="add-lastname">
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-app-inner " id="whatsapp">
+                    <div class="chats-title-content">
+                        <div class="settings-app-title">Chats</div>
+                        <div class="whatsapp-current-chats">
+                            
+                        </div>
+                        <div class="bottom-options-container">
+                            <div class="whatsapp-bottom-option" onclick="OpenHistoryCalls(event)">
+                                <i class="fas fa-phone-volume"></i>
+                                <div class="bottom-option-w">Gesprekken</div>
+                            </div>
+                            <div class="whatsapp-bottom-option select-whatsapp" onclick="OpenChats(event)">
+                                <i class="fas fa-comment"></i>
+                                <div class="bottom-option-w">Chats</div>
+                            </div>
+                            <div class="whatsapp-bottom-option" onclick="OpenWhatsappSettings(event)">
+                                <i class="fas fa-cog"></i>
+                                <div class="bottom-option-w">Instellingen</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner" id="whatsapp-history">
+                        <div class="settings-app-title">Geschiedenis</div>
+
+                        <div class="whatsapp-history-newcall">
+                            <input type="text" id="call-history-input" placeholder="Nummer invoeren">
+                            <div class="notification-callsx" onclick="callThisNummer()">
+                                <i style="color: green;" class="fas fa-phone"></i>
+                            </div>
+                        </div>
+
+                        <div class="whatsapp-history-border">
+                           
+                        </div>
+                    </div>
+
+                    <div class="phone-app-subinner" id="whatsapp-settings">
+                        <div class="settings-app-title">Instellingen</div>
+                        <div class="contacts-my-card">
+                            <div class="my-pf" style="background-image: url();"></div>
+                            <div class="my-pf-title" id="whatsapp-setting-name">Mijn kaart</div>
+                        </div>
+                        <div class="settings-whatsapp">
+                            <div class="card-display">
+                                <div class="card-title">Profielfoto</div>
+                                <input type="text" id="wh-setting-pf">
+                            </div>
+                            <div class="card-display">
+                                <div class="card-title">Achtergrond</div>
+                                <input type="text" id="wh-setting-background">
+                            </div>
+                            <div class="cards-save-button" onclick="SaveWhatsappSettings()">Opslaan</div>
+                        </div>
+                    </div>
+
+
+                    <div class="phone-app-subinner " id="whatsapp-chat">
+                        <div class="top-title-items">
+                            <div class="whatsapp-close-chat" onclick="closeChat()"><i class="fas fa-chevron-left"></i></div>
+                            <div class="current-chat-icon"></div>
+                            <div class="current-chat-name">---</div>
+                            <div class="whatsapp-call-chat" onclick="callCurrentChat()"><i class="fad fa-phone"></i></div>
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="right-message">
+                                <div class="message">
+                                    <div class="message-title-w-right">test</div>
+                          
+                                    <div class="message-text">checkl</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-bottom-options">
+                            <div class="extra-send-options" style="display: none;">
+                                <div class="send-option">Stuur lokatie</div>
+                                <div class="send-option" onclick="SendWhatsappIMG()">Stuur afbeelding</div>
+                            </div>
+                            
+                            <div class="left-add-input" onclick="toggleExtraSends()">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <input type="text" id="whatsapp-input">
+                            <div class="left-send-input" onclick="SendWhatsappMessage()">
+                                <i class="fad fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-app-inner " id="twitter">
+
+                    <div class="phone-app-subinner" id="twitter_settings" style="z-index: 1;">
+                        <div class="twitter-app-background">
+                            <div class="twitter-top-account">
+                                <div class="twitter-top-logo" style="background-image: url(https://pngimg.com/uploads/anime_girl/anime_girl_PNG5.png);"></div>
+                                <div class="twitter-top-name">
+                                    <div class="twitter-top-main-name"> <div class="verified-icon" style="background-image: url(https://th.bing.com/th/id/R.920f42a6efede49e6a327ba8b1a2e8bd?rik=eY4MvmFa9DwbUQ&pid=ImgRaw&r=0);"></div></div>
+                                    <div class="twitter-top-sub-name">@subname</div>
+                                </div>
+                            </div>
+                
+                            <div class="twitter-app-main-inner">
+                                <div class="twitter-top-hotbar">
+                                    <div class="twitter-option-midle" onclick="cancel_settings()">
+                                        <div class="midle-option-inner">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="twitter-app-settings-inner">
+                                    <div class="twitter-settings-save" onclick="save_twitter_settings()">
+                                        Instellingen opslaan
+                                    </div>
+                                    <div class="twitter-setting">
+                                        <div class="setting-title">
+                                            Profielfoto
+                                        </div>
+                                        <div class="twitter-input">
+                                            <input id="twitter_pic" class="twitter-input-x" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="twitter-setting">
+                                        <div class="setting-title">
+                                            Nickname
+                                        </div>
+                                        <div class="twitter-input">
+                                            <input id="twitter_nickname" class="twitter-input-x" type="text">
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div class="twitter-app-background">
+                        <div class="twitter-top-account">
+                            <div class="twitter-top-logo" style="background-image: url();"></div>
+                            <div class="twitter-top-name">
+                                <div class="twitter-top-main-name"><div class="verified-icon" style="background-image: url(https://th.bing.com/th/id/R.920f42a6efede49e6a327ba8b1a2e8bd?rik=eY4MvmFa9DwbUQ&pid=ImgRaw&r=0);"></div></div>
+                                <div class="twitter-top-sub-name">@subname</div>
+                            </div>
+                        </div>
+            
+                        <div class="twitter-top-settings">
+                            <i onclick="sync_on_name()" class="fas fa-bell"></i>
+                            <i onclick="open_settings()" class="fas fa-cog"></i>
+                        </div>
+            
+            
+            
+                        <div class="twitter-app-main-inner">
+                            <div class="twitter-top-hotbar">
+                                <div class="twitter-option" onclick="twitter_search_disp()">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="twitter-option-midle">
+                                    <div class="midle-option-inner" onclick="syncMessagesTwitter()">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                </div>
+                                <div class="twitter-option" onclick="twitter_send_message_disp()">
+                                    <i class="fas fa-feather-alt"></i>
+                                </div>
+                            </div>
+                            <div class="twitter-send-message" style="display: none;">
+                                <div class="twitter-message-inner-main">
+                                    <div class="twitter-message-logo" id="sendmessagelogo" style="background-image: url();"></div>
+                                    <div class="twitter-message-inner">
+                                        <div class="twitter-message-name">
+                                            <div class="twitter-message-main-name" id="sendmessagename"></div>
+                                        </div>
+                                        <div class="twitter-send-content">
+                                            <span class="twitter-span" oninput="cancelInputs()" contenteditable="true"></span>
+                                        </div>
+                                        <div class="twitter-send-button" onclick="send_twitter_message()">
+                                            Bericht sturen
+                                        </div>
+                                        <div class="twitter-send-button" onclick="send_twitter_img()">
+                                            Afbeelding sturen
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="twitter-search-message" style="display: none;">
+                                <input class="twitter_input" onchange="search_on_input_twt()" type="text">
+                            </div>
+                            <div class="twitter-messages-container">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-app-inner" id="services">
+                    <div class="settings-app-title">Diensten.</div>
+                
+                    <div class="servies-my-job">
+                        <div class="serives-myjob-name">Mijn baan: Politie</div>
+                        <div class="services-myjob-toggle" onclick="toggleDuty()">In /- Uitklokken</div>
+                    </div>
+
+                    <div class="lawyer-current-option">
+                     
+                    </div>
+                </div>
+
+                <div class="phone-app-inner" id="bills">
+                    <div class="settings-app-title">Facturen.</div>
+                
+                    <div class="billing-bills" id="billing-fines">
+                
+                    </div>
+                </div>
+
+                <div class="phone-app-inner" id="mail">
+                    <div class="settings-app-title">Mail inbox.</div>
+                
+                    <div class="mail-inbox">
+                        
+                    </div>
+
+                    <div class="phone-app-subinner" id="mail-read" style="z-index: 1;">
+                        <div class="mail-read-title">
+                            <i onclick="closeMail()" class="fas fa-backspace"></i>
+
+                            <div class="mail-maintitle" id="sender-mail">Sender: Ling Ling</div>
+                        </div>
+
+                        <div class="mail-display">
+                            <div class="mail-display-title">Bevestiging van bestelling</div>
+                            <div class="mail-display-text">Dit is een kanker text</div>
+                            <div class="mail-button-location" style="display: none;" onclick="SetupLocationMail(event)">
+                                <div class="location-icon"><i class="fas fa-search-location"></i></div>
+                                <div class="location-text">Locatie instellen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="phone-app-inner " id="garages">
+                    <div class="garages-app-background" style="background-image: url(https://vignette.wikia.nocookie.net/gtawiki/images/b/be/BennysOriginalMotorWorks-GTAO-Logo.png/revision/latest?cb=20160623123158);"></div>
+                    <div class="garages-app-container">
+
+                    </div>
+
+                    <div class="phone-app-subinner " id="garages-info" style="z-index: 1;">
+                        <div class="garages-app-background" style="background-image: url(https://vignette.wikia.nocookie.net/gtawiki/images/b/be/BennysOriginalMotorWorks-GTAO-Logo.png/revision/latest?cb=20160623123158);"></div>
+                        
+                        <div class="vehicle-info-displays">
+                            <div class="vehicle-info-part">
+                                <div class="part-name">Voertuig model</div>
+                                <div class="part-data" id="vehicle-garage-name">xa21</div>
+                            </div>
+                            <div class="vehicle-info-part">
+                                <div class="part-name">Nieuw prijs</div>
+                                <div class="part-data" id="vehicle-garage-price">12000.00</div>
+                            </div>
+                            <div class="vehicle-info-part">
+                                <div class="part-name">Benzine</div>
+                                <div class="part-data" id="vehicle-garage-fuel">60%</div>
+                            </div>
+                            <div class="vehicle-info-part">
+                                <div class="part-name">Voertuig kenteken</div>
+                                <div class="part-data" id="vehicle-garage-plate">12xy33z</div>
+                            </div>
+                            <div class="vehicle-info-part">
+                                <div class="part-name">Huidige garage</div>
+                                <div class="part-data" id="vehicle-garage-garage">Blokkenpark</div>
+                            </div>
+                        </div>
+                        <div class="garage-goback-button" onclick="closeSubGarage()">Ga terug</div>
+                        
+                    </div>
+                </div>
+
+                <div class="phone-app-inner " id="meos">
+                    <div class="meos-top-bar">
+                        <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                        <div class="meos-police-name roleplay_name">Test account</div>
+                    </div>
+                    <div class="meos-options">
+                        <div class="meos-option" onclick="OpenMeosSearch()">
+                            <i class="fas fa-users"></i>
+                            Persoon zoeken
+                        </div>
+                        <div class="meos-option"  onclick="OpenMeosVehicle()">
+                            <i class="fas fa-car"></i>
+                            Voertuig zoeken
+                        </div>
+                        <div class="meos-option"  onclick="OpenMeosEmployees()">
+                            <i class="far fa-siren-on"></i>
+                            Werknemers
+                        </div>
+                        <div class="meos-option"  onclick="OpenMeosAlerts()">
+                            <i class="fad fa-engine-warning"></i>
+                            Meldingen
+                        </div>
+                    </div>
+                    <div class="meos-close-button" onclick="closeAllSubs()">
+                        Meos afsluiten
+                    </div>
+
+                    <div class="phone-app-subinner " id="meos-persons" style="z-index: 1;">
+                        <div class="meos-top-bar">
+                            <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                            <div class="meos-police-name roleplay_name">Test account</div>
+                        </div>
+
+                        <div class="title-element-meos-sub">Persoon zoeken.</div>
+                        <div class="meos-search-input">
+                            <input type="text" id="person-search" placeholder="Voornaam / Achternaam / playerid">
+                        </div>
+                        <div class="search-button-meos" onclick="MeosSearchPersons()">Zoeken.</div>
+
+                        <div class="meos-search-persons">
+                           
+                           
+                        </div>
+
+                        <div class="meos-close-person" onclick="closePersonSearch()">
+                            Beginscherm.
+                        </div>
+
+                        <div class="phone-app-subinner " id="meos-person-stats" style="z-index: 1;">
+                            <div class="meos-top-bar">
+                                <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                <div class="meos-police-name roleplay_name">Test account</div>
+                            </div>
+    
+                            <div class="title-element-meos-sub">Persoons gegevens.</div>
+                  
+                            <div class="meos-search-person-stats">
+                                <div class="meos-stat-cat">
+                                    <div class="meos-cat-title">Persoons gegevens</div>
+                                    <div class="meos-options">
+                                        <div class="meos-option" onclick="OpenReports()">
+                                            <i class="fad fa-file-signature"></i>
+                                            Rapporten
+                                        </div>
+                                        <div class="meos-option"  onclick="OpenDec()">
+                                            <i class="fas fa-folder-tree"></i>
+                                            Aangiftes
+                                        </div>
+                                        <div class="meos-option"  onclick="OpenMeosFines()">
+                                            <i class="fas fa-money-check-edit-alt"></i>
+                                            Bekeuringen
+                                        </div>
+                                        <div class="meos-option">
+                                            <i class="fas fa-phone-office"></i>
+                                            Oproepen
+                                        </div>
+                                    </div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Voornaam:</div>
+                                        <div class="stat-data" id="search-firstname"></div>
+                                    </div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Achternaam:</div>
+                                        <div class="stat-data" id="search-lastname"></div>
+                                    </div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Geboortedatum:</div>
+                                        <div class="stat-data" id="search-birthdate"></div>
+                                    </div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Nationaliteit:</div>
+                                        <div class="stat-data" id="search-nationality"></div>
+                                    </div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Telefoon nummer:</div>
+                                        <div class="stat-data" id="search-phone"></div>
+                                    </div>
+                                </div>
+                                <div class="meos-stat-cat">
+                                    <div class="meos-cat-title">Baan gegevens</div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Baan:</div>
+                                        <div class="stat-data" id="search-job"></div>
+                                    </div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Rang / Taak:</div>
+                                        <div class="stat-data" id="search-jobgrade"></div>
+                                    </div>
+                                </div>
+                                <div class="meos-stat-cat">
+                                    <div class="meos-cat-title">Address gegevens</div>
+                                    <div class="meos-stat">
+                                        <div class="stat-name">Appartement:</div>
+                                        <div class="stat-data" id="search-appartment"></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+    
+                            <div class="meos-close-person" onclick="closePersonStats()">
+                                Persoon zoeken.
+                            </div>
+
+                            <div class="phone-app-subinner" id="meos-reports" style="z-index: 1;">
+                                <div class="meos-top-bar">
+                                    <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                    <div class="meos-police-name roleplay_name">Test account</div>
+                                </div>
+        
+                                <div class="title-element-meos-sub">Persoons Rapporten ().</div>
+                      
+                                <div class="meos-search-person-stats">
+                                    <div class="create-report" onclick="openCreateReport()">Maak nieuw rapport aan.</div>
+                                    <div class="reports" id="reports">
+                           
+                                    </div>
+                                </div>
+        
+                                <div class="meos-close-person" onclick="closeReports()">
+                                    Persoons gegevens.
+                                </div>
+
+                                <div class="phone-app-subinner" id="meos-see" style="z-index: 1;">
+                                    <div class="meos-top-bar">
+                                        <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                        <div class="meos-police-name roleplay_name">Test account</div>
+                                    </div>
+            
+                                    <div class="title-element-meos-sub">Raport bekijken.</div>
+                          
+                                    <div class="meos-search-person-stats">
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Rapport naam
+                                            </div>
+                                            <input id="report-edit-title" type="text" placeholder="Rapport naam">
+                                        </div>
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Rapport informatie
+                                            </div>
+                                            <span class="meos-span" id="report-edit-text" oninput="cancelInputs()" contenteditable="true">
+                                                
+                                            </span>
+                                            
+                                        </div>
+                                        <div class="meos-save-report" onclick="EditReport()">
+                                            Raport bewerken
+                                        </div>
+                                    </div>
+            
+                                    <div class="meos-close-person" onclick="CloseSeeReport()">
+                                        Persoons rapporten.
+                                    </div>
+                                </div>
+
+                                <div class="phone-app-subinner" id="meos-create" style="z-index: 1;">
+                                    <div class="meos-top-bar">
+                                        <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                        <div class="meos-police-name roleplay_name">Test account</div>
+                                    </div>
+            
+                                    <div class="title-element-meos-sub">Raport maken.</div>
+                          
+                                    <div class="meos-search-person-stats">
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Rapport naam
+                                            </div>
+                                            <input id="report-create-title" type="text" placeholder="Rapport naam">
+                                        </div>
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Rapport informatie
+                                            </div>
+                                            <span class="meos-span" id="report-create-text" oninput="cancelInputs()" contenteditable="true">
+                                                
+                                            </span>
+                                            
+                                        </div>
+                                        <div class="meos-save-report" onclick="saveReport()">
+                                            Raport opslaan
+                                        </div>
+                                    </div>
+            
+                                    <div class="meos-close-person" onclick="closeCreateReport()">
+                                        Persoons rapporten.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone-app-subinner " id="meos-dec" style="z-index: 1;">
+                                <div class="meos-top-bar">
+                                    <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                    <div class="meos-police-name roleplay_name">Test account</div>
+                                </div>
+        
+                                <div class="title-element-meos-sub">Openstaande aangiften ().</div>
+                      
+                                <div class="meos-search-person-stats">
+                                    <div class="create-report" onclick="OpenCreateDec()">Aangift opstellen.</div>
+                                    <div class="reports" id="decs">
+                           
+                                    </div>
+                                </div>
+        
+                                <div class="meos-close-person" onclick="CloseDec()">
+                                    Persoons gegevens.
+                                </div>
+
+                                <div class="phone-app-subinner" id="meos-seeDec" style="z-index: 1;">
+                                    <div class="meos-top-bar">
+                                        <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                        <div class="meos-police-name roleplay_name">Test account</div>
+                                    </div>
+            
+                                    <div class="title-element-meos-sub">Aangift bekijken.</div>
+                          
+                                    <div class="meos-search-person-stats">
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Aangift titel
+                                            </div>
+                                            <input id="dec-edit-title" type="text" placeholder="Aangift titel">
+                                        </div>
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Aangift informatie
+                                            </div>
+                                            <span class="meos-span" id="dec-edit-text" oninput="cancelInputs()" contenteditable="true">
+                                                
+                                            </span>
+                                            
+                                        </div>
+                                        <div class="meos-save-report" onclick="EditDec()">
+                                            Aangift bewerken
+                                        </div>
+                                    </div>
+            
+                                    <div class="meos-close-person" onclick="CloseSeeDec()">
+                                        Persoons aangiften.
+                                    </div>
+                                </div>
+
+                                <div class="phone-app-subinner" id="meos-createDec" style="z-index: 1;">
+                                    <div class="meos-top-bar">
+                                        <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                        <div class="meos-police-name roleplay_name">Test account</div>
+                                    </div>
+            
+                                    <div class="title-element-meos-sub">Aangift maken.</div>
+                          
+                                    <div class="meos-search-person-stats">
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Aangift naam
+                                            </div>
+                                            <input id="dec-create-title" type="text" placeholder="Aangift naam">
+                                        </div>
+                                        <div class="create-report-input">
+                                            <div class="create-input-title">
+                                                Aangift informatie
+                                            </div>
+                                            <span class="meos-span" id="dec-create-text" oninput="cancelInputs()" contenteditable="true">
+                                                
+                                            </span>
+                                            
+                                        </div>
+                                        <div class="meos-save-report" onclick="saveDec()">
+                                            Aangift opslaan
+                                        </div>
+                                    </div>
+            
+                                    <div class="meos-close-person" onclick="closeCreateDec()">
+                                        Persoons aangiften.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone-app-subinner " id="meos-fines" style="z-index: 1;">
+                                <div class="meos-top-bar">
+                                    <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                    <div class="meos-police-name roleplay_name">Test account</div>
+                                </div>
+        
+                                <div class="title-element-meos-sub" id="totalpriceFines">Openstaande boetes</div>
+                      
+                                <div class="meos-search-person-stats">
+                                    <div class="create-report" onclick="OpenCreateFine()">Boete opstellen.</div>
+                                    <div class="reports" id="fines">
+                 
+                                    </div>
+                                </div>
+        
+                                <div class="meos-close-person" onclick="CloseMeosFines()">
+                                    Persoons gegevens.
+                                </div>
+
+                                <div class="phone-app-subinner " id="meos-createFine" style="z-index: 1;">
+                                    <div class="meos-top-bar">
+                                        <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                                        <div class="meos-police-name roleplay_name">Test account</div>
+                                    </div>
+                                    <div class="title-element-meos-sub">Maak een keuze.</div>
+
+                                    <div class="meos-search-person-stats">
+                                        <input type="text" placeholder="Artikels zoeken" id="fineName" onchange="SearchArtikelOnName()">
+                                        <div class="fines-list">
+                                  
+                                        </div>
+                                    </div>
+                                    <div class="meos-close-person" onclick="CloseCreteFine()">
+                                        Persoon boetes.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="phone-app-subinner" id="meos-vehicle" style="z-index: 1;">
+                        <div class="meos-top-bar">
+                            <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                            <div class="meos-police-name roleplay_name">Test account</div>
+                        </div>
+
+                        <div class="title-element-meos-sub">Voertuig zoeken.</div>
+                        <div class="meos-search-input">
+                            <input type="text" placeholder="Kenteken" id="meos-plate">
+                        </div>
+                        <div class="search-button-meos" onclick="searchVehicleMeos()">Zoeken.</div>
+
+                        <div class="meos-search-person-stats">
+                            <div class="meos-stat-cat">
+                                <div class="meos-cat-title">Voertuig gegevens</div>
+                                <div class="meos-stat">
+                                    <div class="stat-name">Model:</div>
+                                    <div class="stat-data" id="vehicle-search-model"></div>
+                                </div>
+                                <div class="meos-stat">
+                                    <div class="stat-name">Plate:</div>
+                                    <div class="stat-data" id="vehicle-search-plate"></div>
+                                </div>
+                                <div class="meos-stat">
+                                    <div class="stat-name">Eigenaar:</div>
+                                    <div class="stat-data" id="vehicle-search-owner"></div>
+                                </div>
+                                <div class="meos-stat">
+                                    <div class="stat-name">Eigenaar BSN:</div>
+                                    <div class="stat-data" id="vehicle-search-bsn"></div>
+                                </div>
+                                <div class="meos-stat">
+                                    <div class="stat-name">Voertuig kleur:</div>
+                                    <div class="stat-data" id="vehicle-search-color"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="meos-close-person" onclick="CloseVehicleSearch()">
+                            Beginscherm.
+                        </div>
+                    </div>  
+                    <div class="phone-app-subinner " id="meos-alerts" style="z-index: 1;">
+                        <div class="meos-top-bar">
+                            <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                            <div class="meos-police-name roleplay_name">Test account</div>
+                        </div>
+                        <div class="title-element-meos-sub">Burger meldingen</div>
+
+                        <div class="meos-search-person-stats" id="meos-search-person-stats">
+                            <div class="police-alert">
+                  
+                            </div>
+                        </div>
+
+                        <div class="meos-close-person" onclick="CloseMeosAlerts()">
+                            Beginscherm.
+                        </div>
+                    </div>  
+                    <div class="phone-app-subinner " id="meos-employee" style="z-index: 1;">
+                        <div class="meos-top-bar">
+                            <div class="meos-police-icon" style="background-image: url(https://i.pinimg.com/originals/9a/98/7f/9a987f6f5ff51233dcacad7f86bb9ba4.png);"></div>
+                            <div class="meos-police-name roleplay_name">Test account</div>
+                        </div>
+                        
+                        <div class="meos-search-person-stats" id="meos-employees">
+                           
+                        </div>
+
+                        <div class="meos-close-button" onclick="CloseEmployee()">
+                            Beginscherm
+                        </div>
+    
+                    </div>  
+                </div>
+
+                <div class="phone-app-inner " id="sos">
+                    <div class="sos-title-app">
+                        <div class="sos-title-alert" onclick="openMyAlerts()">
+                            <i class="fad fa-bell-exclamation"></i>
+                        </div>
+                        <div class="sos-title-name">Hulpdiensten</div>
+                    </div>
+
+                    <SELECT id="sos-job">
+                        <OPTION value="police">Politie</OPTION>
+                        <OPTION Value="ambulance">Ambulance</OPTION>
+                        <OPTION Value="mechanic">Wegenwacht</OPTION>                   
+                    </SELECT>
+
+                    <div class="sos-input">
+                        <div class="sos-input-title">Melding titlel</div>
+                        <input type="text" id="sos-title" oninput="cancelInputs()" placeholder="Voer titel van melding in.">
+                    </div>
+                    
+                    <div class="sos-span">
+                        <div class="sos-input-title">Reden van melding</div>
+                        <span contenteditable="true" oninput="cancelInputs()" id="sos-message">
+
+                        </span>
+                    </div>
+
+                    <div class="sos-send-button" onclick="sendSOSmessage()">
+                        Verstuur melding.
+                    </div>
+
+                    <div class="phone-app-subinner" id="sos-alerts" style="z-index: 1;">
+                        <div class="sos-title-app">
+                            <div class="sos-title-alert" onclick="refreshAlerts()">
+                                <i class="fad fa-sync-alt"></i>
+                            </div>
+                            <div class="sos-title-name">Hulpdiensten</div>
+                        </div>
+
+                        <div class="sos-app-notifications">
+                    
+                        </div>
+    
+                        <div class="sos-send-button" onclick="CloseMyAlerts()">
+                            Ga terug.
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="phone-bottom-button" onclick="closeAllSubs()">
+
+            </div>
+
+            <div class="iphone-view-image" onclick="close_view_img()" style="display: none;">
+
+            </div>
+        </div>
+
+
+        <div class="phone-main-image">
+            <img id="phone-background" src="./images/border.png">
+        </div>
+        
+    </div>
+
+    <script src="./script.js" type="text/javascript"></script>
+    <script src="./apps_js/twitter.js" type="text/javascript"></script>
+    <script src="./apps_js/meos.js" type="text/javascript"></script>
+    <script src="./apps_js/sos.js" type="text/javascript"></script>
+    <script src="./apps_js/billing.js" type="text/javascript"></script>
+    <script src="./apps_js/call.js" type="text/javascript"></script>
+    <script src="./apps_js/notification.js" type="text/javascript"></script>
+    <script src="./apps_js/garage.js" type="text/javascript"></script>
+</body>
+
+</html>

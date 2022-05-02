@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <title></title>
+</head>
+<body class="no-selection">
+
+    <div class="title-container" style="display: none;">
+        <div class="text" style="color: #22272c;">ZERO</div>
+        <div class="text" style="color: white;">ROLEPLAY</div>
+    </div>
+
+    <div class="center" style="display: flex;">
+        <div class="character-creation" style="display: none;">
+            <div class="character-creation-title">Karakters</div>
+            <div class="characters">
+                <div class="character-slot" data-slot="1">
+                    <div class="headicon" style="background-image: url(./head-face.png);"></div>
+                    <div class="character-info">Nieuw karakter!</div>
+                </div>
+                <div class="character-slot" data-slot="2">
+                    <div class="headicon" style="background-image: url(./head-face.png);"></div>
+                    <div class="character-info">Nieuw karakter!</div>
+                    
+                </div>
+                <div class="character-slot" data-slot="3">
+                    <div class="headicon" style="background-image: url(./head-face.png);"></div>
+                    <div class="character-info">Nieuw karakter!</div>
+                </div>
+                <div class="character-slot" data-slot="4">
+                    <div class="headicon" style="background-image: url(./head-face.png);"></div>
+                    <div class="character-info">Nieuw karakter!</div>
+                </div>
+                <div class="character-slot" data-slot="5">
+                    <div class="headicon" style="background-image: url(./head-face.png);"></div>
+                    <div class="character-info">Nieuw karakter!</div>
+                </div>
+            </div>
+            <div class="character-buttons">
+                <div class="button" onclick="logout()" style="background-color: rgb(161, 67, 55);">Uitloggen</div>
+            </div>
+        </div>
+        <div class="character-creation2" style="display: none;">
+            <div class="character-creation-title">Karakter maken</div>
+            <div class="input-fields">
+                <div class="input-field">
+                    <div class="input-title" >Voornaam</div>
+                    <input type="text" id="firstname" placeholder="Voornaam">
+                </div>
+                <div class="input-field">
+                    <div class="input-title">Achternaam</div>
+                    <input type="text" id="lastname" placeholder="Achternaam">
+                </div>
+                <div class="input-field">
+                    <div class="input-title">Nationaliteit</div>
+                    <input type="text" id="nationality" placeholder="Nationaliteit">
+                </div>
+                <div class="input-field">
+                    <div class="input-title">Geboortedatum</div>
+                    <input type="date" id="birthdate" placeholder="Geboortedatum">
+                </div>
+                <div class="input-field">
+                    <div class="input-title">Gender</div>
+                    <select id="gender" name="Gender">
+                        <option class="option" value="m">Man</option>
+                        <option class="option" value="f">Vrouw</option>
+                      </select>
+                </div>
+            </div>
+            <div class="character-buttons">
+                <div class="button" onclick="cancelCreation()" style="background-color: rgb(161, 67, 55);">Annuleren</div>
+                <div class="button" onclick="createChar()" style="background-color: rgb(48, 121, 48);">Maak karakter!</div>
+            </div>
+        </div>
+        <div class="character-spawnselection" style="display: none;">
+            <div class="character-creation-title">Spawn locatie</div>
+            <div class="spawnlocations">
+                <div class="spawn" onclick="setcam(1)">
+                    <i class="fas fa-map-marker"></i>
+                    <div class="spawn-title">Laatste locatie</div>
+                </div>
+                <div class="spawn" onclick="setcam(2)">
+                    <i class="fas fa-book"></i>
+                    <div class="spawn-title">Politie HB</div>
+                </div>
+                <div class="spawn" onclick="setcam(3)">
+                    <i class="fas fa-cubes"></i>
+                    <div class="spawn-title">Blokkenpark</div>
+                </div>
+                <div class="spawn" onclick="setcam(4)">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <div class="spawn-title">Sandy Shores</div>
+                </div>
+                <div class="spawn" onclick="setcam(5)">
+                    <i class="fab fa-earlybirds"></i>
+                    <div class="spawn-title">Paleto Bay</div>
+                </div>
+            </div>
+            <div class="character-buttons">
+                <div class="button" onclick="chooseloc()" style="background-color: rgb(48, 161, 48);">Kies locatie</div>
+            </div>
+        </div>
+        <div class="character-appartment" style="display: none;">
+            <div class="character-creation-title">Appartement kiezen</div>
+            <div class="spawnlocations">
+                <div class="spawn" onclick="chooseAppartment('blokkenpark')">
+                    <i class="fas fa-map-marker"></i>
+                    <div class="spawn-title">Blokkenpark</div>
+                </div>
+                <div class="spawn" onclick="chooseAppartment('richards_majestic')">
+                    <i class="fas fa-book"></i>
+                    <div class="spawn-title">Richards Majestic</div>
+                </div>
+                <div class="spawn" onclick="chooseAppartment('eclipse_tower')">
+                    <i class="fas fa-cubes"></i>
+                    <div class="spawn-title">Eclipse Tower</div>
+                </div>
+                <div class="spawn" onclick="chooseAppartment('callisto_tower')">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <div class="spawn-title">Callisto Tower</div>
+                </div>
+                <div class="spawn" onclick="chooseAppartment('arcadius_tower')">
+                    <i class="fab fa-earlybirds"></i>
+                    <div class="spawn-title">Arcadius Tower</div>
+                </div>
+            </div>
+            <div class="character-buttons">
+                <div class="button" onclick="chooseAppartmentConfirm()" style="background-color: rgb(48, 161, 48);">Kies appartement</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

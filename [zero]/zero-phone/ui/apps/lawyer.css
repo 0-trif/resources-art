@@ -1,0 +1,149 @@
+#services {
+    background-color: rgb(29, 29, 29);
+}
+.lawyer-app-options {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lawyer-app-option {
+    position: relative;
+    display: inline-block;
+    width: 10vh;
+    height: 10vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size:  1.5vh; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.4rem;
+    margin: 1vh;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+}
+.lawyer-app-option > i {
+    font-size: 2.3vh !important;
+    margin-bottom: 0.5vh;
+    color: rgb(61, 124, 167);
+}
+
+.current-action-border {
+    position: relative;
+    margin-top: 1vh;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 1vh;
+    overflow: hidden;
+}
+
+.lawyer-current-option {
+    position: relative;
+    margin-top: 1vh;
+    max-width: 100%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+.current-action-title {
+    position: relative;
+    top: 0.5vh;
+    left: 2.5vh;
+    margin-bottom: 0.5vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.3vh; 
+    color: white;
+}
+
+.current-action-laywers {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.active-lawyer {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 88%;
+    align-items: center;
+    height: 5vh;
+    margin-top: 1vh;
+    background-color: rgba(128, 128, 128, 0.13);
+    border-radius: 0.3rem;
+    display: flex;
+}
+
+.lawyer-icon {
+    position: relative;
+    width: 3vh;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    background-color: rgba(199, 199, 199, 0.712);
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.5vh; 
+    display: flex;
+    color: white;
+    border-radius: 50%;
+}
+.lawyer-name {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.5vh; 
+    color: white;
+}
+
+.lawyer-number {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1.3vh; 
+}
+
+.servies-my-job {
+    position: relative;
+    border-radius: 0.3rem;
+    height: 5vh;
+    width: 88%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    left: 50%;
+    background-color: rgba(128, 128, 128, 0.13);
+}
+.serives-myjob-name {
+    position: relative;
+    margin-left: 1vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.5vh; 
+    color: white;
+}
+
+.services-myjob-toggle {
+    position: absolute;
+    right: 1vh;
+    top: 50%;
+    background-color: rgb(46, 122, 46);
+    border-radius: 0.3rem;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1.3vh; 
+    padding: 0.5vh;
+    transform: translate(0, -50%);
+}

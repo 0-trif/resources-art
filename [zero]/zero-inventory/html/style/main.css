@@ -1,0 +1,772 @@
+* {
+    user-select: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+
+#body {
+    background-size: cover;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.main-inventory-containers {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.inventory {
+    position: relative;
+    width: 54.3vh;
+    height: fit-content;
+    max-height: 57vh;
+
+    overflow: hidden;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    padding: 1vh;
+    background-color: rgba(39, 37, 46, 0.797);
+
+    background-position: center;
+    background-size: cover;
+}
+
+
+.inventory-title {
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    width: 102%;
+    height: fit-content;
+}
+
+.inventory-right > .inventory-title > .inventory-title-name {
+    position: relative !important;
+    right: 50% !important;
+    left: unset;
+    float: right;
+    width: 97% !important;
+    transform: translate(50%);
+    text-align: end;
+}
+
+.inventory-title-name {
+    position: relative;
+    font-size: 1.6vh;
+    margin-top: 1vh;
+    top: 50%;
+    
+    height: fit-content;
+    transform: translate(0%, -50%);
+    color: white;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700 !important;
+    left: 50%;
+    width: 97%;
+    transform: translate(-50%);
+}
+
+.midle-fill {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inventory-midle {
+    position: relative;
+    transition: 0.3s;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(39, 35, 48, 0.9);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-left: 3vh;
+    margin-right: 3vh;
+    
+    padding: 1vh;
+}
+.amount {
+    position: relative;
+  
+    width: 97%;
+    border: none;
+    outline: none;
+
+
+    background-color: rgba(0, 0, 0, 0.226);
+    height: 4vh;
+    border-radius: 0.1rem;
+
+    text-align: center;
+
+    color: white;
+    font-size: 1.3vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600 !important;
+}
+
+.midle-use {
+    position: relative;
+    transition: 0.5s;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 1s;
+    margin-top: 1vh;
+    background-color: rgba(0, 0, 0, 0.226);
+    height: 4vh;
+    border-radius: 0.1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 1.3vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600 !important;
+}
+.midle-close {
+    position: relative;
+    transition: 0.5s;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 1s;
+    margin-top: 1vh;
+    background-color: rgba(0, 0, 0, 0.226);
+    height: 4vh;
+    border-radius: 0.1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 1.3vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600 !important;
+}
+.midle-use:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+}
+.midle-close:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+}
+.amount:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.inventory-items {
+    position: relative;
+    width: 100%;
+
+  
+    height: fit-content;
+
+}
+
+.inventory-items-inner {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    overflow: auto;
+    max-height: 51vh;
+    flex-wrap: wrap;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+	width: 4px;
+    background-color: rgba(0, 0, 0, 0.100);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgba(39, 35, 48, 0.9);
+ 
+}
+
+.inventory-items-inner > .item {
+    background-color: rgba(84, 87, 95, 0.282);
+    border: 1px solid rgba(73, 75, 80, 0.382);
+}
+.hot-bar > .item {
+    background-color: rgba(39, 37, 46, 0.797) !important;
+    border: 1px solid rgba(39, 40, 48, 0.363);
+}
+
+.item {
+    position: relative;
+    min-width: 10.44vh;
+    min-height: 10.44vh;
+    overflow: hidden;
+
+    margin: 0.1vh;
+
+    background-color: rgba(39, 37, 46, 0.797) !important;
+    border: 1px solid rgba(39, 40, 48, 0.363);
+}
+.item:hover {
+    background-color: rgba(78, 82, 92, 0.103);
+}
+
+
+.shopitem > .inventory-keybind {
+    position: absolute;
+    
+    right: 0vh;
+    top: 0.7vh;
+
+    height: 1.8vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+}
+.usable > .inventory-keybind {
+    position: absolute;
+    
+    right: 0vh;
+    top: 0.7vh;
+
+    height: 1.8vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+}
+
+.shopitem > .inventory-item > .inventory-keybind {
+    font-size: 0.8vh;
+}
+
+.usableinner {
+    font-size: 0.8vh !important;
+}
+
+.inventory-keybind {
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    height: 100%;
+    width: 100%;
+}
+
+.inventory-keybind-inner {
+    color: white;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-size: 3vh;
+    font-family: "Open Sans Cons", sans-serif;
+    font-weight: 400 !important;
+    opacity: 0.6;
+}
+
+.inventory-item-image {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    transform: translate(0, -50%);
+    height: 100%;
+    z-index: 1;
+    background-position: center;
+    background-size: 70%;
+    
+    background-repeat: no-repeat;
+}
+
+
+
+.inventory-item-label {
+    position: absolute;
+    top: 0.7vh;
+    width: fit-content;
+    left: 1vh;
+    z-index: 1;
+}
+.inventory-item-label-inner {
+
+    color: white;
+    height: 1.8vh;
+    font-size: 0.8vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 400 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventory-item-amount {
+    position: absolute;
+    bottom: 0.4vh;
+    right: 0.7vh;
+    z-index: 1;
+    height: 1.7vh;
+    border-bottom-right-radius: 0vh;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inventory-item-amount-inner {
+    position: relative;
+    color: white;
+
+    font-size: 0.8vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 400 !important;
+}
+
+.inventory-item-weight {
+    position: absolute;
+    bottom: 0.4vh;
+    left: 0.7vh;
+    z-index: 1;
+    height: 1.7vh;
+    border-bottom-right-radius: 0vh;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inventory-item-weight-inner {
+    position: relative;
+    color: white;
+
+    font-size: 0.8vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 400 !important;
+}
+
+
+.inventory-item-durabilty {
+    position: absolute;
+    left: 0vh;
+    bottom: 0vh;
+
+    height: 0.5vh;
+    width: 100%;
+
+    overflow: hidden;
+    background-color: rgba(128, 128, 128, 0.233);
+}
+
+.inventory-item-durabilty-inner {
+    position: absolute;
+    left: 0vh;
+    bottom: 0vh;
+    height: 50%;
+    width: 100%;
+    
+    background: linear-gradient(to top, #17ee82fb, #24b66dfb 70%);
+}
+
+.inventory-title-amount {
+    position: relative;
+    width: 97%;
+    height: fit-content;
+    min-height: 0.7vh;
+    border-radius: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.371);
+    overflow: hidden;
+    margin-top: 0.2vh;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 1vh;
+    padding: 0.1vh;
+    display: flex;
+}
+.inventory-title-amount-inner {
+    position: absolute;
+    left: 0vh;
+    top: 0vh;
+
+    height: 100%;
+    transition: 1s;
+    background: linear-gradient(to right, #17ee82fb, #197446fb 600px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 0.8vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 100 !important;
+}
+
+.inventory-hotbar {
+    position: absolute;
+    right: 3vh;
+    transition: 1s;
+    bottom: -11.5vh;
+
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    max-width: 81.3vh;
+    overflow: hidden;
+    
+}
+.hotbar-hud {
+    position: relative;
+    width: 100%;
+
+    max-width: 100%;
+    
+}
+
+.hotbar-hud-item {
+    position: relative;
+    float: right;
+    margin-bottom: 2vh;
+    width: fit-content;
+    margin-right: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotbar-hud-bar {
+    position: relative;
+    background-color: rgba(165, 165, 165, 0.500);
+    height: 3vh;
+
+    width: 18vh;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+.hud-bar-inner {
+    position: absolute;
+    transition: 1s;
+    height: 100%;
+    background-color: rgb(36, 151, 103);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 3vh;
+    color: white;
+
+    font-size: 1.3vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+.hud-item-label {
+    position: relative;
+    width: fit-content;
+
+    width: 100%;
+  
+    color: white;
+    margin-top: 0.2vh;
+    margin-left: 0.3vh;
+    font-size: 1.3vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 500 !important;
+}
+
+.hot-bar {
+    position: relative;
+    display: flex;
+}
+
+.inventory-hotbar > .item {
+    position: relative;
+
+}
+
+.amount-inner-opt {
+    transition: 1s;
+    position: relative;
+    width: 0.7vh;
+    height: 100%;
+    border-radius: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.507);
+    margin-right: 0.2vh;
+    border: white solid 1px;
+}
+.ending {
+    background-color: rgba(160, 66, 66, 0.719) !important;
+}
+
+.inventory-notifications {
+    position: absolute;
+    height: fit-content;
+    bottom: 10vh;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%);
+
+    display: flex;
+}
+
+.item-inspect-container {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 160vh;
+
+    border-radius: 0.3rem;
+    height: 80vh;
+
+    width: 90%;
+
+}
+
+.inspect-attachment {
+    position: relative;
+    padding: 1vh;
+    border-radius: 0.3rem;
+    transform: 1s;
+    width: fit-content;
+    margin-bottom: 1vh;
+    height: 4vh;
+    display: flex;
+ 
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: opacity 0.2s;
+}
+.inspect-attachment-img {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    transform: translate(0, -30%);
+    top: 50%;
+    left: 1vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom-inspect-information {
+    position: absolute;
+    bottom: 1vh;
+    height: fit-content;
+    width: fit-content;
+    left: 1vh;
+}
+.top-weapon-attachments {
+    position: absolute;
+    top: 1vh;
+    height: fit-content;
+    width: fit-content;
+    left: 1vh;
+}
+
+
+.inspect-item-name {
+    position: relative;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3vh;
+}
+
+.inspect-item-serie {
+    position: relative;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5vh;
+}
+
+.inspect-item-ammo {
+    position: relative;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.5vh;
+}
+
+.inspect-item-durability {
+    position: relative;
+    margin-top: 1vh;
+    width: 30vh;
+
+    border-radius: 0.3rem;
+    height: 2.3vh;
+    overflow: hidden;
+    background-color: gray;
+    
+}
+
+body > .item {
+    opacity: 0.6;
+}
+
+.durability-inner {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    background-color: green;
+    min-width: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+    font-size: 1vh;
+    font-weight: 100;
+}
+
+.inspect-weapon-image {
+    position: absolute;
+    
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    height: fit-content;
+}
+.inspect-weapon-image > img {
+    width: 100vh;
+}
+
+.inspect-close-button {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+    border-radius: 0.3rem;
+
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+    font-size: 1.4vh;
+    font-weight: 100;
+    background-color: rgb(162, 49, 49);
+    padding: 1vh;
+    text-align: center;
+    width: 6vh;
+}
+
+.inventory-current-item-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    padding: 1vh;
+    background-color: rgba(39, 37, 46, 0.8);
+
+    z-index: 999;
+}
+
+.item-info-name {
+    position: relative;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+    font-size: 2.3vh;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.item-info-set {
+    position: relative;
+    font-family: "Open Sans Condensed", sans-serif;
+    color: white;
+    font-size: 1.1vh;
+    text-transform: uppercase;
+    margin-right: 0.2vh;
+    margin-top: 0.5vh;
+    margin-left: 0.2vh;
+}
+.item-info-displays {
+    max-width: 35vh;
+    width: fit-content;
+}
+
+.bottom-displays {
+    position: relative;
+    margin-top: 0.5vh;
+    width: 95%;
+    height: fit-content;
+    border-top: white solid 0.1vh;
+    margin-bottom: 0vh;
+}
+
+.bottom-displays {
+    display: flex;
+    width: fit-content;
+}
+
+.inventory-title-weight {
+    position: absolute;
+    right: 1vh;
+    color: white;
+    font-size: 1.1vh;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700 !important;
+}
+.other-inventory > .inventory-title > .inventory-title-weight {
+    left: 1vh !important;
+    transform: translate(0, -50%);
+    top: 50%;
+}
+
+.inventory-use-display {
+
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.pricetag {
+    color: #17ee82fb;
+    font-size: 1.1vh;
+
+}

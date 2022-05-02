@@ -1,0 +1,19 @@
+{
+  "name": "ok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@citizenfx/client": "^2.0.5374-1",
+    "@citizenfx/server": "^2.0.5374-1"
+  }
+}

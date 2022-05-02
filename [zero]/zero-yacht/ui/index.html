@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YACHT: Zero script</title>
+
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fa/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script src="./script.js"></script>
+    <script src="./all.js"></script>
+</head>
+<body style="display: none;">
+    <div class="main-border-top"></div>
+    <div class="main-border-bottom"></div>
+
+    <div class="main-info-top">
+        <div class="main-title">Yacht heist.</div>
+        <div class="sub-title">LosSantos scheepshaven, yacht ligplaats.</div>
+        <div class="sub-title-small">17-03-2022: 17:45.</div>
+    </div>
+
+    <div class="main-info-crew">
+        <div class="main-title">Heist crew.</div>
+        <div class="crew-members">
+            
+        </div>
+    </div>
+
+
+    <div class="bottom-left-buttons">
+        <div class="button" onclick="CloseMission()">
+            <div class="button-icon"><i class="fa-solid fa-ban"></i></div>
+            <div class="button-text">Sluiten</div>
+        </div>
+        
+        <div class="button" onclick="JoinMission()">
+            <div class="button-icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></div>
+            <div class="button-text">Join missie</div>
+        </div>
+
+        <div class="button" onclick="LeaveMission()">
+            <div class="button-icon"><i class="fa-solid fa-xmark"></i></div>
+            <div class="button-text">Verlaat missie</div>
+        </div>
+
+        <div class="button" onclick="StartMission()">
+            <div class="button-icon"><i class="fa-solid fa-play"></i></div>
+            <div class="button-text">Start missie</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+
+.can {
+    position: absolute;
+    width: 100%;
+    left: 0vh;
+    height: 100%;
+    top: 0vh;
+    display: flex;
+    transition: 1s;
+    align-items: center;
+}
+.main-interaction-container {
+    position: absolute;
+    transition: 1s;
+    
+    left: 3vh;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(71, 148, 52);
+    border-radius: 0.1rem;
+    border-left: white solid 0.1vh;
+}
+
+.interaction-inner {
+    transition: 1s;
+    position: relative;
+    margin: 1vh;
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 800 !important;
+    color: white;
+}

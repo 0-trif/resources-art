@@ -1,0 +1,81 @@
+@font-face {
+    font-family:"bold-main";
+    src: url("./fonts/Chivo-Bold.otf") format("truetype");
+}
+@font-face {
+    font-family:"chivo";
+    src: url("./fonts/Chivo-Regular.otf") format("truetype");
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.main-container {
+    position: absolute;
+
+    transform: translate(-50%);
+    left: 50%;
+
+    bottom: 4vh;
+    width: fit-content;
+    background-color: rgb(53, 53, 71);
+    padding: 0.6vh;
+    border-radius: 0.2rem;
+
+    display: none;
+    flex-direction: column;
+}
+
+.skill-title {
+    color: white;
+    font-family: "chivo";
+    
+    font-size: 1.40vh;
+}
+
+.skill-bar {
+    position: relative;
+    height: fit-content;
+    margin-top: 0.3vh;
+
+    
+    border-bottom: white solid 0.1vh;
+    width: 33vh;
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    padding: 0vh;
+
+}
+
+.skill-bar-inner {
+    position: relative;
+    background-color: rgba(27, 24, 39, 0.8);
+
+    height: 2vh;
+    z-index: 1;
+    width: 10%;
+}
+.skill-bar-selectpoint {
+    position: absolute;
+    height: 2vh;
+    overflow: hidden;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(255, 255, 255);
+    font-family: "chivo";
+    font-weight: bold;
+    font-size: 1.4vh;
+    background-color: rgb(62, 148, 36);
+    width: 5vh;
+    left: 9vh;
+    z-index: 3;
+}

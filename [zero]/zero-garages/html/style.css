@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+body {
+ 
+}
+*{
+    user-select: none;
+}
+.main-container {
+    position: absolute;
+    top: 50%;
+    right: 3vh;
+    transform: translate(0, -50%);
+    width: fit-content;
+    height: fit-content;
+    border-right: white solid 0.1vh;
+}
+.title {
+    opacity: 1;
+    font-size: 2.5vh;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-right: 2vh;
+}
+
+.vehicles {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    overflow: auto;
+    max-height: 40vh;
+    margin-right: 2vh;
+}
+.vehicle {
+    position: relative;
+    width: 35vh;
+    height: 4vh;
+    min-height: 4vh;
+    background: linear-gradient(to top right, #000000be 0%, #00000000 100%);
+    border-radius: 0.1rem;
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.15vh;
+}
+.vehicle-name {
+    position: relative;
+    margin-left: 2vh;
+
+    
+    opacity: 1;
+    font-size: 1.6vh;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.vehicle:hover {
+    transform: skew(5deg);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

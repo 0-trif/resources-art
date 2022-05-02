@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/model.css">
+    <link rel="stylesheet" href="./style/settings.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>TRIF INVENTORY</title>
+</head>
+<body id="body">  
+    <div class="inventory-notifications">
+        <div class="inventory-use-display" style="display: none;">
+            <div class="item usable" id="usable">
+                <div class="inventory-keybind"><div class="inventory-keybind-inner usableinner">Gebruiken</div></div>
+                <div class="inventory-item-image" style="background-image: url(./images/`+item+`.png);"></div>
+                <div class="inventory-item-label"><div class="inventory-item-label-inner"></div></div> 
+            </div>   
+        </div>
+    </div>
+
+
+    <div class="inventory-current-item-info" style="display: none;">
+        <div class="item-info-name">Iron</div>
+        <div class="item-info-displays">
+            <div class="metainfo">
+                <div class="item-info-set" id="serial">Serienummer: 30242xp340 |</div>
+                <div class="item-info-set" id="ammo">Ammo: 120</div>
+            </div>
+
+            <div class="bottom-displays">
+                <div class="item-info-set" id="bottom-info">Hoeveelheid: 5x | Weight: 0.25 | Kwaliteit: 20%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="inventory-hotbar">
+        <div class="hotbar-hud">
+           
+        </div>
+        <div class="hot-bar">
+            <div class="item " data-slot="1"></div>
+            <div class="item " data-slot="2"></div>
+            <div class="item " data-slot="3"></div>
+            <div class="item " data-slot="4"></div>
+            <div class="item " data-slot="5"></div>
+            <div class="item " data-slot="6"></div>
+        </div>
+    </div>
+
+    <div  class="item-inspect-container" style="display: none;">
+        <div class="top-weapon-attachments">
+            
+        </div>
+        <div class="bottom-inspect-information">
+            <div class="inspect-item-name"></div>
+            <div class="inspect-item-serie"></div>
+            <div class="inspect-item-ammo"></div>
+            <div class="inspect-item-durability"><div class="durability-inner">
+            </div></div>
+        </div>
+
+        <div class="inspect-weapon-image">
+            <img src="./images/displays/weapon_assaultrifle.png" alt="">
+        </div>
+
+        <div class="inspect-close-button" onclick="closeInspect()">Sluiten</div>
+    </div>
+
+    <div class="main-inventory-containers" style="display: none;">
+        <div  class="inventory player-inventory inventory-left">
+            <div class="inventory-title">
+                <div class="inventory-title-weight" id="player-weight"></div>
+                <div class="inventory-title-name">Speler</div>
+                <div class="inventory-title-amount">
+                    <div class="inventory-title-amount-inner"></div>
+                </div>
+            </div>
+            <div class="inventory-items">
+                <div class="inventory-items-inner">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="midle-fill">
+            <div class="inventory-midle">
+                <input oninput="change_dial()" min="1" value="1" class="amount" type="number">
+                <div class="midle-use" id="give" style="display: none;">
+                    Geven
+                </div>
+                <div class="midle-use" id="inspect" style="display: none;">
+                    Inspecteren
+                </div>
+                <div class="midle-use" id="useItem" style="display: none;">
+                    Gebruiken
+                </div>
+                <div class="midle-close" onclick="toggle_inventory(false)">
+                    Sluiten
+                </div>
+            </div>
+        </div>
+
+        <div class="inventory other-inventory inventory-right" >
+            <div class="inventory-title">
+                <div class="inventory-title-weight" id="other-weight"></div>
+                <div class="inventory-title-name">Stash</div>
+                <div class="inventory-title-amount">
+                    <div class="inventory-title-amount-inner"></div>
+                </div>
+            </div>
+            <div class="inventory-items">
+                <div class="inventory-items-inner">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/input.js"></script>
+    <script src="./js/crafting.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/models.js"></script>
+</body>
+</html>

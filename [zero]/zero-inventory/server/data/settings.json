@@ -1,0 +1,30 @@
+{
+    "steam:110000115d50fa8": {
+        "background-other": "",
+        "background": false,
+        "center": false,
+        "background-player": "",
+        "radius": 1
+    },
+    "steam:11000013fbdb3ad": {
+        "background-player": "",
+        "background": false,
+        "center": false,
+        "background-other": "",
+        "radius": 1
+    },
+    "steam:11000014752f74a": {
+        "background-other": "",
+        "background": false,
+        "center": false,
+        "background-player": "",
+        "radius": 1
+    },
+    "steam:110000109d77221": {
+        "background-other": "",
+        "background": false,
+        "center": false,
+        "background-player": "",
+        "radius": 1
+    }
+}

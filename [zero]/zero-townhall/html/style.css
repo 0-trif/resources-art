@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+
+@font-face{
+    font-family: graph;
+    src: url(fonts/graph.otf);
+}
+
+* {
+    user-select: none;
+}
+
+
+.main-container-townhall {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 130vh;
+    height: 80vh;
+    background-color: rgb(38, 50, 70);
+    border-radius: 0.1rem;
+    overflow: hidden;
+}
+
+.townhall-top-bar {
+    position: relative;
+    background-color: rgb(38, 50, 70);
+    width: 100%;
+    border-bottom: white solid 0.5vh;
+    height: 5vh;
+}
+#jobs > .job {
+    width: 100% !important;
+}
+.job-selection {
+    position: relative;
+    background-color: rgb(38, 50, 70);
+    height: 73vh;
+    width: 24vh;
+    top: 1vh;
+    left: 1vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.current-job-info {
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    margin-top: 1vh;
+    background-color: rgba(8, 8, 8, 0.100);
+
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.playername {
+    position: relative;
+    color: white;
+    margin-left: 1vh;
+    font-size: 1.6vh;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.normaltext {
+    position: relative;
+    color: white;
+    font-size: 1.3vh;
+    margin-left: 1vh;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.job {
+    position: relative;
+    width: 80%;
+    height: 8vh;
+    margin-top: 1vh;
+    border-left: white solid 0.3vh;
+    background-color: rgba(8, 8, 8, 0.100);
+
+    display: flex;
+    justify-content: center;
+    min-height: 8vh;
+    flex-direction: column;
+}
+
+.job-listing {
+    position: relative;
+    max-height: 70vh;
+    width: 100%;
+    overflow: auto;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.setjobbutton {
+    position: absolute;
+    bottom: 1vh;
+    border-radius: 0.3rem;
+    background-color: rgb(50, 133, 47);
+    padding: 0.5vh;
+    color: white;
+    font-weight: 400;
+    font-family: "Open Sans Condensed", sans-serif;
+    overflow: hidden;
+    right: 1vh;
+    font-size: 1.3vh;
+}
+
+.top-bar-inner {
+    position: absolute;
+    
+    border-radius: 0.3rem;
+    left: 2vh;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    font-family: "Open Sans Condensed", sans-serif;
+    overflow: hidden;
+    scroll-margin-left: 1vh;
+    font-size: 2vh;
+
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.job-select-title {
+    position: relative;
+    
+    border-radius: 0.3rem;
+ 
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    font-family: "Open Sans Condensed", sans-serif;
+    overflow: hidden;
+    font-size: 2vh;
+    margin-left: 2vh;
+    width: fit-content;
+
+}
+
+.licenses-selection {
+    position: relative;
+    background-color: rgb(38, 50, 70);
+    height: 83vh;
+    width: 36vh;
+    top: 1vh;
+    left: 1vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.townhall-options {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+  
+    display: flex;
+    flex-direction: row;
+}
+
+.character-information {
+    position: relative;
+    width: 100%;
+    margin-left: 2vh;
+}
+
+.character-data {
+    position: relative;
+    font-size: 1.5vh;
+    color: white;
+    font-weight: 500;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.character-idcard {
+    position: relative;
+
+    margin-left: 2vh;
+    margin-top: 1vh;
+    width: 100%;
+    overflow: hidden;
+
+    height: 23vh;
+
+    background-repeat: no-repeat;
+    background-image: url(./idcard.png);
+    background-position: center;
+    background-size: 100%;
+}
+
+.idcard-name {
+    position: absolute;
+    left: 11vh;
+    top: 4.8vh;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5vh;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.idcard-birth {
+    position: absolute;
+    left: 11.3vh;
+    top: 9.5vh;
+    color: white;
+    font-size: 1.2vh;
+    font-weight: 500;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.idcard-gender {
+    position: absolute;
+    left: 18.6vh;
+    top: 9.5vh;
+    color: white;
+    font-size: 1.2vh;
+    font-weight: 500;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.idcard-height {
+    position: absolute;
+    left: 23.1vh;
+    top: 9.5vh;
+    color: white;
+    font-size: 1.2vh;
+    font-weight: 500;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.idcard-sign {
+    position: absolute;
+    left: 11.5vh;
+    top: 12.9vh;
+    color: white;
+    font-size: 2vh;
+    font-weight: 500;
+    font-family: "graph";
+}
+
+.idcard-image {
+    position: absolute;
+    left: 0.5vh;
+    width: 10.0vh;
+    height: 12.0vh;
+    background-color: transparent;
+    top: 2vh;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.menu-selection {
+    position: relative;
+    width: 25vh;
+    margin-left: 1vh;
+    margin-top: 1vh;
+
+    height: 73vh;
+}
+
+.closeMenuButton {
+    position: absolute;
+    bottom: 1vh;
+    border-radius: 0.3rem;
+    background-color: rgb(165, 59, 59);
+    padding: 0.4vh;
+    color: white;
+    font-weight: 500;
+    font-family: "Open Sans Condensed", sans-serif;
+    overflow: hidden;
+    left: 1vh;
+    font-size: 2vh;
+}
+
+.selection-option {
+    position: relative;
+    color: white;
+    padding: 1vh;
+    font-family: "Open Sans Condensed", sans-serif;
+    width: 90%;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.100);
+}

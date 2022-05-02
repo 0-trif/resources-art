@@ -1,0 +1,348 @@
+@font-face {
+  font-family:"bold-main";
+  src: url("./fonts/Chivo-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family:"chivo";
+  src: url("./fonts/Chivo-Regular.otf") format("truetype");
+}
+
+.banking-main-container {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: fit-content;
+  padding: 3vh;
+  height: fit-content;
+  background-color: rgba(39, 37, 46, 0.9);
+}
+
+.main-title {
+  position: relative;
+
+  padding: 0.5vh;
+
+
+  position: relative;
+  /* left: 0; */
+  /* margin-right: 20px; */
+  font-size: 2.3vh;
+
+  width: fit-content;
+
+  transition: 0.1s;
+  color: white;
+  font-family: "chivo";
+  font-weight: bold;
+
+}
+
+.small-title {
+  position: relative;
+
+
+
+
+  position: relative;
+  /* left: 0; */
+  /* margin-right: 20px; */
+  font-size: 1.6vh;
+
+  width: fit-content;
+
+  transition: 0.1s;
+  color: white;
+  font-family: "chivo";
+  font-weight: bold;
+
+  text-shadow: 2px 2px 0 #000;
+}
+
+.small-title-sub {
+  font-family: "chivo";
+  transition: 0.1s;
+  font-size: 1.2vh;
+  color: white;
+  font-family: "chivo";
+}
+
+.option-withdraw {
+  position: relative;
+  padding: 1vh;
+  margin-bottom: 1vh;
+  width: 35vh;
+  background-color: rgba(39, 37, 46, 0.8);
+}
+
+.main-options {
+  position: relative;
+  width: fit-content;
+
+
+}
+
+.ui-input {
+  position: relative;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+input {
+  position: relative;
+  height: 3vh;
+  margin-left: 1vh;
+
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: white solid 0.2vh;
+
+  font-family: "chivo";
+  transition: 0.1s;
+  font-size: 1.2vh;
+  color: white;
+  font-family: "chivo";
+}
+
+.button {
+  position: relative;
+  font-size: 1.25vh;
+  padding: 1vh;
+  width: fit-content;
+  height: fit-content;
+
+
+
+  color: white;
+  justify-content: center;
+  display: flex;
+  border-radius: 0.3rem;
+
+  background-color: rgb(82, 121, 139);
+  align-items: center;
+
+  font-family: "chivo";
+}
+
+.button:hover {
+  position: relative;
+  cursor: default;
+  background-color: rgb(54, 76, 87);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+}
+
+.history {
+  position: relative;
+  height: fit-content;
+  margin-left: 2vh;
+  margin-top: -4.8vh;
+  
+  width: 70vh;
+}
+
+.history-title {
+  position: relative;
+
+  margin-top: 2vh;
+  margin-left: 0.5vh;
+
+
+  position: relative;
+  /* left: 0; */
+  /* margin-right: 20px; */
+  font-size: 1.9vh;
+
+  width: fit-content;
+
+  transition: 0.1s;
+  color: white;
+  font-family: "chivo";
+  font-weight: bold;
+
+}
+
+.history-container {
+  position: relative;
+  
+  height: 60vh;
+  width: 100%;
+  max-height: 60vh;
+ 
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.history-tab {
+  position: relative;
+  left: 50%;
+  min-height: 6.5vh;
+  transform: translate(-50%);
+  overflow: hidden;
+  height: fit-content;
+  padding: 1vh;
+  border-left: white solid 0.2vh;
+  background-color: rgba(39, 37, 46, 0.96);
+  width: 95%;
+  margin-top: 0.5vh;
+}
+
+.history-name {
+  position: relative;
+  color: white;
+  font-family: "chivo";
+  font-size: 1.7vh;
+}
+
+.history-subname {
+  position: relative;
+  color: white;
+  font-family: "chivo";
+  font-size: 1.2vh;
+}
+
+.history-time {
+  position: relative;
+  color: white;
+  font-family: "chivo";
+  font-size: 1.2vh;
+}
+
+.history-amount {
+  position: relative;
+  color: rgb(212, 59, 59);
+  font-family: "chivo";
+  font-size: 1.5vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.main-info {
+  position: absolute;
+  bottom: 2vh;
+  font-family: "chivo";
+  transition: 0.3s;
+  background-color: rgb(212, 59, 59);
+  font-size: 1vh;
+  pointer-events: all;
+  padding: 1vh;
+  z-index: 999;
+  border-radius: 0.1rem;
+  color: white;
+  left: 4vh;
+}
+.main-info:hover {
+  transform: scale(0.9);
+}
+
+.bank-amount {
+  position: relative;
+  color: white;
+  font-family: "chivo";
+  font-size: 1vh;
+}
+
+.cash-amount {
+  position: relative;
+  color: white;
+  font-family: "chivo";
+  font-size: 1vh;
+}
+
+.bank-amount-inner {
+  position: relative;
+  color: rgb(41, 102, 110) !important;
+  font-family: "chivo";
+  font-weight: bold;
+  font-size: 1.6vh !important;
+}
+
+.cash-amount-inner {
+  position: relative;
+  color: rgb(143, 44, 44) !important;
+  font-family: "chivo";
+  font-weight: bold;
+  font-size: 1.6vh !important;
+}
+
+.positive {
+  color: rgb(35, 128, 23)
+}
+.negative {
+  color: rgb(212, 59, 59)
+}
+
+.private-safe-container {
+  position: absolute;
+  right: 3vh;
+  transform: translate(0, -50%);
+  height: fit-content;
+
+  width: 30vh;
+  padding: 1vh;
+  top: 50%;
+  background-color: rgba(39, 37, 46, 0.9);
+}
+
+.current-amount-safe {
+  position: relative;
+  color: white;
+  font-size: 1.4vh;
+  font-family: "chivo";
+  margin: 1vh;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+
+}
+
+.buttons > .button {
+  margin-right: 1vh;
+  background-color: rgba(105, 109, 133, 0.959);
+  transition: 0.3s;
+  border-radius: 0.1rem !important;
+}
+.redB {
+  background-color: rgba(105, 109, 133, 0.959);
+  transition: 0.1s;
+}
+
+.buttons > .button:hover {
+  background-color: unset !important;
+}
+
+.current-safeInfo {
+  position: relative;
+  margin: 1vh;
+
+  padding: 1vh;
+  flex-direction: column;
+  display: flex;
+  color: white;
+  font-family: "chivo";
+  border-left: white solid 0.1vh;
+  border-radius: 0.1rem;
+}
+
+.info-part {
+  font-family: "chivo";
+  font-size: 1.1vh;
+  text-shadow: none;
+}

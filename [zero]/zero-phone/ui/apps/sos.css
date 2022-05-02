@@ -1,0 +1,125 @@
+.sos-title-app {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 8vh;
+}
+
+.sos-title-name {
+    position: absolute;
+    bottom: 1vh;
+    transform: translate(-50%);
+    left: 50%;
+
+    font-size: 2.5vh;
+    opacity: 1;
+    color: #004682;
+    font-weight: bold;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+#sos {
+    background-color: rgb(223, 222, 222);
+}
+
+select {
+    position: relative;
+    width: 87%;
+    left: 50%;
+    margin-top: 1vh;
+    transform: translate(-50%);
+    padding: 1vh;
+
+    outline: none;
+
+    border: none;
+    border-bottom: #004682 solid 0.4vh;
+
+    font-size: 1.5vh;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+
+.sos-input {
+    margin-top: 1vh;
+    
+}
+
+.sos-input-title {
+    position: relative;
+    color: white;
+    font-size: 1.5vh;
+    margin-top: 0.5vh;
+    margin-bottom: 0.3vh;
+    font-weight: 400;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 2vh;
+}
+.sos-input > input {
+    position: relative;
+    width: 80%;
+    left: 50%;
+
+    transform: translate(-50%);
+    padding: 1vh;
+
+    outline: none;
+    border: none;
+}
+
+.sos-span {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.sos-span > span {
+    position: relative;
+    background-color: white;
+    padding: 1vh;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2vh;
+    min-width: 80%;
+    max-width: 80%;
+    transform: translate(-50%);
+    left: 50%;
+    min-height: 20vh;
+    margin-top: 1vh;
+    overflow: auto;
+    max-height: 20vh;
+    display: block;
+    border-bottom: #004682 solid 0.4vh;
+}
+
+.sos-send-button {
+    position: relative;
+    transition: 1s;
+    padding: 1vh;
+    border-radius: 0.3rem;
+    background-color: #004682;
+    margin-left: 1.6vh;
+    color: white;
+    margin-top: 1vh;
+    font-family: "Open Sans", sans-serif;
+    width: fit-content;
+    font-size: 1.3vh;
+}
+
+.sos-send-button:hover {
+    transform: scale(0.95);
+}
+
+.sos-title-alert {
+    font-size: 2.2vh;
+    position: absolute;
+    left: 2vh;
+    bottom: 1.4vh;
+}
+
+.sos-app-notifications {
+    position: relative;
+    height: 42vh;
+    overflow: auto;
+    width: 100%;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+    <script src="./script.js" type="text/javascript"></script>
+</head>
+
+<body style="display: none;">  
+    <div class="border-top"></div>
+    <div class="border-bottom"></div>
+
+    <div class="border-bottom-infos">
+        <div class="key-info" onclick="dealership.close()">
+            <div class="key">ESC</div>
+            <div class="info">Dealer sluiten</div>
+        </div>
+        <div class="key-info" onclick="dealership.buy()">
+            <div class="key">ENTER</div>
+            <div class="info">Koop voertuig</div>
+        </div>
+
+        <div class="key-info" onclick="dealership.testdive()">
+            <div class="key">Klik</div>
+            <div class="info">Testrit voertuig</div>
+        </div>
+    </div>
+
+    <div class="display-text" style="display: none;">
+        <div class="circle" style="background-image: url(https://th.bing.com/th/id/R.4605b9d7fb097db18af9f830a5e239cc?rik=snqXiuhe%2bOriow&pid=ImgRaw&r=0)"></div>
+        <div class="text"></div>
+    </div>
+        
+    <div class="left-menu-vehicle-stats"></div>
+
+    <div class="right-menu-vehicle">
+        <div class="vehicle-menu-title">Premium Deluxe Motorsports</div>
+        <div class="vehicle-menu-subtitle" id="vehicle-menu-subtitle">Class: Sports</div>
+
+        <div class="vehicle-menu-inner">
+            <div class="vehicles-list">
+                <div class="vehicle"></div>
+            </div>
+            <div class="vehicle-class-right">
+                <div class="class">sports</div>
+            </div>
+        </div>
+
+        <div class="vehicle-buy-screen" style="display: none;">
+            <div class="vehicle-menu-title">Koop voertuig</div>
+            <div class="vehicle-menu-subtitle">Voertuig gegevens:</div>
+
+            <div class="vehicle-buy-data">
+                <div class="vehicle-buy-price">€700.00</div>
+                <div class="vehicle-buy-speed"><i class="fas fa-burn"></i>250 KM/U</div>
+
+                <div class="vehicle-buy-text">Door op kopen te klikken reken je gelijk af voor dit voertuig, je kan met zowel contant als bank betalen.</div>
+                <div class="vehicle-buy-text">Er komt geen nieuwe mogelijkheid om te bevestigen na het klikken op (kopen)</div>
+            </div>
+            
+
+            <div class="vehicle-buy-buttons">
+                <div class="button" onclick="dealership.close()">Annuleer</div>
+                <div class="button" onclick="dealership.confirmBuy()">Kopen</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+@font-face {
+    font-family:"bold-main";
+    src: url("./fonts/Chivo-Bold.otf") format("truetype");
+}
+@font-face {
+    font-family:"chivo";
+    src: url("./fonts/Chivo-Regular.otf") format("truetype");
+}
+
+
+
+body {
+    overflow: hidden;
+}
+
+.clothing-menu-container {
+    position: absolute;
+    left: 0vh;
+    height: 100%;
+    width: fit-content;
+    
+    padding: 2vh;
+    top: 0vh;
+    overflow: hidden;
+    border-right: white solid 0.2vh;
+    background-color: rgba(39, 37, 46, 0.8);
+}
+
+.clothing-menu-title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5vh;
+    color: white;
+    
+    margin-top: 3vh;
+    font-family: "bold-main";
+
+}
+
+.clothing-menu-gender-selection {
+    position: relative;
+    width: fit-content;
+    display: flex;
+
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+.gender-option {
+    position: relative;
+
+    width: 8vh;
+    height: 8vh;
+    margin-right: 1vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+    font-size: 1.2vh;
+    font-family: "bold-main";
+
+}
+.gender-option > i {
+    position: relative;
+    transition: 0.5s;
+    font-size: 3vh;
+    opacity: 0.5;
+}
+.gender-option:hover > i {
+    opacity: 1;
+}
+
+.clothing-model-selection {
+    position: relative;
+    display: flex;
+}
+
+.button {
+    position: relative;
+    width: 6vh;
+    transition: 0.3s;
+    overflow: hidden;
+    height: 3.3vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.1rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.current-model {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    border-radius: 0.1rem;
+    min-width: 14vh;
+    padding: 0.5vh;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.2vh;
+    font-family: "bold-main";
+
+    justify-content: center;
+}
+
+.clothing-menu-options {
+    position: relative;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    max-width: 35vh;
+    flex-wrap: wrap;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+.menu-option {
+    position: relative;
+    width: 7vh;
+    height: 4vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    border-radius: 0.1rem;
+    margin-right: 0.3vh;
+    margin-bottom: 0.3vh;
+    border-bottom: transparent solid 0.2vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.button:hover {
+    transform: scale(0.95);
+}
+
+.clothing-menu-current-title {
+    position: relative;
+
+    text-transform: uppercase;
+    font-size: 2vh;
+    
+    color: white;
+    font-family: "bold-main";
+    width: 36.8vh;
+}
+
+.clothing-menu-info {
+    position: absolute;
+
+    font-size: 1vh;
+    right: 1vh;
+    
+    opacity: 0.;
+    font-size: 0.9vh;
+    color: white;
+    font-family: "bold-main";
+}
+
+.menu {
+    position: relative;
+    height: fit-content;
+    transition: 1s;
+    left: 0vh;
+    width: fit-content;
+    display: none;
+
+    max-height: 63vh;
+    overflow: auto;
+}
+
+.menu-skin-option {
+    position: relative;
+
+    margin-top: 1vh;
+   
+
+    height: fit-content;
+    width: fit-content;
+
+
+    color: rgb(255, 255, 255);
+
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700 !important;
+    font-size: 1vh;
+
+}
+.menu-skin-option-label {
+    color: rgb(255, 255, 255);
+    margin-bottom: 1vh;
+    text-shadow: 1px 1px 0 #000;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700 !important;
+    font-size: 1.1vh;
+}
+
+.menu-skin-slider {
+    position: relative;
+    display: flex;
+    width: fit-content;
+}
+.menu-skin-slider-other {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    margin-top: 0.5vh;
+}
+
+.menu-skin-slider > input {
+    text-align: center;
+    border: none;
+    outline: none;
+    width: fit-content;
+    background-color: transparent;
+    border-bottom: white solid 0.1vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    
+    background-color: rgba(39, 37, 46, 0.800);
+
+    font-size: 1.3vh;
+    color: white;
+    min-width: 22.2vh;
+    overflow: show;
+    font-family: "bold-main";
+}
+
+.menu-skin-slider-other > input {
+    text-align: center;
+    border: none;
+    outline: none;
+    width: fit-content;
+    background-color: transparent;
+    border-bottom: white solid 0.1vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    
+    background-color: rgba(39, 37, 46, 0.800);
+    
+    font-size: 1.3vh;
+    color: white;
+    min-width: 22.2vh;
+    overflow: show;
+    font-family: "bold-main";
+}
+
+.menu-skin-option-current {
+    position: absolute;
+    right: 0vh;
+    top: 0.2vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.0vh;
+    width: fit-content;
+    
+}
+
+.menu-option-selected {
+    position: relative;
+    border-bottom: white solid 0.2vh;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+::-webkit-scrollbar
+{   
+    display: none;
+	width: 4px;
+
+}
+
+
+
+.saved-skin-item {
+    position: relative;
+    background-color: rgba(39, 37, 46, 0.800);
+    width: 36.3vh;
+    margin-top: 1vh;
+    height: fit-content;
+    border-left: white solid 0.2vh;
+}
+.saved-skin-item-label {
+    position: relative;
+    background-color: rgba(39, 37, 46, 0.800);
+    width: 100%;
+
+    height: fit-content;
+
+    font-family: "chivo";
+    font-size: 1.2vh;
+    color: white;
+}
+
+.label-inner {
+    position: relative;
+    left: 1vh;
+    padding: 0.5vh;
+}
+.saved-skin-buttons {
+    position: relative;
+    display: flex;
+    padding: 1vh;
+}
+
+.confirm-button {
+    position: relative;
+    padding: 1vh;
+    border-radius: 0.2rem;
+    background-color: rgb(72, 86, 117);
+    transition: 0.3s;
+    font-family: "chivo";
+    font-size: 1.2vh;
+    color: white;
+    margin: 0.3vh;
+}
+.cancel-button {
+    position: relative;
+    transition: 0.3s;
+    padding: 1vh;
+    border-radius: 0.2rem;
+    background-color: rgb(128, 62, 62);
+
+    font-family: "chivo";
+    font-size: 1.2vh;
+    color: white;
+    
+    margin: 0.3vh;
+}
+
+.confirm-button:hover {
+    transform: scale(0.9);
+}
+
+.cancel-button:hover {
+    transform: scale(0.9);
+}
+
+.clothing-save-container {
+    position: absolute;
+    left: 0vh;
+    top: 0vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(72, 86, 117, 0.904);
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    border-radius: 0.2rem;
+}
+
+.clothing-save-title {
+    position: relative;
+    text-transform: uppercase;
+
+    font-size: 1.8vh;
+    color: white;
+    margin: 2vh;
+    font-family: "bold-main";
+}
+
+.clothing-save-info {
+    position: relative;
+    margin: 2vh;
+    font-size: 1.3vh;
+    font-family: "chivo";
+    color: white;
+}
+
+.clothing-save-input {
+    padding: 0.5vh;
+    width: 35vh;
+    background-color: rgba(0, 0, 0, 0.200);
+    margin: 2vh;
+    border-radius: 0.2rem;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.clothing-save-input > input {
+    position: relative;
+    width: 95%;
+    background-color: transparent;
+    height: 3vh;
+    color: white;
+    border: none;
+    outline: none;
+
+    font-size: 1.3vh;
+    font-family: "chivo";
+    color: white;
+}
+.clothing-save-input > input::placeholder {
+    color: white;
+}
+
+.clothing-save-buttons {
+    position: absolute;
+    left: 2vh;
+    display: flex;
+    bottom: 6vh;
+}
+
+.clothing-save-exit {
+    position: absolute;
+    top: 1.8vh;
+    right: 2vh;
+    transition: 0.3s;
+    border-radius: 0.2rem;
+    background-color: rgb(141, 51, 51);
+
+
+    padding: 0.5vh;
+    font-size: 1.2vh;
+    font-family: "chivo";
+    color: white;
+}
+.clothing-save-exit:hover {
+    transform: scale(0.9);
+    background-color: rgb(189, 61, 61);
+}
+
+.clothing-cams {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1vh;
+    padding: 0.6vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cam {
+    width: 5vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    height: 5vh;
+    margin: 0.3vh;
+
+    display: flex;
+    align-items: center;
+    font-size: 1.5vh;
+    color: white;
+    justify-content: center;
+}
+
+.settings-inp {
+    position: relative;
+    width: 34vh;
+    padding: 1vh;
+    transform: translate(-50%);
+    left: 50%;
+    border-radius: 0.1rem;
+    outline: none;
+    border: none;
+    margin-bottom: 1vh;
+    height: 2vh;
+}
+
+.skin-code-button {
+    position: relative;
+    padding: 1vh;
+
+    border-radius: 0.2rem;
+    background-color: rgb(89, 90, 116);
+
+    position: relative;
+    /* left: 0; */
+    /* margin-right: 20px; */
+    font-size: 12px;
+
+    width: fit-content;
+    margin-right: 0.5vh;
+    transition: 0.1s;
+    color: white;
+
+    font-weight: bold;
+  
+    text-shadow: 1px 1px 0 #000;
+
+}
+
+.skin-code-button:hover {
+    transform: scale(0.95);
+}
+
+.skin-code-items > ::-webkit-scrollbar {
+    display: unset !important;
+}
+
+.skin-code-items {
+    position: relative;
+    max-width: 35vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    max-height: 30vh;
+    margin-bottom: 1vh;
+}
+.skin-item {
+    position: relative;
+    padding: 1vh;
+    transition: 0.1s;
+    margin-right: 0.2vh;
+    color: rgb(255, 255, 255);
+    border-bottom: white solid 0.3vh;
+}
+
+.true {
+    background-color: rgba(47, 104, 47, 0.600);
+    border-bottom: white solid 0.2vh;
+}
+.true:hover {
+    background-color: rgba(47, 104, 47, 0.600);
+}
+
+.false {
+    border-bottom: white solid 0.2vh;
+}
+.false:hover {
+    background-color: rgba(150, 43, 43, 0.6);
+}
+
+.tattoo-dlc-listing {
+    position: relative;
+    margin-left: -1vh;
+    height: fit-content;
+    max-width: 35vh;
+
+}
+.tattoo-dlc-name {
+    position: relative;
+    margin: 1vh;
+
+
+    width: fit-content;
+
+    transition: 0.1s;
+    color: white;
+
+    font-weight: bold;
+  
+    text-shadow: 1px 1px 0 #000;
+}
+
+.tattoo-dlc-list {
+    position: relative;
+    flex-direction: row;
+    max-width: 42.2vh;
+    flex-wrap: wrap;
+    display: flex;
+    overflow: auto;
+
+}
+
+.dlc-tattoo {
+    position: relative;
+    margin: 1vh;
+    font-size: 1vh;
+    
+    padding: 1vh;
+
+    width: fit-content;
+    background-color: rgba(126, 115, 165, 0.8);
+    transition: 0.1s;
+    color: white;
+
+    font-weight: bold;
+ 
+}
+.dlc-tattoo:hover {
+    transform: scale(0.9);
+    cursor:grab;
+    background-color: rgba(126, 115, 165, 0.2);
+}
+
+.selected-tattoo {
+    position: relative;
+    background-color: rgba(73, 185, 83, 0.8);
+}

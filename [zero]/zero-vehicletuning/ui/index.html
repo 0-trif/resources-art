@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./js/lib/progressbar.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"/>
+
+    <title>tuning</title>
+</head>
+<body>
+    <div class="tuning-parts">
+
+    </div>
+    
+    <div class="nfs-tuning-othermenu" id="colours-menu-primary" style="display: none;">
+
+        <div class="title" id="color">primair</div>
+        <div class="sub-title" id="colorname">Kleuren aanpassen</div>
+
+        <div class="current-max-speed-display">
+            <i style="color: white;" class="fas fa-palette"></i>
+            <div class="text-speed-inner">
+                Kleuren pallete
+            </div>
+        </div>
+
+        <div class="top-bar-colour">
+            <div class="current-color">
+                <div class="sub-title">Huidige kleur</div>
+                <div class="current-color-display" id="primaryColorx"></div>
+                <div class="rotate-color-type" id="pri-color-type" onclick="changeColourTypeMain()">
+                    <i class="fas fa-sync-alt" id="colourspinnerpre"></i>
+                    <div class="inner-type-color" id="nameColorTypePre">Normaal</div>
+                </div>
+            </div>
+            <div class="previous-colours">
+                <div class="sub-title sub-title-colorid">Basis kleuren</div>
+                <div class="current-color-mult">
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`black`)" style="background: linear-gradient(to top right, black 0%, #272727 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`red`)" style="background: linear-gradient(to top right, rgb(190, 27, 27) 0%, #272727 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`green`)" style="background: linear-gradient(to top right, rgb(17, 109, 45) 0%, #0a3b08 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`blue`)" style="background: linear-gradient(to top right, rgb(41, 43, 138) 0%, #1d6fdb 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`yellow`)" style="background: linear-gradient(to top right, rgb(255, 215, 38) 0%, #e4d552 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`orange`)" style="background: linear-gradient(to top right, rgb(255, 153, 0) 0%, #e49631 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`purple`)" style="background: linear-gradient(to top right, rgb(128, 19, 190) 0%, #4421a5 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`brown`)" style="background: linear-gradient(to top right, rgb(83, 53, 53) 0%, #361a1a 100%);"></div>
+
+                    <div class="color-prev hide-color black" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div class="color-prev hide-color black" onclick="setColorPrimary(event)" data-color_r="0" data-color_g="0" data-color_b="0" style="background: linear-gradient(to top right, rgb(0, 0, 0), #141313 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorPrimary(event)" data-color_r="24" data-color_g="24" data-color_b="24" style="background: linear-gradient(to top right, rgb(24, 23, 23), #1a1717 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorPrimary(event)" data-color_r="51" data-color_g="47" data-color_b="47" style="background: linear-gradient(to top right, rgb(51, 47, 47), rgb(18, 20, 22) 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorPrimary(event)" data-color_r="75" data-color_g="65" data-color_b="65" style="background: linear-gradient(to top right, rgb(75, 65, 65), rgb(59, 59, 52) 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorPrimary(event)" data-color_r="117" data-color_g="111" data-color_b="111" style="background: linear-gradient(to top right, rgb(117, 111, 111), #79736b 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorPrimary(event)" data-color_r="194" data-color_g="188" data-color_b="188" style="background: linear-gradient(to top right, rgb(194, 188, 188), rgb(167, 163, 179) 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorPrimary(event)" data-color_r="255" data-color_g="255" data-color_b="255" style="background: linear-gradient(to top right, rgb(180, 180, 180), #ffffff 100%);"></div>
+
+                    <div class="color-prev hide-color red" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color red" onclick="setColorPrimary(event)" data-color_r="187" data-color_g="47" data-color_b="47" style="background: linear-gradient(to top right, rgb(187, 47, 47), #a82727 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorPrimary(event)" data-color_r="167" data-color_g="34" data-color_b="34" style="background: linear-gradient(to top right, rgb(167, 34, 34), #961d1d 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorPrimary(event)" data-color_r="148" data-color_g="43" data-color_b="43" style="background: linear-gradient(to top right, rgb(148, 43, 43), rgb(92, 21, 21) 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorPrimary(event)" data-color_r="109" data-color_g="33" data-color_b="33" style="background: linear-gradient(to top right, rgb(109, 33, 33), rgb(114, 33, 33) 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorPrimary(event)" data-color_r="110" data-color_g="29" data-color_b="29" style="background: linear-gradient(to top right, rgb(110, 29, 29), #750c0c 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorPrimary(event)" data-color_r="71" data-color_g="20" data-color_b="20" style="background: linear-gradient(to top right, rgb(71, 20, 20), rgb(143, 32, 32) 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorPrimary(event)" data-color_r="65" data-color_g="27" data-color_b="27" style="background: linear-gradient(to top right, rgb(65, 27, 27), #b44545 100%);"></div>
+
+                    <div class="color-prev hide-color green" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color green" onclick="setColorPrimary(event)" data-color_r="23" data-color_g="92" data-color_b="17" style="background: linear-gradient(to top right, rgb(23, 92, 17), rgb(23, 92, 17) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorPrimary(event)" data-color_r="12" data-color_g="131" data-color_b="22" style="background: linear-gradient(to top right, rgb(12, 131, 22), rgb(12, 131, 22) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorPrimary(event)" data-color_r="5" data-color_g="148" data-color_b="29" style="background: linear-gradient(to top right, rgb(5, 148, 29), rgb(5, 148, 29) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorPrimary(event)" data-color_r="44" data-color_g="170" data-color_b="5" style="background: linear-gradient(to top right, rgb(44, 170, 5), rgb(44, 170, 5) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorPrimary(event)" data-color_r="60" data-color_g="211" data-color_b="54" style="background: linear-gradient(to top right, rgb(60, 211, 54), rgb(60, 211, 54) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorPrimary(event)" data-color_r="50" data-color_g="218" data-color_b="45" style="background: linear-gradient(to top right, rgb(50, 218, 45), rgb(50, 218, 45) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorPrimary(event)" data-color_r="45" data-color_g="255" data-color_b="73" style="background: linear-gradient(to top right, rgb(45, 255, 73), rgb(45, 255, 73) 100%);"></div>
+
+
+                    <div class="color-prev hide-color blue" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color blue" onclick="setColorPrimary(event)" data-color_r="1" data-color_g="31" data-color_b="87" style="background: linear-gradient(to top right, rgb(1, 31, 87), rgb(1, 31, 87) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorPrimary(event)" data-color_r="1" data-color_g="4" data-color_b="143" style="background: linear-gradient(to top right, rgb(1, 4, 143), rgb(1, 4, 143) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorPrimary(event)" data-color_r="21" data-color_g="4" data-color_b="117" style="background: linear-gradient(to top right, rgb(21, 4, 177), rgb(21, 4, 177) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorPrimary(event)" data-color_r="16" data-color_g="3" data-color_b="192" style="background: linear-gradient(to top right, rgb(16, 3, 192), rgb(16, 3, 192) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorPrimary(event)" data-color_r="0" data-color_g="55" data-color_b="235" style="background: linear-gradient(to top right, rgb(0, 55, 235), rgb(0, 55, 235) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorPrimary(event)" data-color_r="36" data-color_g="33" data-color_b="211" style="background: linear-gradient(to top right, rgb(36, 33, 211), rgb(36, 33, 211) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorPrimary(event)" data-color_r="57" data-color_g="75" data-color_b="238" style="background: linear-gradient(to top right, rgb(57, 75, 238), rgb(57, 75, 238) 100%);"></div>
+
+
+                    <div class="color-prev hide-color yellow" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color yellow" onclick="setColorPrimary(event)" data-color_r="75" data-color_g="77" data-color_b="0" style="background: linear-gradient(to top right, rgb(75, 77, 0), rgb(75, 77, 0) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorPrimary(event)" data-color_r="112" data-color_g="116" data-color_b="1" style="background: linear-gradient(to top right, rgb(112, 116, 0), rgb(112, 116, 0) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorPrimary(event)" data-color_r="140" data-color_g="145" data-color_b="1" style="background: linear-gradient(to top right, rgb(140, 145, 1), rgb(140, 145, 1) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorPrimary(event)" data-color_r="158" data-color_g="150" data-color_b="0" style="background: linear-gradient(to top right, rgb(145, 150, 1), rgb(145, 150, 1) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorPrimary(event)" data-color_r="158" data-color_g="163" data-color_b="0" style="background: linear-gradient(to top right, rgb(158, 163, 0), rgb(158, 163, 0) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorPrimary(event)" data-color_r="182" data-color_g="187" data-color_b="27" style="background: linear-gradient(to top right, rgb(182, 187, 27), rgb(182, 187, 27) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorPrimary(event)" data-color_r="246" data-color_g="255" data-color_b="0" style="background: linear-gradient(to top right, rgb(246, 255, 0), rgb(246, 255, 0) 100%);"></div>
+
+
+                    <div class="color-prev hide-color orange" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color orange" onclick="setColorPrimary(event)" data-color_r="241" data-color_g="131" data-color_b="4" style="background: linear-gradient(to top right, rgb(241, 131, 4), rgb(241, 131, 4) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorPrimary(event)" data-color_r="230" data-color_g="128" data-color_b="12" style="background: linear-gradient(to top right, rgb(230, 128, 12), rgb(230, 128, 12) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorPrimary(event)" data-color_r="212" data-color_g="122" data-color_b="18" style="background: linear-gradient(to top right, rgb(212, 122, 18), rgb(212, 122, 18) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorPrimary(event)" data-color_r="192" data-color_g="115" data-color_b="27" style="background: linear-gradient(to top right, rgb(192, 115, 27), rgb(192, 115, 27) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorPrimary(event)" data-color_r="182" data-color_g="110" data-color_b="29" style="background: linear-gradient(to top right, rgb(182, 110, 29), rgb(182, 110, 29) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorPrimary(event)" data-color_r="161" data-color_g="98" data-color_b="25" style="background: linear-gradient(to top right, rgb(161, 98, 25), rgb(161, 98, 25) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorPrimary(event)" data-color_r="158" data-color_g="100" data-color_b="33" style="background: linear-gradient(to top right, rgb(158, 100, 33), rgb(158, 100, 33) 100%);"></div>
+
+                    <div class="color-prev hide-color purple" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color purple" onclick="setColorPrimary(event)" data-color_r="140" data-color_g="0" data-color_b="255" style="background: linear-gradient(to top right, rgb(140, 0, 255), rgb(140, 0, 255) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorPrimary(event)" data-color_r="127" data-color_g="13" data-color_b="219" style="background: linear-gradient(to top right, rgb(127, 13, 219), rgb(127, 13, 219) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorPrimary(event)" data-color_r="110" data-color_g="24" data-color_b="182" style="background: linear-gradient(to top right, rgb(110, 23, 182), rgb(110, 23, 182) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorPrimary(event)" data-color_r="95" data-color_g="21" data-color_b="156" style="background: linear-gradient(to top right, rgb(95, 21, 156), rgb(95, 21, 156) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorPrimary(event)" data-color_r="93" data-color_g="23" data-color_b="150" style="background: linear-gradient(to top right, rgb(93, 23, 150), rgb(93, 23, 150) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorPrimary(event)" data-color_r="70" data-color_g="20" data-color_b="110" style="background: linear-gradient(to top right, rgb(70, 20, 110), rgb(70, 20, 110) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorPrimary(event)" data-color_r="38" data-color_g="12" data-color_b="59" style="background: linear-gradient(to top right, rgb(38, 12, 59), rgb(38, 12, 59) 100%);"></div>
+
+                    <div class="color-prev hide-color brown" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color brown" onclick="setColorPrimary(event)" data-color_r="71" data-color_g="48" data-color_b="48" style="background: linear-gradient(to top right, rgb(71, 48, 48), rgb(71, 48, 48) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorPrimary(event)" data-color_r="63" data-color_g="42" data-color_b="42" style="background: linear-gradient(to top right, rgb(63, 42, 42), rgb(63, 42, 42) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorPrimary(event)" data-color_r="102" data-color_g="69" data-color_b="69" style="background: linear-gradient(to top right, rgb(102, 69, 69), rgb(102, 69, 69) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorPrimary(event)" data-color_r="102" data-color_g="67" data-color_b="67" style="background: linear-gradient(to top right, rgb(102, 67, 67), rgb(102, 67, 67) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorPrimary(event)" data-color_r="124" data-color_g="84" data-color_b="84" style="background: linear-gradient(to top right, rgb(124, 84, 84), rgb(124, 84, 84) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorPrimary(event)" data-color_r="161" data-color_g="109" data-color_b="109" style="background: linear-gradient(to top right, rgb(161, 109, 109), rgb(161, 109, 109) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorPrimary(event)" data-color_r="177" data-color_g="123" data-color_b="123" style="background: linear-gradient(to top right, rgb(177, 123, 123), rgb(177, 123, 123) 100%);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="colour-picker-box">
+            <div class="color-picker">
+                <div class="sub-title" style="position: relative !important; left: 50% !important; transform: translate(-50%); width: fit-content;">Color picker</div>
+                <div class="pickerwheel">
+                    <div id="picker"></div>
+                    <div class="rgbcode">
+                        <input class="rgbcode-i pri-r" oninput="syncColorPrimary()" style="border-bottom: rgba(255, 0, 0, 0.466) solid 0.3vh;" value="0">
+                        <input class="rgbcode-i pri-g" oninput="syncColorPrimary()" style="border-bottom: rgba(0, 92, 128, 0.466) solid 0.3vh;" value="0">
+                        <input class="rgbcode-i pri-b" oninput="syncColorPrimary()" style="border-bottom: rgba(0, 0, 255, 0.466) solid 0.3vh;" value="0">
+                        <input class="rgbcode-i pri-hex" oninput="syncColorPrimaryHex()" style="border-bottom: rgba(0, 0, 0, 0.466) solid 0.3vh;" value="#fffff">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="nextColorButton pri selected-button" onclick="openPrimary()">
+                <div class="button-inner">
+                    Primary
+                </div>
+            </div>
+            <div class="nextColorButton sec" onclick="openSecondary()">
+                <div class="button-inner">
+                    Secondary
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="nextColorButton" onclick="CancelColourChanges()">
+                <div class="button-inner">
+                    Annuleer
+                </div>
+            </div>
+            <div class="nextColorButton" onclick="SaveColourChanges()">
+                <div class="button-inner">
+                    Bevestig
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nfs-tuning-othermenu" id="colours-menu-secondary" style="display: none;">
+
+        <div class="title" id="color">secundair</div>
+        <div class="sub-title" id="colorname">Kleuren aanpassen</div>
+
+        <div class="current-max-speed-display">
+            <i style="color: white;" class="fas fa-palette"></i>
+            <div class="text-speed-inner">
+                Kleuren pallete
+            </div>
+        </div>
+
+        <div class="top-bar-colour">
+            <div class="current-color">
+                <div class="sub-title">Huidige kleur</div>
+                <div class="current-color-display" id="secondaryColorx"></div>
+                <div class="rotate-color-type" id="sec-color-type" onclick="changeColourTypeSec()">
+                    <i class="fas fa-sync-alt" id="colourspinnersec"></i>
+                    <div class="inner-type-color" id="nameColorTypeSec">Normaal</div>
+                </div>
+            </div>
+            <div class="previous-colours">
+                <div class="sub-title sub-title-colorid">Basis kleuren</div>
+                <div class="current-color-mult">
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`black`)" style="background: linear-gradient(to top right, black 0%, #272727 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`red`)" style="background: linear-gradient(to top right, rgb(190, 27, 27) 0%, #272727 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`green`)" style="background: linear-gradient(to top right, rgb(17, 109, 45) 0%, #0a3b08 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`blue`)" style="background: linear-gradient(to top right, rgb(41, 43, 138) 0%, #1d6fdb 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`yellow`)" style="background: linear-gradient(to top right, rgb(255, 215, 38) 0%, #e4d552 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`orange`)" style="background: linear-gradient(to top right, rgb(255, 153, 0) 0%, #e49631 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`purple`)" style="background: linear-gradient(to top right, rgb(128, 19, 190) 0%, #4421a5 100%);"></div>
+                    <div class="color-prev primary-main-color" onclick="openColorClass(`brown`)" style="background: linear-gradient(to top right, rgb(83, 53, 53) 0%, #361a1a 100%);"></div>
+
+                    <div class="color-prev hide-color black" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div class="color-prev hide-color black" onclick="setColorSec(event)" data-color_r="0" data-color_g="0" data-color_b="0" style="background: linear-gradient(to top right, rgb(0, 0, 0), #141313 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorSec(event)" data-color_r="24" data-color_g="24" data-color_b="24" style="background: linear-gradient(to top right, rgb(24, 23, 23), #1a1717 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorSec(event)" data-color_r="51" data-color_g="47" data-color_b="47" style="background: linear-gradient(to top right, rgb(51, 47, 47), rgb(18, 20, 22) 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorSec(event)" data-color_r="75" data-color_g="65" data-color_b="65" style="background: linear-gradient(to top right, rgb(75, 65, 65), rgb(59, 59, 52) 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorSec(event)" data-color_r="117" data-color_g="111" data-color_b="111" style="background: linear-gradient(to top right, rgb(117, 111, 111), #79736b 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorSec(event)" data-color_r="194" data-color_g="188" data-color_b="188" style="background: linear-gradient(to top right, rgb(194, 188, 188), rgb(167, 163, 179) 100%);"></div>
+                    <div class="color-prev hide-color black" onclick="setColorSec(event)" data-color_r="255" data-color_g="255" data-color_b="255" style="background: linear-gradient(to top right, rgb(180, 180, 180), #ffffff 100%);"></div>
+
+                    <div class="color-prev hide-color red" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color red" onclick="setColorSec(event)" data-color_r="187" data-color_g="47" data-color_b="47" style="background: linear-gradient(to top right, rgb(187, 47, 47), #a82727 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorSec(event)" data-color_r="167" data-color_g="34" data-color_b="34" style="background: linear-gradient(to top right, rgb(167, 34, 34), #961d1d 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorSec(event)" data-color_r="148" data-color_g="43" data-color_b="43" style="background: linear-gradient(to top right, rgb(148, 43, 43), rgb(92, 21, 21) 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorSec(event)" data-color_r="109" data-color_g="33" data-color_b="33" style="background: linear-gradient(to top right, rgb(109, 33, 33), rgb(114, 33, 33) 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorSec(event)" data-color_r="110" data-color_g="29" data-color_b="29" style="background: linear-gradient(to top right, rgb(110, 29, 29), #750c0c 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorSec(event)" data-color_r="71" data-color_g="20" data-color_b="20" style="background: linear-gradient(to top right, rgb(71, 20, 20), rgb(143, 32, 32) 100%);"></div>
+                    <div class="color-prev hide-color red" onclick="setColorSec(event)" data-color_r="65" data-color_g="27" data-color_b="27" style="background: linear-gradient(to top right, rgb(65, 27, 27), #b44545 100%);"></div>
+
+                    <div class="color-prev hide-color green" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color green" onclick="setColorSec(event)" data-color_r="23" data-color_g="92" data-color_b="17" style="background: linear-gradient(to top right, rgb(23, 92, 17), rgb(23, 92, 17) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorSec(event)" data-color_r="12" data-color_g="131" data-color_b="22" style="background: linear-gradient(to top right, rgb(12, 131, 22), rgb(12, 131, 22) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorSec(event)" data-color_r="5" data-color_g="148" data-color_b="29" style="background: linear-gradient(to top right, rgb(5, 148, 29), rgb(5, 148, 29) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorSec(event)" data-color_r="44" data-color_g="170" data-color_b="5" style="background: linear-gradient(to top right, rgb(44, 170, 5), rgb(44, 170, 5) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorSec(event)" data-color_r="60" data-color_g="211" data-color_b="54" style="background: linear-gradient(to top right, rgb(60, 211, 54), rgb(60, 211, 54) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorSec(event)" data-color_r="50" data-color_g="218" data-color_b="45" style="background: linear-gradient(to top right, rgb(50, 218, 45), rgb(50, 218, 45) 100%);"></div>
+                    <div class="color-prev hide-color green" onclick="setColorSec(event)" data-color_r="45" data-color_g="255" data-color_b="73" style="background: linear-gradient(to top right, rgb(45, 255, 73), rgb(45, 255, 73) 100%);"></div>
+
+
+                    <div class="color-prev hide-color blue" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color blue" onclick="setColorSec(event)" data-color_r="1" data-color_g="31" data-color_b="87" style="background: linear-gradient(to top right, rgb(1, 31, 87), rgb(1, 31, 87) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorSec(event)" data-color_r="1" data-color_g="4" data-color_b="143" style="background: linear-gradient(to top right, rgb(1, 4, 143), rgb(1, 4, 143) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorSec(event)" data-color_r="21" data-color_g="4" data-color_b="117" style="background: linear-gradient(to top right, rgb(21, 4, 177), rgb(21, 4, 177) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorSec(event)" data-color_r="16" data-color_g="3" data-color_b="192" style="background: linear-gradient(to top right, rgb(16, 3, 192), rgb(16, 3, 192) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorSec(event)" data-color_r="0" data-color_g="55" data-color_b="235" style="background: linear-gradient(to top right, rgb(0, 55, 235), rgb(0, 55, 235) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorSec(event)" data-color_r="36" data-color_g="33" data-color_b="211" style="background: linear-gradient(to top right, rgb(36, 33, 211), rgb(36, 33, 211) 100%);"></div>
+                    <div class="color-prev hide-color blue" onclick="setColorSec(event)" data-color_r="57" data-color_g="75" data-color_b="238" style="background: linear-gradient(to top right, rgb(57, 75, 238), rgb(57, 75, 238) 100%);"></div>
+
+
+                    <div class="color-prev hide-color yellow" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color yellow" onclick="setColorSec(event)" data-color_r="75" data-color_g="77" data-color_b="0" style="background: linear-gradient(to top right, rgb(75, 77, 0), rgb(75, 77, 0) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorSec(event)" data-color_r="112" data-color_g="116" data-color_b="1" style="background: linear-gradient(to top right, rgb(112, 116, 0), rgb(112, 116, 0) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorSec(event)" data-color_r="140" data-color_g="145" data-color_b="1" style="background: linear-gradient(to top right, rgb(140, 145, 1), rgb(140, 145, 1) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorSec(event)" data-color_r="158" data-color_g="150" data-color_b="0" style="background: linear-gradient(to top right, rgb(145, 150, 1), rgb(145, 150, 1) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorSec(event)" data-color_r="158" data-color_g="163" data-color_b="0" style="background: linear-gradient(to top right, rgb(158, 163, 0), rgb(158, 163, 0) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorSec(event)" data-color_r="182" data-color_g="187" data-color_b="27" style="background: linear-gradient(to top right, rgb(182, 187, 27), rgb(182, 187, 27) 100%);"></div>
+                    <div class="color-prev hide-color yellow" onclick="setColorSec(event)" data-color_r="246" data-color_g="255" data-color_b="0" style="background: linear-gradient(to top right, rgb(246, 255, 0), rgb(246, 255, 0) 100%);"></div>
+
+
+                    <div class="color-prev hide-color orange" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color orange" onclick="setColorSec(event)" data-color_r="241" data-color_g="131" data-color_b="4" style="background: linear-gradient(to top right, rgb(241, 131, 4), rgb(241, 131, 4) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorSec(event)" data-color_r="230" data-color_g="128" data-color_b="12" style="background: linear-gradient(to top right, rgb(230, 128, 12), rgb(230, 128, 12) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorSec(event)" data-color_r="212" data-color_g="122" data-color_b="18" style="background: linear-gradient(to top right, rgb(212, 122, 18), rgb(212, 122, 18) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorSec(event)" data-color_r="192" data-color_g="115" data-color_b="27" style="background: linear-gradient(to top right, rgb(192, 115, 27), rgb(192, 115, 27) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorSec(event)" data-color_r="182" data-color_g="110" data-color_b="29" style="background: linear-gradient(to top right, rgb(182, 110, 29), rgb(182, 110, 29) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorSec(event)" data-color_r="161" data-color_g="98" data-color_b="25" style="background: linear-gradient(to top right, rgb(161, 98, 25), rgb(161, 98, 25) 100%);"></div>
+                    <div class="color-prev hide-color orange" onclick="setColorSec(event)" data-color_r="158" data-color_g="100" data-color_b="33" style="background: linear-gradient(to top right, rgb(158, 100, 33), rgb(158, 100, 33) 100%);"></div>
+
+                    <div class="color-prev hide-color purple" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color purple" onclick="setColorSec(event)" data-color_r="140" data-color_g="0" data-color_b="255" style="background: linear-gradient(to top right, rgb(140, 0, 255), rgb(140, 0, 255) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorSec(event)" data-color_r="127" data-color_g="13" data-color_b="219" style="background: linear-gradient(to top right, rgb(127, 13, 219), rgb(127, 13, 219) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorSec(event)" data-color_r="110" data-color_g="24" data-color_b="182" style="background: linear-gradient(to top right, rgb(110, 23, 182), rgb(110, 23, 182) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorSec(event)" data-color_r="95" data-color_g="21" data-color_b="156" style="background: linear-gradient(to top right, rgb(95, 21, 156), rgb(95, 21, 156) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorSec(event)" data-color_r="93" data-color_g="23" data-color_b="150" style="background: linear-gradient(to top right, rgb(93, 23, 150), rgb(93, 23, 150) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorSec(event)" data-color_r="70" data-color_g="20" data-color_b="110" style="background: linear-gradient(to top right, rgb(70, 20, 110), rgb(70, 20, 110) 100%);"></div>
+                    <div class="color-prev hide-color purple" onclick="setColorSec(event)" data-color_r="38" data-color_g="12" data-color_b="59" style="background: linear-gradient(to top right, rgb(38, 12, 59), rgb(38, 12, 59) 100%);"></div>
+
+                    <div class="color-prev hide-color brown" onclick="goBack()" style="background: transparent;">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="color-prev hide-color brown" onclick="setColorSec(event)" data-color_r="71" data-color_g="48" data-color_b="48" style="background: linear-gradient(to top right, rgb(71, 48, 48), rgb(71, 48, 48) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorSec(event)" data-color_r="63" data-color_g="42" data-color_b="42" style="background: linear-gradient(to top right, rgb(63, 42, 42), rgb(63, 42, 42) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorSec(event)" data-color_r="102" data-color_g="69" data-color_b="69" style="background: linear-gradient(to top right, rgb(102, 69, 69), rgb(102, 69, 69) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorSec(event)" data-color_r="102" data-color_g="67" data-color_b="67" style="background: linear-gradient(to top right, rgb(102, 67, 67), rgb(102, 67, 67) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorSec(event)" data-color_r="124" data-color_g="84" data-color_b="84" style="background: linear-gradient(to top right, rgb(124, 84, 84), rgb(124, 84, 84) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorSec(event)" data-color_r="161" data-color_g="109" data-color_b="109" style="background: linear-gradient(to top right, rgb(161, 109, 109), rgb(161, 109, 109) 100%);"></div>
+                    <div class="color-prev hide-color brown" onclick="setColorSec(event)" data-color_r="177" data-color_g="123" data-color_b="123" style="background: linear-gradient(to top right, rgb(177, 123, 123), rgb(177, 123, 123) 100%);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="colour-picker-box">
+            <div class="color-picker">
+                <div class="sub-title" style="position: relative !important; left: 50% !important; transform: translate(-50%); width: fit-content;">Color picker</div>
+                <div class="pickerwheel">
+                    <div id="picker-sec"></div>
+                    <div class="rgbcode">
+                        <input class="rgbcode-i sec-r"  oninput="syncColorSecondary()" style="border-bottom: rgba(255, 0, 0, 0.466) solid 0.3vh;" value="0">
+                        <input class="rgbcode-i sec-g"  oninput="syncColorSecondary()" style="border-bottom: rgba(0, 92, 128, 0.466) solid 0.3vh;" value="0">
+                        <input class="rgbcode-i sec-b"  oninput="syncColorSecondary()" style="border-bottom: rgba(0, 0, 255, 0.466) solid 0.3vh;" value="0">
+                        <input class="rgbcode-i sec-hex"  oninput="syncColorSecondaryHex()" style="border-bottom: rgba(0, 0, 0, 0.466) solid 0.3vh;" value="#fffff">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="nextColorButton pri selected-button" onclick="openPrimary()">
+                <div class="button-inner">
+                    Primary
+                </div>
+            </div>
+            <div class="nextColorButton sec" onclick="openSecondary()">
+                <div class="button-inner">
+                    Secondary
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="nextColorButton" onclick="CancelColourChanges()">
+                <div class="button-inner">
+                    Annuleer
+                </div>
+            </div>
+            <div class="nextColorButton" onclick="SaveColourChanges()">
+                <div class="button-inner">
+                    Bevestig
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vehicle-wheel-menu" style="display: none;">
+        <div class="wheel-title">Banden aanpassen</div>
+        <div class="wheel-option">
+            <div class="wheel-option-title">Voorbanden</div>
+            <div class="wheel-option-input">
+                <div class="input-title">Rotatie</div>
+                <input type="range" id="rotation-f"  oninput="ChangeWheelsRotation(event)" step="0.01" value="0" min="-0.5" max="0.5">
+            </div>
+            <div class="wheel-option-input">
+                <div class="input-title">Breedte</div>
+                <input type="range" id="width-f"  oninput="ChangeWheelsRotation(event)" step="0.01" value="0" min="-0.99" max="-0.76">
+            </div>
+        </div>
+        <div class="wheel-option">
+            <div class="wheel-option-title">Achterbanden</div>
+            <div class="wheel-option-input">
+                <div class="input-title">Rotatie</div>
+                <input type="range" id="rotation-r"  oninput="ChangeWheelsRotation(event)" step="0.01" value="0" min="-0.5" max="0.5">
+            </div>
+            <div class="wheel-option-input">
+                <div class="input-title">Breedte</div>
+                <input type="range" id="width-r"  oninput="ChangeWheelsRotation(event)" step="0.01" value="0" min="-0.99" max="-0.76">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div class="save" onclick="resetWheel()">
+                Reset 
+            </div>
+            <div class="save" onclick="saveWheel()">
+                Opslaan
+            </div>
+        </div>
+    </div>
+ 
+    <div class="tuning-menu" style="display: none;">
+
+        <div class="tuning-logo" style="background-image: url(./banner.png);">
+            <div class="current-tuning-string">1/120</div>
+        </div>
+
+        <div class="current-tunings">
+            <div class="tuning-logo"></div>
+            <div class="tuning-logo"></div>
+            <div class="tuning-logo"></div>
+            <div class="tuning-logo"></div>
+            <div class="tuning-logo"></div>
+            <div class="tuning-logo"></div>
+            <div class="tuning-logo"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/lib/progressbar.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+
+    <script>
+        var colorPicker = new iro.ColorPicker("#picker", {
+            // Set the size of the color picker
+            width: 190,
+            // Set the initial color to pure red
+            color: "#ffff",
+        });
+        colorPicker.on("color:change", colorChange);
+
+        var colorPicker2 = new iro.ColorPicker("#picker-sec", {
+            // Set the size of the color picker
+            width: 190,
+            // Set the initial color to pure red
+            color: "#ffff",
+        });
+        colorPicker2.on("color:change", colorChange2);
+    </script>
+</body>
+</html> 

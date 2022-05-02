@@ -1,0 +1,1034 @@
+body {
+    overflow: hidden;
+}
+
+
+@font-face {
+    font-family:"NFS";
+    src: url("./fonts/644-font.otf") format("truetype");
+}
+
+.tuning-parts {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tuning-part {
+    position: absolute;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, -100%);
+    flex-direction: column;
+    width: fit-content;
+}
+
+.selected > .part-icon {
+    opacity: 1 !important;
+    color: rgb(66, 182, 182) !important;
+
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+.selected > .part-name {
+    display: flex !important;
+    flex-direction: row !important;
+    text-align: center;
+    width: fit-content;
+}
+
+
+.part-icon {
+    position: relative;
+    
+    height: 2vh;
+    width: 2vh;
+    background-image: url(https://cdn.discordapp.com/attachments/921482708209786931/943125474400428092/R_wit.png);
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.1;
+}
+
+.part-name {
+    position: absolute;
+    font-size: 1.5vh;
+    margin-top: -5vh;
+    display: none;
+    text-transform: uppercase;
+    color: white;
+    transform: skew(10deg);
+    font-family: "NFS";
+    text-align: center;
+
+    overflow: hidden;
+    margin-bottom: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.151);
+    padding: 0.4vh;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.tuning-menu {
+    position: absolute;
+    display: flex;
+    left: 1vh;
+    bottom: 1vh;
+    width: fit-content;
+    max-width: 83%;
+   
+}
+
+.tuning-logo {
+    position: relative;
+    transition: 1s;
+    min-width: 35vh;
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.500);
+    margin-right: 0.6vh;
+    margin-bottom: 0.1vh;
+    border-radius: 0.1rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.current-tunings {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.selected-part {
+    background-color: rgba(0, 0, 0, 0.800);
+    transform: scale(0.9);
+}
+
+.tuning-logo-icon > i {
+    color: white;
+    font-size: 5vh;;
+}
+.tuning-logo-label {
+    color: white;
+    transform: skew(10deg);
+    font-family: "NFS";
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+.current-tuning-string {
+    position: absolute;
+    color: white;
+    transform: skew(10deg);
+    font-family: "NFS";
+    font-weight: bold;
+    font-size: 3vh;
+    transform: skew(3deg);
+    left: 1vh;
+    top: -4vh;
+}
+
+.vehicle-wheel-menu {
+    position: absolute;
+    left: 1vh;
+    top: 42%;
+    transform: translate(0, -50%);
+    padding: 1vh;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.500);
+}
+
+.wheel-title {
+    position: relative;
+    color: white;
+    transform: skew(3deg);
+    font-family: "NFS";
+    font-weight: bold;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+}
+.wheel-option-title {
+    position: relative;
+    color: white;
+    transform: skew(3deg);
+    font-family: "NFS";
+    font-weight: bold;
+    font-size: 2vh;
+    text-transform: uppercase;
+}
+
+.wheel-option-input {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.100);
+    padding: 1vh;
+    width: 35vh;
+    margin-bottom: 1vh;
+}
+
+.input-title {
+    position: relative;
+    color: white;
+    transform: skew(3deg);
+    font-family: "NFS";
+    font-weight: bold;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+}
+
+
+.wheel-option-input > input {
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    user-select: none;
+    outline: none;
+    height: 3vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.418);
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+    margin-bottom: 1vh;
+}
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* 1 */
+    height: 40px;
+    background: rgba(0, 0, 0, 0.418);
+    box-shadow: -100vw 0 0 100vw rgba(0, 0, 0, 0.288);
+    border: 2px solid #999; /* 1 */
+}
+
+.save {
+    position: relative;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.500);
+    height: 6vh;
+    width: 100%;
+    margin-right: 0.3vh;
+    margin-left: 0.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "NFS";
+    font-weight: bold;
+    font-size: 3vh;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+.save:hover {
+    transform: skew(5deg);
+}
+
+* {
+    user-select: none;
+}
+
+@font-face {
+    font-family:"NFS";
+    src: url("./fonts/644-font.otf") format("truetype");
+}
+
+
+#body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    
+}
+.nfs-main-screen {
+    position: absolute;
+    height: 100%;
+}
+.nfs-mid-stats {
+    position: relative;
+    top: 50%;
+    left: 2vh;
+    transform: translate(0, -50%);
+    width: 40vh;
+    height: 55vh;
+    border-top: rgb(255, 255, 255) solid 0.6vh;
+    border-bottom: rgb(255, 255, 255) solid 0.6vh;
+    background-color: rgba(0, 0, 0, 0.444);
+}
+.nfs-tuning-othermenu {
+    position: absolute;
+    top: 45%;
+    left: 1vh;
+    transform: translate(0, -50%);
+    width: 40vh;
+    height: fit-content;
+    border-top: rgb(255, 255, 255) solid 0.6vh;
+    border-bottom: rgb(255, 255, 255) solid 0.6vh;
+    background-color: rgba(0, 0, 0, 0.444);
+}
+
+.title {
+    font-family: "NFS";
+    color: white;
+    font-size: 4vh;
+    text-transform: uppercase;
+    margin-left: 1vh;
+}
+.sub-title {
+    font-family: "NFS";
+    color: white;
+    font-size: 2vh;
+    text-transform: uppercase;
+    margin-left: 1vh;
+}
+
+.current-max-speed-display {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+
+    display: flex;
+    color: rgb(255, 102, 0);
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+.current-max-speed-display > i {
+    font-size: 2vh;
+}
+.current-max-speed-display > .text-speed-inner {
+    font-family: "NFS";
+    color: white;
+    font-size: 2vh;
+    text-transform: uppercase;
+    margin-left: 1vh;
+}
+
+.stat-bar {
+    height: fit-content;
+    width: 95%;
+    display: flex;
+    margin-top: 1vh;
+    flex-direction: column;
+}
+.stat-bar-title {
+    font-family: "NFS";
+    color: white;
+    font-size: 1.7vh;
+    text-transform: uppercase;
+    margin-left: 1vh;
+}
+.start-bar-inner {
+    position: relative;
+    height: 2.5vh;
+    background-color: rgba(32, 32, 32, 0.411);
+    width: 100%;
+    left: 1vh;
+    margin-top: 0.3vh;
+}
+.start-bar-max {
+    position: absolute;
+    top: 50%;
+    right: -0.5vh;
+    transform: translate(0, -50%);
+    width: 4vh;
+    height: 3vh;
+    background-color: rgb(253, 253, 253);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "NFS";
+    color: rgb(5, 5, 5);
+    font-size: 1.5vh;
+}
+
+.stat-bar-fill {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    min-width: 5%;
+    max-width: 100%;
+    transform: translate(0, -50%);
+    width: 0vh;
+    height: 100%;
+    background-color: rgb(253, 253, 253);
+    border-right: rgba(0, 0, 0, 0.479) solid 3px;
+}
+
+.nfs-bottom-options {
+    position: absolute;
+    bottom: 4vh;
+    width: fit-content;
+    height: fit-content;
+    left: 2vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.nfs-menu-option {
+    width: 30vh;
+    background-color: rgba(0, 0, 0, 0.444);
+    height: 15vh;
+    margin-right: 1vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nfs-menu-option > i {
+    color: white;
+    font-size: 5vh
+}
+.nfs-menu-option > .menu-title {
+    font-family: "NFS";
+    color: rgb(255, 255, 255);
+    font-size: 3vh;
+    text-transform: uppercase;
+}
+
+.bar-inner-number {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "NFS";
+    color: rgb(0, 0, 0);
+    font-size: 1.5vh;
+}
+
+.press-button {
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.555);
+    height: 4vh;
+    min-width: 20vh;
+    overflow: hidden;
+
+    margin-right: 2vh;
+    display: flex;
+    flex-direction: row;
+}
+.press-icon {
+    position: relative;
+    height: 100%;
+    width: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+
+    font-family: "NFS";
+    color: rgb(0, 0, 0);
+    font-size: 2vh;
+    font-weight: 800;
+}
+.press-text {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "NFS";
+    color: rgb(255, 255, 255);
+    font-size: 1.8vh;
+}
+
+.nfs-part-display {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    height: fit-content;
+    width: fit-content;
+
+    width:  2.5vh;
+    height: 2.5vh;
+
+    border: rgb(21, 80, 70) solid 0.2vh;
+    
+    border-radius: 50%;
+}
+
+.nfs-part-display > i {
+    color: white;
+}
+
+.nfs-tuning-parts {
+    position: absolute;
+    bottom: 4vh;
+    width:  fit-content;
+    height: fit-content;
+    max-width: 120vh;
+    left: 70vh;
+    overflow-x: scroll;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.nfs-tuning-option-container {
+    width: 60vh;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.555);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.nfs-tuning-items {
+    position: relative;
+    left: 50%;
+    top: 1vh;
+    transform: translate(-50%);
+    width: 95%;
+    height: 8.2qvh;
+    overflow: scroll;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.selected-tuning-item {
+    border: white solid 0.2vh;
+}
+
+.tuning-item {
+    position: relative;
+    height: 8vh;
+    min-width: 8vh;
+    background-color: rgba(0, 0, 0, 0.281);
+    margin-right: 1vh;
+}
+.tuning-item-title {
+    position: absolute;
+    bottom: 0vh;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.719);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.title-inner {
+    font-family: "NFS";
+    font-size: 2vh;
+    max-height: 3vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.nfs-tuning-bottom {
+    position: relative;
+    width: 95%;
+    height: 4vh;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 2vh;
+
+}
+.tuning-label {
+    position: absolute;
+    left: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 3vh;
+    overflow: hidden;
+    height: 100%;
+    width: fit-content;
+    color: white;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: "NFS";
+    font-size: 3vh;
+}
+
+.tuning-price {
+    position: absolute;
+    right: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: fit-content;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    background-color: rgba(0, 0, 0, 0.445);
+}
+.tuning-price > i {
+    color: rgb(172, 82, 160);
+    font-size: 2vh;
+    margin-left: 1vh;
+}
+.tuning-price > .price {
+    color: rgb(172, 82, 160);
+    font-family: "NFS";
+    font-size: 2.4vh;
+
+    margin-right: 1vh;
+
+    margin-left: 0.5vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.top-bar-colour {
+    position: relative;
+    width: 100%;
+    left: 50%;
+ 
+    transform: translate(-50%);
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+}
+.current-color-display {
+    width: 15vh;
+    height: 3vh;
+    background-color: rgba(34, 185, 60, 0.836);
+    border: white solid 2px;
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+}
+.rotate-color-type {
+    width: 15vh;
+    height: 3vh;    
+    background-color: rgba(0, 0, 0, 0.222);
+    border: white solid 2px;
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rotate-color-type > i {
+    color: white;
+    margin-right: 0.5vh;
+}
+.inner-type-color {
+    font-family: "NFS";
+    color: white;
+    text-transform: uppercase;
+    font-size: 2vh;
+}
+
+.current-color-mult {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+}
+.color-prev {
+    width: 4vh;
+    margin-bottom: 1vh;
+    height: 3vh;
+    margin-left: 1vh;
+    border: white solid 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.nfs-tuning-othermenu > .sub-title {
+    margin-bottom: 1vh;
+}
+.colour-picker-box {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+#colorpicker {
+    margin-left: 1vh;
+}
+
+.color-picker {
+    position: relative;
+    flex-direction: column;
+
+
+    width: 100%;
+}
+
+.pickerwheel{
+    margin-left: 1vh;
+    display: flex;
+    flex-direction: row;
+}
+.rgbcode {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+.rgbcode-i {
+    margin-bottom: 1vh;
+    width: 7vh;
+    height: 3vh;
+    border: none;
+    outline: none;
+    border-radius: 0.1rem;
+
+    color: white;
+    font-family: "NFS";
+    font-size: 2VH;
+
+    background-color: transparent;
+
+    text-align: center;
+}
+
+.bottom-layer {
+    position: absolute;
+    bottom: 0px;
+    height: 5vh;
+    width: 100%;
+}
+.bottom-layer > .price {
+    position: relative;
+    bottom: 0px !important;
+    height: 100%;
+    transform: translate(0, 0) !important;
+}
+
+.buttons {
+    position: relative;
+    width: fit-content;
+    height: 5vh;
+    margin-top: 2vh;
+    width: 98%;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: flex;
+    margin-bottom: 2vh;
+}
+
+.nextColorButton {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.500);
+    width: 100%;
+    margin-right: 0.5vh;
+    margin-left: 0.5vh;
+    border-bottom: transparent solid 0.3vh;
+}
+.nextColorButton:hover {
+    transform: skew(3deg);
+}
+.selected-button > .button-inner {
+    border-bottom: white solid 0.3vh;
+}
+.button-inner {
+    margin-right: 1vh;
+    margin-left: 1vh;
+    font-family: "NFS";
+    color: white;
+}
+
+.nfs-buy-confirm {
+    position: absolute;
+    width: 50vh;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.333);
+
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+
+}
+.tuning-items-bought {
+    position: relative;
+    height: 25vh;
+    width: 50%;
+ 
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-right: 0.1vh;
+}
+.tuning-items-bought-secondary {
+    position: relative;
+    height: 35vh;
+    width: 50%;
+  
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-right: 0.1vh;
+}
+
+.sub-cats {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox {
+    width: 2vh;
+    border-radius: 0.2rem;
+    height: 2vh;
+    background: rgba(0, 0, 0, 0.363);
+    margin-left: 1vh;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type=checkbox] {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.bought-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+.bought-item-text {
+    margin-left: 1vh;
+    display: flex;
+    width: 100%;
+}
+.item-bought-label {
+    color: white;
+    font-family: "NFS";
+}
+.price-tag {
+    position: absolute;
+    width: fit-content;
+    right: 0px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.233) 0vh 0.1vh 0.3vh;
+}
+.price-tag-inner {
+    color: rgb(172, 82, 160);
+    font-family: "NFS";
+    margin-right: 1vh;
+    margin-left: 1vh;
+    text-transform: uppercase;
+    height: 2vh;
+}
+
+.color-prev > i {
+    transition: 0.5s;
+    color: rgb(141, 35, 35);
+    font-size: 6vh;
+    opacity: 0.5;
+}
+.color-prev:hover > i {
+    opacity: 0.8;
+}
+
+.fa-spin-hover {
+    -webkit-animation: spin 0.5s infinite linear;
+    -moz-animation: spin 0.5s infinite linear;
+    -o-animation: spin 0.5s infinite linear;
+    animation: spin 0.5s infinite linear;
+  }
+  
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.checkbox > i {
+    color: white;
+}
+
+.totalPriceTag {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    height: 4vh;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+}
+.price-tag-inner-local {
+    position: relative;
+    color: rgb(172, 82, 160);
+    font-family: "NFS";
+    margin-right: 1vh;
+    margin-left: 1vh;
+    text-transform: uppercase;
+    height: 2vh;
+    font-size: 3.5vh;
+}
+
+.complete-buy-tunings {
+    position: relative;
+    width: 20vh;
+    background-color: rgba(0, 0, 0, 0.555);
+    height: 5vh;
+    margin-bottom: 1vh;
+    left: 1vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: "NFS";
+    font-size: 3vh;
+    text-transform: uppercase;
+}
+
+.wheel-classes {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 3vh;
+
+}
+
+.wheel-cats {
+    position: relative;
+
+    width: 90%;
+    left: 50%;
+    height: fit-content;
+    transform: translate(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: "NFS";
+    font-size: 3vh;
+    text-transform: uppercase;
+}
+
+.wheel-goleft {
+    padding: 1vh;
+}
+
+.wheel-goright {
+    padding: 1vh;
+}
+
+.wheel-list {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 90%;
+}
+.wheel {
+    position: relative;
+    transition: 0.2s;
+    width: 90%;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    background-color: rgba(53, 52, 52, 0.192);
+    border-radius: 0.2rem;
+    margin-bottom: 0.1vh;
+}
+.wheel:hover {
+    transform: skew(5deg);
+}
+.wheel-icon {
+    position: relative;
+    font-size: 3vh;
+    padding: 1vh;
+}
+.wheel-name {
+    color: white;
+    font-family: "NFS";
+    font-size: 1.6vh;
+    text-transform: uppercase;
+    margin-left: 1vh;
+}
+.wheel-colours {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tuning-logo-price {
+    position: absolute;
+    right: 0vh;
+    top: 0vh;
+    padding: 0.6vh;
+    color: rgb(247, 88, 30);
+    background-color: rgba(0, 0, 0, 0.500);
+    font-family: "NFS";
+    font-size: 1.6vh;
+    text-transform: uppercase;
+}

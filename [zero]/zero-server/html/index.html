@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./js/lib/progressbar.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"/>
+
+    <title>admin menu (server: Zero)</title>
+</head>
+<body id="body" style="display: none;">
+    <div class="menu-main-container">
+        <div class="menu-title">Admin menu >- vehicles</div>
+        <div class="menu-inner-container">
+            <div class="menu-selection-container">
+                <div class="option" data-type="vehicles">Vehicles</div>
+                <div class="option" data-type="players">Players</div>
+                <div class="option" data-type="server">Server</div>
+                <div class="option" data-type="me">Me</div>
+            </div>
+            <div class="menu-options-container">
+                <div class="opt vehicles" style="display: unset;">
+                    <div class="input-option">
+                        <div class="input-option-title">Spawn vehicle</div>
+                        <input type="text" id="model">
+                        <div class="confirm-button" onclick="admin.post('vehicle', 'spawn', `${$('#model').val()}`)">Done</div>
+                    </div>
+                    <div class="input-option">
+                        <div class="input-option-title">Delete vehicle</div>
+                        <div class="buttons">
+                            <div class="confirm-button" onclick="admin.post('vehicle', 'areaclear')">Area</div>
+                            <div class="confirm-button" onclick="admin.post('vehicle', 'clear')">In vehicle</div>
+                        </div>
+                    </div>
+                    <div class="input-option">
+                        <div class="input-option-title">Vehicle options</div>
+
+                        <div class="confirm-button" onclick="admin.post('vehicle', 'keys')">Get vehicke keys</div>
+                        <div class="confirm-button" onclick="admin.post('vehicle', 'fix')">Fix vehicle</div>
+                        <div class="confirm-button" onclick="admin.post('vehicle', 'fuel')">Set fuel 100</div>
+                    </div>
+                </div>
+                <div class="opt players" style="display: none;">
+
+                </div>
+                <div class="opt chosenplayer" style="display: none;">
+                    <div class="input-option">
+                        <div class="input-option-title">Ped options</div>
+
+                        <div class="buttons">
+                            <div class="confirm-button" onclick="admin.post('chosenplayer', 'res', `${$('.chosenplayer').data(`id`)}`)">Revive player</div>
+                            <div class="confirm-button" onclick="admin.post('chosenplayer', 'kill', `${$('.chosenplayer').data(`id`)}`)">Kill player</div>
+                            <div class="confirm-button" onclick="admin.post('chosenplayer', 'freeze', `${$('.chosenplayer').data(`id`)}`)">Freeze player</div>
+                            <div class="confirm-button" onclick="admin.post('chosenplayer', 'unfreeze', `${$('.chosenplayer').data(`id`)}`)">Unfreeze player</div>
+                        </div>
+                    </div>
+                    <div class="input-option">
+                        <div class="input-option-title">Player options</div>
+
+                        <div class="buttons">
+                            <div class="confirm-button"  onclick="admin.post('chosenplayer', 'inventory', `${$('.chosenplayer').data(`id`)}`)">Open inventory</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="input-option">
+                        <div class="input-option-title">Ban</div>
+                        <input type="text" placeholder="Ban reason" id="banreason">
+                        <input type="text" placeholder="Ban time" id="bantime">
+
+                        <div class="confirm-button" onclick="admin.ban(`${$('#banreason').val()}`, `${$('#bantime').val()}`, `${$('.chosenplayer').data(`id`)}`)">Ban player</div>
+                    </div>
+
+                    <div class="input-option">
+                        <div class="input-option-title">Kick</div>
+                        <input type="text" placeholder="Kick reason" id="kickreason">
+                        <div class="confirm-button" onclick="admin.kick(`${$('#kickreason').val()}`, `${$('.chosenplayer').data(`id`)}`)">Kick player</div>
+                    </div>
+
+                    <div class="input-option">
+                        <div class="input-option-title">Admin options</div>
+
+                        <div class="buttons">
+                            <div class="confirm-button"  onclick="admin.post('chosenplayer', 'gotoplayer', `${$('.chosenplayer').data(`id`)}`)">Teleport to player</div>
+                            <div class="confirm-button"  onclick="admin.post('chosenplayer', 'bring', `${$('.chosenplayer').data(`id`)}`)">Bring player</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="opt me" style="display: none;">
+                    <div class="input-option">
+                        <div class="input-option-title">Ped options</div>
+
+                        <div class="buttons">
+                            <div class="confirm-button" onclick="admin.post('me', 'res')">Revive</div>
+                            <div class="confirm-button" onclick="admin.post('me', 'kill')">Kill</div>
+                            <div class="confirm-button" onclick="admin.post('me', 'invisible')">Invisible toggle</div>
+                            <div class="confirm-button" onclick="admin.post('me', 'staff')">Staff toggle</div>
+                            <div class="confirm-button" onclick="admin.post('me', 'playerids')">Player id's</div>
+                        </div>
+                    </div>
+
+                    <div class="input-option">
+                        <div class="input-option-title">Inventory</div>
+
+                        <div class="buttons">
+                            <div class="confirm-button" onclick="admin.post('me', 'clearinv')">Clear inventory</div>
+                        </div>
+                    </div>
+
+                    <div class="input-option">
+                        <div class="input-option-title">Spawn item</div>
+                        <input type="text" placeholder="item" id="item">
+                        <input type="text" placeholder="amount" id="amount">
+                        <div class="confirm-button" onclick="admin.post('me', 'spawnitem', `${$('#item').val()}`, `${$('#amount').val()}`)">Done</div>
+                    </div>
+                </div>
+                <div class="opt server" style="display: none;">
+
+                    <div class="input-option">
+                        <div class="input-option-title">Announcement</div>
+                        <input type="text" placeholder="Message" id="message">
+                        <div class="confirm-button" onclick="admin.post('server', 'announce', `${$('#message').val()}`)">Done</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-log">
+
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html> 

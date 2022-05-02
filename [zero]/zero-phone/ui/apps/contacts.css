@@ -1,0 +1,330 @@
+#contacts {
+    background-color: rgb(24, 24, 24);
+}
+#contacts-contactCard {
+    background-color: rgb(24, 24, 24);
+}
+.contacts-my-card {
+    position: relative;
+    width: 80%;
+    height: 8vh;
+    transform: translate(-50%);
+    left: 50%;
+    display: flex;
+    align-items: center;
+}
+.my-pf-title {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3vh;
+    margin-left: 1vh;
+    opacity: 0.7;
+    color: white;
+}
+.my-pf {
+    position: relative;
+    width: 5vh;
+    height: 5vh;
+    border: rgba(36, 35, 35, 0.185) solid 0.3vh;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 0.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 96, 139);
+
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    text-transform: uppercase;
+}
+
+.contacts-contact-list {
+    position: relative;
+    width: 100%;
+    height: 43vh;
+
+    overflow: hidden;
+}
+
+.contacts-cat {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+}
+.cat-title {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    margin-left: 2vh;
+    
+    font-weight: bold;
+    color: white;
+}
+.cat-contacts {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.contact {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    border-bottom: rgba(36, 35, 35, 0.363) solid 0.1px;
+    display: flex;
+    margin-bottom: 0vh;
+    align-items: center;
+}
+.contact-icon {
+    position: relative;
+    background-color: white;
+    width: 3.5vh;
+    height: 3.5vh;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 1vh;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    align-items: center;
+}
+.contact-name {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    
+    margin-left: 1vh;
+    
+    font-weight: 100;
+    color: white;
+}
+.contacts-add-contact {
+    position: absolute;
+    top: 5vh;
+    right: 2vh;
+    color: white;
+    font-size: 1.5vh;
+}
+
+#contacts-mycard {
+    background-color: rgb(24, 24, 24);
+}
+.contact-add-mycard-pf {
+    position: relative;
+    width: 7vh;
+    height: 7vh;
+    background-color: rgb(248, 248, 248);
+    border-radius: 50%;
+    overflow: hidden;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%);
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 96, 139);
+
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    text-transform: uppercase;
+}
+.contact-mycard-pf {
+    position: relative;
+    width: 7vh;
+    height: 7vh;
+    background-color: rgb(248, 248, 248);
+    border-radius: 50%;
+    overflow: hidden;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%);
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 96, 139);
+
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    text-transform: uppercase;
+}
+
+.contact-mycard-pf2 {
+    position: relative;
+    width: 7vh;
+    height: 7vh;
+    background-color: rgb(248, 248, 248);
+    border-radius: 50%;
+    overflow: hidden;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%);
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 96, 139);
+
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    text-transform: uppercase;
+}
+
+.card-options {
+    position: relative;
+    width: 100%;
+    height: 76%;
+    top: 5vh;
+
+    overflow: auto;
+}
+.card-display {
+    position: relative;
+    width: 90%;
+    left: 50%;
+    margin-top: 1vh;
+    background-color: rgb(41, 40, 40);
+    border-radius: 0.8rem;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 5vh;
+}
+
+.card-title {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    
+    margin-left: 1vh;
+    
+    font-weight: 100;
+    color: white;
+}
+.card-subinfo {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    
+    margin-left: 1vh;
+    
+    font-weight: 100;
+    color: rgb(0, 47, 255);
+}
+
+#contacts-add {
+    background-color: rgb(24, 24, 24);
+}
+
+.add-contacts-inputs {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    top: 6vh;
+}
+
+.add-contacts-inputs > input {
+    position: relative;
+    width: 100%;
+    height: 3vh;
+    outline: none;
+    border-bottom: rgb(29, 28, 28) solid 0.5px !important;
+    background-color: rgb(24, 24, 24);
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4vh;
+    color: white;
+    border: none;
+}
+
+.contact-add-confirm {
+    position: absolute;
+    top: 4vh;
+    width: fit-content;
+    right: 2vh;
+    color: rgb(49, 74, 216);
+    
+    font-family: "Open Sans Condensed", sans-serif;
+
+    font-size: 1.3vh;
+}
+
+.card-display >input {
+    position: relative;
+    width: 92%;
+    outline: none;
+    background-color: transparent;
+    left: 1vh;
+    border: none;
+    font-size: 1.6vh;
+    color: white;
+    height: fit-content;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.card-option-button {
+    position: relative;
+    padding: 1vh;
+    transform: translate(-50%);
+    left: 50%;
+    width: 80%;
+    border-radius: 0.8rem;
+    
+    font-family: "Open Sans Condensed", sans-serif;
+    text-align: center;
+    background-color:rgb(41, 40, 40);
+    font-size: 1.7vh;
+    margin-top: 1vh;
+    height: 2.5vh;
+    color: rgb(182, 47, 47);
+}
+.card-display-options {
+    position: relative;
+    height: 7vh;
+    border-radius: 0.8rem;
+ 
+    margin-top: 1vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.contact-opt {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: rgb(41, 40, 40);
+    border-radius: 0.8rem;
+    width: 7vh;
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+
+    color: white;
+    font-size: 1.5vh;
+}

@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Zero settings script</title>
+</head>
+<body id="body">  
+    <div class="settings-main-container" style="display: none;">
+        <div class="settings-main-container-title">
+            <div class="main-title">Server instellingen</div>
+            <div class="sub-title">Pet Jan (playerid: 3) - Trifilion2</div>
+        </div>
+        <div class="settings-keybinds">
+            <div class="main-title-setting">Command keybinds</div>
+            <div class="add-keybind">     
+                <input type="text" id="key" placeholder="Key">
+            </div>
+            <div class="add-keybind">     
+                <input type="text" id="command" placeholder="Volledige command">
+                <div class="add-keybind-button" onclick="addKeybind()"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="settings-keybinds-active">
+             
+            </div>
+        </div>
+        <div class="settings-inventory">
+            <div class="inventory-setting">
+                <div class="setting-title">Speler achtergrond</div>
+                <input type="text" id="player" oninput="changeBackGround(event)" placeholder="URL van achtergrond">
+            </div>
+            <div class="inventory-setting">
+                <div class="setting-title">Stash achtergrond</div>
+                <input type="text" id="other" oninput="changeBackGround(event)" placeholder="URL van achtergrond">
+            </div>
+        </div>
+    </div>
+   
+    <script src="./main.js"></script>
+</body>
+</html>

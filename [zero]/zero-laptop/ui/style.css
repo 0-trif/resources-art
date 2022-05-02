@@ -1,0 +1,562 @@
+body {
+    overflow: hidden;
+}
+
+* {
+    user-select: none;
+}
+
+@font-face {
+    font-family:"bold-main";
+    src: url("./fonts/Chivo-Bold.otf") format("truetype");
+}
+@font-face {
+    font-family:"chivo";
+    src: url("./fonts/Chivo-Regular.otf") format("truetype");
+}
+
+.border-laptop {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150vh;
+
+    height: 80vh;
+    background-color: #000000;
+}
+.border-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: 14vh;
+    background-repeat: no-repeat;
+    background-color: #17181a;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    width: 99.5%;
+    overflow: hidden;
+    height: 99%;
+   
+}
+
+.border-bottom 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+}
+
+.border-bottom > .app > .app-icon {
+    width: 3vh;
+    height: 3vh;
+}
+
+.apps {
+    position: absolute;
+
+    top: 1%;
+    
+    width: 25%;
+    height: 74vh;
+
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    display: flex;
+
+
+}
+
+.app {
+    position: relative;
+    margin: 1vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+    transition: 0.1s;
+    justify-content: center;
+    height: fit-content;
+}
+
+.app-icon {
+    position: relative;
+
+    border-radius: 0.2rem;
+    background-size: cover;
+    background-position: center;
+    width: 5vh;
+    height: 5vh;
+
+}
+.app-name {
+    font-size: 1.2vh;
+    color: white;
+    font-family: "chivo";
+}
+
+.apps > .app:hover {
+    background-color: rgba(69, 68, 82, 0.452);
+}
+
+.in-app-frame {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    
+
+    overflow: hidden;
+    width:95%;
+    transform: translate(-50%, -50%);
+    height: 88%;
+    background-color: rgba(37, 39, 55, 0.800);
+    backdrop-filter: blur(4px);
+    
+}
+.top-bar-app {
+    position: relative;
+    top: 0vh;
+    left: 0vh;
+    width: 100%;
+    height: 2vh;
+    background-color: rgb(37, 39, 55);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bar-button {
+    width: 1.3vh;
+    height: 1.3vh;
+
+    margin-right: 1vh;
+    border-radius: 50%;
+
+    color: white;
+    font-size: 1vh;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.in-app-frame-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 243, 243);
+}
+
+.inner-app {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.webstore-background {
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://wallpaperaccess.com/full/2492653.jpg);
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+#app-webstore {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-page-info {
+    position: relative;
+    top: 1vh;
+
+    left: 1vh;
+
+    display: flex;
+    background-color: rgb(30, 30, 44);
+    width: fit-content;
+    padding: 1vh;
+    border-radius: 0.2rem;
+
+    flex-direction: column;
+}
+.top-bar-tab {
+    position: relative;
+    font-family: "chivo";
+    color: rgb(0, 0, 0);
+    padding: 0.5vh;
+
+    transition: 0.2s;
+    width: 20vh;
+    border-radius: 0.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.1vh;
+
+    color: white;
+    background-color: rgb(67, 72, 93);
+    font-size: 2vh;
+}
+
+.top-bar-tab:hover {
+    cursor: pointer;
+    transform: translateX(2px);
+}
+
+.webstore-main-info {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: fit-content;
+    height: fit-content;
+    
+    left: 5vh;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+}
+.web-store-main-text {
+    position: relative;
+    color: white;
+
+
+    font-family: "chivo";
+    font-size: 4vh;
+    max-width: 70vh;
+    font-weight: bold;
+}
+.web-store-button {
+    position: relative;
+    margin-top: 1vh;
+    transition: 0.2s;
+    font-size: 1.3vh;
+    color: white;
+    padding: 1vh;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+    font-family: "chivo";
+    width: fit-content;
+    background-color: rgb(235, 57, 57);
+}
+.web-store-button:hover {
+    transform: translateX(2px);
+    cursor: pointer;
+}
+
+.webstore-cats {
+    position: absolute;
+    transition: 1s;
+    
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+.vehicles {
+    position: relative;
+    max-height: 96%;
+
+    
+    overflow: auto;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    
+}
+
+::-webkit-scrollbar {
+    min-height: 100%;
+    display: none;
+
+    background-color: rgba(255, 255, 255, 0.249);
+    width: 1vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(60, 70, 98, 0.426);
+}
+.vehicle {
+    position: relative;
+    width: 40vh;
+    height: 40vh;
+    border-radius: 0.3rem;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.979);
+    margin: 1vh;
+
+}
+
+.back-button {
+    position: absolute;
+    left: 2vh;
+    top: 1vh;
+    width: 5vh;
+    z-index: 1;
+    border-radius: 0.2rem;
+    height: 5vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2vh;
+    color: white;
+    background-color: rgb(235, 57, 57);
+}
+i {
+    transition: 0.3s;
+}
+.back-button:hover > i {
+    transform: rotate(180deg);
+}
+
+.package-name {
+    position: absolute;
+    left: 1vh;
+    top: 1vh;
+  
+    color: white;
+    font-size: 3vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: rgb(0, 0, 0) 0.3px 0.3px;
+    font-family: "chivo";
+}
+
+.vehicle-button {
+    position: absolute;
+    left: 2vh;
+    bottom: 2vh;
+    width: 5vh;
+    height: 5vh;
+    background-color: rgb(235, 57, 57);
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1.3vh;
+
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    transition: 0.2s;
+
+    font-family: "chivo";
+}
+
+.vehicle-button > i {
+    margin-left: 2vh;
+}
+
+.vehicle-button:hover > i {
+    transform: rotate(90deg);
+}
+
+
+.vehicle-button:hover > .vehicle-button-text {
+    display: unset;
+
+}
+
+.vehicle-button:hover {
+    width: 14vh;
+}
+.vehicle-button-text {
+    position: absolute;
+  
+
+    transition: 2s;
+    width: 20vh;
+   
+    left: 4vh;
+
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+.vehicle-inspect-area {
+    transition: 0.3s;
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.800);
+    height: 100%;
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inspect-title {
+    position: absolute;
+    left: 2vh;
+    top: 7vh;
+    color: white;
+    font-family: "chivo";
+    text-transform: uppercase;
+    font-size: 3vh;
+    text-shadow: rgba(0, 0, 0, 0.611) 1px 1px;
+    font-weight: bold;
+}
+
+.sub-info {
+    position: absolute;
+    left: 2vh;
+    top: 10vh;
+}
+
+.small-vehicle-info {
+    position: absolute;
+
+    max-width: 60vh;
+    max-height: 50vh;
+    top: 6vh;
+    overflow: auto;
+    left: 41vh;
+    color: white;
+    font-family: "chivo";
+
+    font-size: 1.4vh;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.inspect-back {
+    pointer-events: all;
+    background-color: rgb(235, 57, 57);
+}
+
+.big-image {
+    position: relative;
+    margin-top: 6vh;
+    width: 40vh;
+
+    transition: 100ms ease-in-out;
+
+    background-image: url(https://images.hdqwalls.com/download/nissan-gt-r-black-gy-3840x2400.jpg);
+    background-position: center;
+    background-size: cover;
+
+    height: 40vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.3rem;
+}
+
+.small-images {
+    position: relative;
+    max-width: 90%;
+    overflow: auto;
+    margin-top: 1vh;
+    display: flex;
+}
+.small-image {
+    min-width: 9vh;
+    background-image: url(https://images.hdqwalls.com/download/nissan-gt-r-black-gy-3840x2400.jpg);
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 0.3rem;
+    background-color: rgb(0, 0, 0);
+    height: 9vh;
+    margin-right: 1vh;
+}
+
+
+.price-tag {
+    position: absolute;
+    right: 1vh;
+    bottom: 1vh;
+    padding: 1vh;
+
+    transform: skew(-deg);
+    font-family: "NFS";
+
+    border-bottom: white solid 2px;
+    font-weight: bold;
+    font-size: 2vh;
+    color: #d9d9d9;
+    z-index: 100;
+}
+.price-tag > i {
+    margin-left: 0.3vh;
+    font-size: 1.2vh;
+    color: white;
+}
+@font-face {
+    font-family:"NFS";
+    src: url("./fonts/644-font.otf") format("truetype");
+}
+
+.buy-packet-button {
+    position: absolute;
+    left: 41vh;
+    transition: 0.3s;
+    top: 41.5vh;
+    background-color: rgb(50, 62, 80);
+    font-family: "NFS";
+    font-size: 2vh;
+    color: white;
+    padding: 1vh;
+    border-radius: 0.2rem;
+    min-width: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-packet-button:hover {
+    cursor: pointer;
+    transform: skew(-6deg);
+}
+
+.Zero-coins {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    padding: 1vh;
+
+    transform: skew(-deg);
+    font-family: "NFS";
+
+    border-bottom: white solid 2px;
+    font-weight: bold;
+    font-size: 2vh;
+    color: #d9d9d9;
+    z-index: 100;
+}
+
+.Zero-coins > i {
+    margin-left: 0.3vh;
+    font-size: 1.2vh;
+    color: white;
+}

@@ -1,0 +1,76 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+
+
+
+*{
+    user-select: none;
+}
+
+.code-container {
+    position: absolute;
+    left: 50%;
+    padding: 1vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 50%;
+    height: fit-content;
+
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}
+input {
+    position: relative;
+    width: 33vh;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+    text-transform: uppercase;
+    font-size: 3vh;
+    
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+
+    font-family: "Open Sans Cons", sans-serif;
+    font-weight: bolder !important;
+    
+}
+
+.number {
+    position: relative;
+    min-width: 8vh;
+    background-color: rgb(255, 255, 255);
+    height: 6vh;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 0.1rem;
+    
+    align-items: center;
+    transition: 0.1s;
+    margin: 1vh;
+
+    font-family: "Open Sans Cons", sans-serif;
+    font-weight: bolder !important;
+    
+    color: rgb(0, 0, 0);
+}
+.number:hover {
+    transform: scale(0.95);
+    position: relative;
+}
+.inputs {
+    position: relative;
+    display: flex;
+    max-width: 33vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

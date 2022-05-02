@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"/>
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>  
+   <div class="border-laptop" style="display: none;">
+       <div class="border-inner" style="background-image: url(https://cdn.discordapp.com/attachments/921801495786164286/960556604460240926/Discord_Main-removebg-preview_2.png);">
+           <div class="border-bottom">
+                <div class="app" onclick="closeApps()">
+                    <div class="app-icon" style="background-image: url(https://cdn.discordapp.com/attachments/921801495786164286/960556604460240926/Discord_Main-removebg-preview_2.png);"></div>
+                </div>
+           </div>
+
+           <div class="apps">
+               <div class="app" onclick="openApp(event)" id="webstore">
+                   <div class="app-icon" style="background-image: url(https://cdn.discordapp.com/attachments/921801495786164286/960556551851098193/test45.png);"></div>
+                   <div class="app-name">Voertuig dealer</div>
+               </div>
+           </div>
+
+           <div class="in-app-frame" style="display: none;">
+               <div class="top-bar-app">
+                   <div class="bar-button" onclick="closeApps()" style="background-color: rgb(181, 36, 36);"></div>
+               </div>
+
+               <div class="in-app-frame-inner">
+                    <div class="inner-app" id="app-webstore">
+                        <div class="webstore-background"></div>
+                        <div class="webstore-main-info">
+                            <div class="web-store-main-text">
+                                Haal hier de meest exclusieve voertuigen.
+                                Alleen hier verkrijgbaar in gelimiteerde hoeveelheden.
+                            </div>
+                            <div class="web-store-button" onclick="ShowVehicles()">Voertuigen bekijken</div>
+                        </div>
+
+
+                        <div class="webstore-cats" style="top: 100%;">
+                            <div class="back-button" onclick="closeVehicles()">
+                                <i class="fas fa-caret-up"></i>
+                            </div>
+                            <div class="vehicles">
+                            
+                            </div>
+
+                            <div class="vehicle-inspect-area" style="top: 100%">
+                                <div class="back-button inspect-back" onclick="closeInspect()">
+                                    <i class="fas fa-caret-up"></i>
+                                </div>
+
+                                <div class="Zero-coins">0 <i class="fas fa-coins"></i></div>
+
+                                <div class="inspect-title">Nissan GTR</div>
+                                <div class="sub-info">
+
+                                    <div class="small-vehicle-info">
+                                        “This has all the shapes needed to test a design. It’s also a little in-joke, because in my native German, a glove is a Handschuh (“hand shoe”), so handglove is an Anglo-German tautology.”
+                                    </div>
+                                    <div class="big-image">
+                                        <div class="price-tag">299 <i class="fas fa-coins"></i></div>
+                                    </div>
+
+                                    <div class="buy-packet-button" onmouseleave="toggleConfirmButton(false)" onclick="BuyPackage()">
+                                        Pakket kopen
+                                    </div>
+
+                                    <div class="small-images">
+                                 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+    <script src="./script.js" type="text/javascript"></script>
+</body>
+
+</html>

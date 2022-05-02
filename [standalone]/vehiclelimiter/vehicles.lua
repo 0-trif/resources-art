@@ -1,0 +1,47 @@
+vehicles = {
+    [`focusrs`] = 250,
+    [`gemera`] = 370,
+    [`hayabusa`] = 280,
+    [`ksmasked`] = 270,
+    [`mcjcw20`] = 250,
+    [`mk7pandem`] = 290,
+    [`msls`] = 330,
+    [`pcmansory`] = 260,
+    [`radical`] = 320,
+    [`rmodveneno`] = 400,
+    [`rs6rabt20`] = 340,
+    [`sian2`] = 400,
+    [`skylinec110`] = 210,
+    [`v877`] = 230,
+    [`supervolito2`] = 300,
+    [`volatus`] = 300,
+    [`19x7m`] = 240,
+    [`ft1c`] = 260,
+    [`m3f80wb`] = 270,
+    [`m760li`] = 220,
+    [`wmfenyr`] = 320,
+    [`17mansorypnmr`] = 270,
+    [`alpinab7blackedition`] = 230,
+    [`g650`] = 180,
+    [`lcvxr2016`] = 230,
+    [`sclkuz`] = 240,
+    [`trophy3`] = 250,
+    [`19dbs`] = 310,
+    [`20x5m`] = 270,
+    [`rs3mh500`] = 305,
+    [`918`] = 370,
+    [`carbonadoevo`] = 385,
+    [`foxct`] = 290,
+    [`foxcq`] = 120,
+    [`beetlerwb`] = 180,
+    [`eg6`] = 260,
+    [`rmodsuprapandem`] = 300,
+    [`mansorygls500`] = 310,
+}
+
+
+--[[ voorbeeld
+    vehicles = {
+        [`bati`] = 60,
+    }
+]]

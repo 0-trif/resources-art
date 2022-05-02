@@ -1,0 +1,394 @@
+.twitter-app-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #343B56;
+    overflow: hidden;
+}
+.twitter-app-main-inner {
+    position: relative;
+
+    top: 12vh;
+    width: 100%;
+    background-color: white;
+ 
+    border-radius: 2.2rem;
+    height: 100%;
+}
+
+.twitter-top-hotbar {
+    position: absolute;
+    top: 0vh;
+    transform: translate(0, -50%);
+    width: 100%;
+ 
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitter-option-midle {
+    position: relative;
+    height: 7vh;
+    width: 7vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-right: 1vh;
+    margin-left: 1vh;
+    opacity: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.midle-option-inner {
+    position: relative;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    background-color: #52A2E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5vh;
+}
+.twitter-option {
+    position: relative;
+    height: 4vh;
+    width: 4vh;
+    background-color: #52A2E9;
+    border-radius: 50%;
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 1.5vh;
+    justify-content: center;
+}
+
+.twitter-top-account {
+    position: absolute;
+    top: 0vh;
+ 
+    height: 12vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+.twitter-top-logo {
+    position: relative;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    border-radius: 50%;
+    height: 5vh;
+    background-size: cover;
+    background-position: center;
+    width: 5vh;
+}
+.twitter-top-name {
+    position: relative;
+    margin-top: 1vh;
+    margin-left: 1vh;
+}
+.twitter-top-main-name {
+    position: relative;
+
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    
+    text-overflow: ellipsis;
+    max-height: 3vh;
+    font-size: 1.2vh;
+    overflow: hidden;
+    
+}
+.twitter-top-sub-name {
+    position: relative;
+    font-size: 1.2vh;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    opacity: 0.6;
+}
+.verified-icon {
+    position: relative;
+    height: 1vh;
+    background-size: cover;
+ 
+    background-position: center;
+    width: 1vh;
+    margin-left: 0.6vh;
+}
+
+.twitter-top-settings {
+    position: absolute;
+    top: 5vh;
+    right: 0vh;
+    transform: translate(-50%);
+    height: fit-content;
+    display: flex;
+
+}
+.twitter-top-settings > i {
+    margin-left: 1vh;
+    color: white;
+}
+
+.twitter-messages-container {
+    position: relative;
+    transition: 1s;
+    width: 100%;
+
+    height: 100%;
+    max-height: 65%;
+    border-radius: 2rem;
+    overflow: auto;
+    top: 2.5vh;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.twitter-message {
+    position: relative;
+    transition: 1s;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vh;
+}
+.twitter-message-logo {
+    position: relative;
+    width: 5vh;
+    min-height: 5vh;
+    height: 5vh;
+    min-width: 5vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-left: 2vh;
+}
+.twitter-message-name {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5vh;
+    margin-top: 1vh;
+    align-items: center;
+}
+.twitter-message-main-name {
+    position: relative;
+     font-family: "Open Sans", sans-serif;
+    font-size: 1vh;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.twitter-message-sub-name {
+    position: relative;
+     font-family: "Open Sans", sans-serif;
+    opacity: 0.7;
+    margin-left: 0.2vh;
+    font-size: 1vh;
+}
+.twitter-message-time {
+    position: relative;
+     font-family: "Open Sans", sans-serif;
+    opacity: 0.7;
+    margin-left: 0.2vh;
+    font-size: 1vh;
+}
+.twitter-message-content {
+    position: relative;
+    margin-left: 0.5vh;
+    font-size: 1.3vh;
+    font-family: "Open Sans", sans-serif;
+    max-width: 15vh;
+    overflow: hidden;
+    word-break: break-all;
+}
+.twitter-message-img {
+    position: relative;
+    margin-left: 0.5vh;
+    font-size: 1.3vh;
+    font-family: "Open Sans", sans-serif;
+    background-size: cover;
+    background-position: center;
+    max-width: 17vh;
+    min-width: 17vh;
+    min-height: 12vh;
+    height: fit-content;
+}
+.twitter-message-options {
+    position: absolute;
+    margin-top: 3vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+}
+
+.twitter-bottom-options {
+    margin-top: 1vh;
+    position: relative;
+    width: 65%;
+    left: 50%;
+    transform: translate(-50%);
+    border-bottom: rgba(128, 128, 128, 0.267) solid 2px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.twitter-options-inner > i {
+    color: black;
+    margin-right: 2vh;
+    margin-left: 2vh;
+    font-size: 1.2vh;
+    margin-bottom: 1vh;
+}
+.twitter-message-inner-main {
+    position: relative;
+    display: flex;
+}
+
+.twitter-send-message {
+    position: relative;
+    height: fit-content;
+    top: 3vh;
+    margin-bottom: 2vh;
+    transform: translate(-50%);
+    left: 50%;
+    width: 100%;
+}
+.twitter-send-content {
+    position: relative;
+    width: 18vh;
+ 
+    margin-top: 0vh;
+    height: fit-content;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+    max-height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.twitter-span {
+    position: relative;
+    max-width: 100%;
+ 
+    min-width: 100%;
+    outline: none;
+     font-family: "Open Sans", sans-serif;
+    font-size: 1.5vh;
+    height: 60%;
+    max-height: 69%;
+    margin-left: 1vh;
+    font-size: 1.3vh;
+    min-height: 50%;
+    overflow: auto;
+}
+.twitter-send-button {
+    position: relative;
+    left: 0vh;
+    background-color: #52A2E9;
+    border-radius: 1rem;
+    color: white;
+     font-family: "Open Sans", sans-serif;
+    font-size: 1vh;
+    display: flex;
+    margin-top: 1vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 2vh;
+    width: 10vh;
+}
+
+.twitter-search-message {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 3.5vh;
+  
+    overflow: hidden;
+    height: 3vh;
+    margin-bottom: 2vh;
+    width: fit-content;
+}
+.twitter_input {
+    position: relative;
+    border: #52A2E9 solid 2px;
+    outline: none;
+    border-radius: 1rem;
+
+    font-size: 1.3vh;
+     font-family: "Open Sans", sans-serif;
+
+}
+.twitter-app-settings-inner {
+    position: relative;
+    width: 100%;
+    top: 3vh;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+.twitter-setting {
+    position: relative;
+    margin-left: 2vh;
+}
+.setting-title {
+    position: relative;
+     font-family: "Open Sans", sans-serif;
+    font-size: 1.5vh;
+}
+.twitter-input {
+    position: relative;
+    max-width: 22vh; 
+}
+.twitter-input > input {
+    max-width: 100%;
+    height: 2.3vh;
+}
+
+.twitter-input-x {
+    position: relative;
+    border-radius: 0.4rem;
+    outline: none;
+     font-family: "Open Sans", sans-serif;
+    color: white;
+    width: 24vh;
+    background-color: #343B56;
+    border: #343B56 solid 2px;
+}
+
+.twitter-settings-save {
+    position: absolute;
+    top: 37vh;
+    left: 50%;
+    width: 20vh;
+    font-size: 1.4vh;
+    height: 3vh;
+     font-family: "Open Sans", sans-serif;
+    color: white;
+    border-radius: 0.3rem;
+    background-color: #343B56;
+    border: #343B56 solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%);
+}

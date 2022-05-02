@@ -1,0 +1,227 @@
+body {
+    font-family: Segoe UI, Helvetica, Arial, sans-serif;
+    user-select: none;
+}
+.dispatch {
+    position: absolute;
+    left: 0vh;
+    top: 0vh;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.displatch-notifications {
+    position: absolute;
+    right: 2vh;
+    top: 2vh;
+    width: 40vh;
+    height: 70%;
+    overflow: auto;
+    padding: 1vh;
+}
+
+.dispatch-alert {
+    position: relative;
+    border-radius: 0.1rem;
+    background-color: white;
+    padding: 1vh;
+    min-height: 3vh;
+    border-right: rgb(255, 255, 255) solid 0.6vh;
+    height: fit-content;
+    margin-bottom: 0.5vh;
+}
+
+.dispatch-title {
+    position: relative;
+    /* left: 0; */
+    /* margin-right: 20px; */
+    font-size: 12px;
+    left: 8px;
+    width: fit-content;
+    margin-right: 0.5vh;
+    color: white;
+    /* bottom: 0px; */
+    font-weight: bold;
+    top: 3px;
+    text-shadow: 1px 1px 0 #000;
+    padding-bottom: 0.6vh !important;
+    padding: 0.4vh;
+    border-radius: 0.5rem;
+}
+.dispatch-text-title {
+    position: relative;
+    /* left: 0; */
+    /* margin-right: 20px; */
+    font-size: 12px;
+    left: 8px;
+    width: fit-content;
+    margin-right: 0.5vh;
+    color: white;
+    /* bottom: 0px; */
+    font-weight: bold;
+    top: 3px;
+    text-shadow: 1px 1px 0 #000;
+    padding-bottom: 0.6vh !important;
+    padding: 0.4vh;
+
+    border-radius: 0.5rem;
+}
+
+.dispatch-titles {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+}
+
+.dispatch-alert > i {
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    color: white;
+    font-size: 2vh;
+}
+
+
+.police > .dispatch-title {
+    background-color: rgb(70, 60, 124);
+    color: rgb(255, 255, 255);
+}
+.police {
+    background-color: rgba(49, 49, 141, 0.788);
+}
+
+.error > .dispatch-title {
+    background-color: rgb(109, 96, 96);
+    color: rgb(255, 255, 255);
+}
+.error {
+    background-color: rgba(98, 96, 122, 0.918);
+}
+
+.warning > .dispatch-title {
+    background-color: rgb(109, 96, 96);
+    color: rgb(255, 255, 255);
+}
+.warning {
+    background-color: rgba(48, 47, 63, 0.966);
+}
+
+.dispatch-info-part > i {
+    position: relative;
+    font-size: 1.7vh;
+    margin-right: 0.5vh;
+}
+.dispatch-info-part {
+    position: relative;
+    /* left: 0; */
+    /* margin-right: 20px; */
+    font-size: 12px;
+    left: 8px;
+    width: fit-content;
+    margin-right: 0.5vh;
+    color: white;
+    /* bottom: 0px; */
+    font-weight: bold;
+    top: 3px;
+    text-shadow: 1px 1px 0 #000;
+    padding-bottom: 0.6vh !important;
+    padding: 0.4vh;
+
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.dispatch-members {
+    position: absolute;
+    width: fit-content;
+    right: 3vh;
+    bottom: 2vh;
+    height: 22vh;
+    background-color: rgba(48, 47, 63, 0.966);
+    display: flex;
+    padding: 0.5vh;
+
+}
+.dispatch-members-inner {
+    position: relative;
+    width: 30vh;
+    margin: 0.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dispatch-members-title {
+    position: relative;
+    /* left: 0; */
+    /* margin-right: 20px; */
+    font-size: 12px;
+    left: 8px;
+    width: fit-content;
+    margin-right: 0.5vh;
+    color: white;
+    /* bottom: 0px; */
+    font-weight: bold;
+    top: 3px;
+    text-shadow: 1px 1px 0 #000;
+    padding-bottom: 0.6vh !important;
+    padding: 0.4vh;
+
+    border-radius: 0.5rem;
+}
+
+.dispatch-members-players {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+}
+.dispatch-player > i {
+    position: relative;
+    font-size: 1.5vh;
+    padding: 1vh;
+    border-radius: 1rem;
+    margin-top: 0.3vh;
+    margin-right: 0.5vh;
+}
+.dispatch-player {
+    position: relative;
+    margin-left: 1vh;
+
+    background-color: rgba(0, 0, 0, 0.500);
+
+    margin-bottom: 0.3vh;
+    width: 93%;
+    
+    align-items: center;
+    display: flex;
+
+    position: relative;
+    /* left: 0; */
+    /* margin-right: 20px; */
+    font-size: 12px;
+
+
+    margin-right: 0.5vh;
+    color: white;
+    /* bottom: 0px; */
+    font-weight: bold;
+    top: 3px;
+    text-shadow: 1px 1px 0 #000;
+    padding-bottom: 0.6vh !important;
+    padding: 0.4vh;
+
+    border-radius: 0.5rem;
+
+}

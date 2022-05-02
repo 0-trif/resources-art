@@ -1,0 +1,307 @@
+@font-face {
+    font-family:"NFS";
+    src: url("./fonts/644-font.otf") format("truetype");
+}
+
+
+* {
+    user-select: none;
+}
+
+.border-top {
+    position: absolute;
+    width: 100%;
+    left: 0vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    top: 0vh;
+    height: 4vh;
+}
+
+.border-bottom {
+    position: absolute;
+    width: 100%;
+    left: 0vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    bottom: 0vh;
+    height: 4vh;
+}
+
+.right-menu-vehicle {
+    position: absolute;
+    overflow: hidden;
+    right: 2vh;
+    transform: translate(0, -50%);
+    width: fit-content;
+    border-radius: 0.1rem;
+    border-right: white solid 0.2vh;
+    top: 50%;
+    padding: 1vh;
+    min-height: 70vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(39, 37, 46, 0.8);
+}
+
+.vehicle-menu-title {
+    position: relative;
+    font-family: "NFS";
+    color: white;
+    font-size: 3vh;
+    
+    margin: 2vh;
+}
+.vehicle-menu-subtitle {
+    position: relative;
+    font-family: "NFS";
+    color: white;
+    font-size: 2vh;
+    margin-top: -1.7vh;
+    margin-bottom: 0.5vh;
+    margin-left: 2vh;
+}
+
+.vehicles-list {
+    position: relative;
+    width: 35vh;
+
+    max-height: 70vh;
+    overflow: auto;
+    height: fit-content;
+}
+.vehicle-class-right {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    max-height: 30vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vehicle-menu-inner {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+
+    display: flex;
+}
+
+.class {
+    position: relative;
+
+    height: fit-content;
+
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+    font-family: "NFS";
+    color: white;
+    display: flex;
+    padding: 1vh;
+    width: fit-content;
+    margin: 0.5vh;
+}
+.class:hover {
+    background-color: rgba(39, 37, 46, 0.8);
+}
+
+::-webkit-scrollbar
+{
+	width: 4px;
+
+    background-color: rgba(39, 35, 48, 0.9);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: rgb(255, 255, 255);
+}
+
+.vehicle {
+    position: relative;
+    transition: 0.2s;
+    background-color: rgba(39, 35, 48, 0.9);
+    left: 50%;
+    transform: translate(-50%);
+    height: fit-content;
+    padding: 1vh;
+    margin-bottom: 1vh;
+    width: 88%;
+    border-radius: 0.1rem;
+    display: flex;
+ 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.vehicle:hover {
+    background-color: rgba(53, 48, 63, 0.9)
+}
+
+.vehicle-label {
+    position: relative;
+    font-family: "NFS";
+    color: white;
+    font-size: 2.4vh;
+}
+.vehicle-price {
+    position: relative;
+    font-family: "NFS";
+    color: rgb(67, 141, 33);
+    font-size: 1.6vh;
+
+}
+.vehicle-speed {
+    position: absolute;
+    right: 1vh;
+    top: 2vh;
+}
+.vehicle-speed > i {
+    color: rgb(187, 75, 55);
+    margin-right: 0.3vh;
+}
+.vehicle-speed {
+    font-size: 1.3vh;
+    font-family: "NFS";
+    color: white;
+}
+
+.display-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle {
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    background-size: cover;
+    background-position: center;
+}
+.display-text > .text {
+    margin-top: 0.5vh;
+    position: relative;
+    font-size: 1.6vh;
+    font-family: "NFS";
+    transform: skew(4deg);
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+    padding: 0.5vh;
+}
+.border-bottom-infos {
+    position: absolute;
+    bottom: 5vh;
+    left: 2vh;
+    display: flex;
+}
+
+.key-info {
+    position: relative;
+    display: flex;
+    transition: 0.3s;
+    padding: 0.8vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    border-radius: 0.1rem;
+    font-size: 1.6vh;
+    font-family: "NFS";
+    color: white;
+    margin-right: 1vh;
+    transform: skew(4deg);
+    align-items: center;
+}
+.key {
+    position: relative;
+    background-color: rgba(39, 37, 46, 0.8);
+    padding: 0.6vh;
+    margin-right: 1vh;
+}
+.info {
+    margin-right: 0.5vh;
+    font-size: 1.8vh;
+}
+
+.key-info:hover {
+    transform: skew(4deg) scale(0.9);
+}
+
+.vehicle-buy-screen {
+    position: absolute;
+    width: 100%;
+    top: 0vh;
+    left: 0vh;
+    background-color: rgba(39, 37, 46, 0.8);
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+.vehicle-buy-data {
+    position: relative;
+    transform: translate(-50%);
+    padding: 1vh;
+    left: 50%;
+    
+    width: 90%;
+}
+
+.vehicle-buy-price {
+    position: relative;
+    font-family: "NFS";
+    color: rgb(67, 141, 33);
+    font-size: 3vh;
+}
+
+.vehicle-buy-speed {
+    position: relative;
+}
+.vehicle-buy-speed > i {
+    color: rgb(187, 75, 55);
+    margin-right: 0.3vh;
+}
+.vehicle-buy-speed {
+    font-size: 1.6vh;
+    font-family: "NFS";
+    color: white;
+}
+
+.vehicle-buy-buttons {
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%);
+    width: fit-content;
+}
+.button {
+    margin: 1vh;
+    background-color: rgba(62, 61, 65, 0.8);
+    padding: 1vh;
+    transition: 0.3s;
+    min-width: 16vh;
+    font-size: 2.6vh;
+    font-family: "NFS";
+    color: white;
+    text-align: center;
+}
+
+.button:hover {
+    transform: skew(4deg);
+}
+
+.vehicle-buy-text {
+    position: relative;
+    margin-top: 1vh;
+
+    font-size: 1.7vh;
+    color: white;
+    font-family: "NFS";
+}

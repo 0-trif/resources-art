@@ -1,0 +1,130 @@
+#garages {
+    background-color: rgb(255, 255, 255);
+}
+.garages-app-background {
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 10vh;
+    top: 2vh;
+    transform: translate(-50%);
+    left: 50%;
+    width: 12vh;
+    opacity: 0.9;
+}
+
+.garages-app-container {
+    position: relative;
+    width: 100%;
+    height: 46vh;
+    overflow: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicle-container {
+    position: relative;
+    width: 90%;
+    min-height: 5vh;
+    margin-top: 0.3vh;
+    background-color: rgb(202, 201, 201);
+    border-radius: 0.8rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.vehicle-container > .vehicle-icon {
+    position: relative;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.5vh;
+    align-items: center;
+    margin-left: 1vh;
+}
+
+
+.vehicle-info {
+    position: relative;
+    margin-left: 1vh;
+}
+.vehicle-name {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.5vh; 
+}
+.vehicle-plate {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 100;
+    font-size: 1.3vh; 
+}
+
+.vehicle-specs-button {
+    position: absolute;
+    width: 3vh;
+    height: 3vh;
+    right: 1vh;
+
+
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.6vh;
+    align-items: center;
+  
+}
+
+.vehicle-info-displays {
+    position: relative;
+    height: 40vh;
+
+    width: 100%;
+}
+
+.vehicle-info-part {
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    width: 85%;
+    background-color: rgb(255, 255, 255);
+    padding: 1vh;
+    border-bottom: rgb(226, 226, 226) solid 0.3vh;
+    overflow: hidden;
+ 
+}
+
+.part-name {
+    position: relative;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.3vh; 
+    color: rgb(0, 0, 0);
+}
+.part-data {
+    position: relative;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 100;
+    font-size: 1.3vh;
+    color: rgb(0, 0, 0); 
+}
+
+.garage-goback-button {
+    position: relative;
+    width: fit-content;
+    background-color: rgb(186, 42, 42);
+    border-radius: 0.3rem;
+    margin-left: 2vh;
+    padding: 1vh;
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 100;
+    font-size: 1.3vh;
+}

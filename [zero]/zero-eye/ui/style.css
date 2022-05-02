@@ -1,0 +1,107 @@
+
+@font-face {
+    font-family:"bold-main";
+    src: url("./fonts/Chivo-Bold.otf") format("truetype");
+}
+@font-face {
+    font-family:"chivo";
+    src: url("./fonts/Chivo-Regular.otf") format("truetype");
+}
+
+body {
+    overflow: hidden;
+}
+
+* {
+    user-select: none;
+}
+
+
+.center-eye-body {
+    position: absolute;
+    height: fit-content;
+
+    left: 50%;
+    width: fit-content;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    flex-direction: row;
+
+}
+
+.center-eye-body > i {
+    position: relative;
+    font-size: 3vh;
+    color:rgb(113, 107, 156);
+}
+
+.center-eye-options {
+    position: relative;
+    height: 2vh;
+    width: 0vh;
+    overflow: show;
+
+    margin-top: 0.65vh;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vh;
+}
+
+.eye-option {
+    position: relative;
+    margin-bottom: 0.5vh;
+
+    transition: 0.3s;
+
+    color: rgb(113, 107, 156);
+
+    font-family: "bold-main";
+    width: 30vh;
+}
+
+.eye-option:hover {
+    transform: translate(2px) skew(4deg);
+}
+.eye-option:hover > i {
+    color: rgb(255, 255, 255)
+}
+
+.eye-option > i {
+    transition: 0.2s;
+    margin-right: 0.5vh;
+}
+
+.eye-option:hover {
+    cursor: pointer;
+}
+
+.center-eye-dots {
+    position: absolute;
+    
+    width: 100%;
+    left: 0vh;
+    height: 100%;
+    top: 0vh;
+}
+
+.eye-dot {
+    position: absolute;
+
+    left: 40vh;
+
+    top: 20vh;
+
+    width: 0.5vh;
+    height: 0.5vh;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: rgb(67, 94, 164) solid 0.6vh;
+    overflow: hidden;
+}
+
+.active-dot {
+    border: rgb(37, 175, 103) solid 0.6vh;
+}

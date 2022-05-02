@@ -1,0 +1,258 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+.color-0{color: #ffffff;}
+.color-1{color: #ff4444;}
+.color-2{color: #99cc00;}
+.color-3{color: #b88727;}
+.color-4{color: #0099cc;}
+.color-5{color: #33b5e5;}
+.color-6{color: #aa66cc;}
+.color-8{color: #cc0000;}
+.color-9{color: #cc0068;}
+
+@font-face {
+  font-family:"DINItalic";
+  src: url("DINBlackItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"DINRegular";
+  src: url("DINRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"DINBold";
+  src: url("DINBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Scada Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Scada Regular'), url('Scada-Regular.woff') format('woff');
+}
+  
+  
+@font-face {
+  font-family: 'Scada Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Scada Italic'), url('Scada-Italic.woff') format('woff');
+}
+  
+  
+@font-face {
+  font-family: 'Scada Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Scada Bold'), url('Scada-Bold.woff') format('woff');
+}
+  
+  
+@font-face {
+  font-family: 'Scada Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Scada Bold Italic'), url('Scada-BoldItalic.woff') format('woff');
+}
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+#app {
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: transparent;
+}
+
+.chat-window {
+  position: absolute;
+  left: 15px;
+  width: 32vw;
+  height: 25vh;
+  background-color: rgba(255, 255, 255, 0);
+  top: 5vh;
+  -webkit-animation-duration: 2s;
+}
+
+.chat-messages {
+  max-height: 100%;
+  font-size: 14px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.chat-input {
+  font-size: 0.9rem;
+  position: absolute;
+  top: 27vh;
+  left: 15px;
+  width: 28vw;
+  box-sizing: border-box;
+}
+
+textarea {
+  font-family: 'DINRegular';
+  font-size: 1.4vh;
+
+  display: block;
+  box-sizing: border-box;
+
+  padding: 0.3vw;
+  text-indent: .5vh;
+
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border: none;
+  border-left: .2vh solid #fff;
+
+  width: 80%;
+  min-height: 3vh;
+  max-height: 3vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  resize: none;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.msg {
+  margin-bottom: 5px;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 5px;
+  padding-left: 27px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-left: .2vh solid #fff;
+  
+  width: 80%;
+}
+
+.help {
+  margin-top: -10px;
+  color: #ffffffe7;
+}
+
+.disabled {
+  margin-top: -10px;
+  color: #ffffff93;
+}
+
+.suggestion {
+  margin-bottom: 5px;
+  color: #ffffffec;
+}
+
+.chat-message {
+  display: inline-block !important;
+  padding: 0.65vw;
+  margin: 0.2vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+  border-left: .2vh solid #fff;
+ 
+}
+
+.chat-message-label {
+  background-color: rgba(47, 114, 181, 0.9);
+  position: relative;
+
+  border-radius: .3vh;
+
+  top: .3vh;
+  margin-bottom: .5vh;
+  padding: .5vh;
+
+  font-family: 'DINBold';
+  text-align: center;
+  font-size: 1.2vh;
+}
+
+.chat-message-body {
+  margin-top: 1.5vh;
+  font-family: 'DINRegular';
+}
+
+.first-argument {
+  font-family: 'DINBold';
+  font-size: 1.3vh;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-lightred: #ff4444;
+  --color-lightgreen: #99cc00;
+  --color-yellow: #ffbb33;
+  --color-blue: #0099cc;
+  --color-lightblue: #33b5e5;
+  --color-purple: #aa66cc;
+  --color-pink: #cc0000;
+  --color-pinkred: #cc0068;
+}
+
+.warning > .chat-message-label {
+  background-color: var(--color-yellow);
+}
+
+.primary > .chat-message-label {
+  background-color:var(--color-blue);
+}
+
+.error > .chat-message-label {
+  background-color: var(--color-lightred);
+}
+
+.report > .chat-message-label {
+  background-color: var(--color-purple);
+}
+
+.staff > .chat-message-label {
+  background-color: #b88727;
+}
+
+.warning {
+  border-left: .2vh solid var(--color-yellow);
+}
+
+.report {
+  border-left: .2vh solid var(--color-purple);
+}
+
+.staff {
+  border-left: .2vh solid #b88727;
+}
+
+.primary {
+  border-left: .2vh solid var(--color-blue);
+}
+
+.error {
+  border-left: .2vh solid var(--color-lightred);
+}

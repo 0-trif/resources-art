@@ -1,0 +1,192 @@
+@font-face {
+    font-family:"bold-main";
+    src: url("./fonts/Chivo-Bold.otf") format("truetype");
+}
+@font-face {
+    font-family:"chivo";
+    src: url("./fonts/Chivo-Regular.otf") format("truetype");
+}
+
+* {
+    user-select: none;
+}
+
+.main-border-top {
+    position: absolute;
+    width: 100%;
+    height: 4vh;
+    left: 0vh;
+    opacity: 0.8;
+    top: 0vh;
+    background-color: rgb(64, 70, 88);
+}
+
+.main-info-crew > .main-title {
+    position: relative;
+    color: white;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+
+    color: white;
+    font-family: "chivo";
+    font-weight: bold;
+    text-shadow: rgba(255, 255, 255, 0.521) 2px 2px;    
+}
+
+.main-border-bottom {
+    position: absolute;
+    width: 100%;
+    opacity: 0.8;
+    height: 4vh;
+    left: 0vh;
+    bottom: 0vh;
+    background-color: rgb(64, 70, 88)
+}
+
+.main-info-top {
+    position: absolute;
+    left: 5vh;
+    top: 10vh;
+
+    width: fit-content;
+    height: fit-content;
+}
+
+.main-title {
+    position: relative;
+    color: white;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+
+    color: white;
+    font-family: "chivo";
+    font-weight: bold;
+    text-shadow: rgba(255, 255, 255, 0.521) 2px 2px;
+}
+.sub-title {
+    position: relative;
+    color: white;
+    font-size: 1.3vh;
+    text-transform: uppercase;
+
+    color: white;
+    font-family: "chivo";
+ 
+    margin-left: 0.2vh;
+}
+
+.sub-title-small {
+    position: relative;
+    color: white;
+    font-size: 1vh;
+    text-transform: uppercase;
+
+    color: white;
+    font-family: "chivo";
+ 
+    margin-left: 0.2vh;
+}
+
+.bottom-left-buttons {
+    position: absolute;
+    bottom: 6vh;
+    display: flex;
+    left: 5vh;
+}
+
+.button {
+    padding: 0.8vh;
+    transition: 0.3s;
+    overflow: hidden;
+    margin: 1vh;
+    font-family: "chivo";
+    background-color: rgba(64, 70, 88, 0.500);
+    border-radius: 0.1rem;
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+.button-text {
+    width: 0vh;
+    overflow: hidden;
+
+    transition: 1s;
+}
+
+.button:hover  {
+    cursor:default;
+    
+    transform: skew(4deg);
+}
+
+.button:hover > .button-text {
+    width: 6vh;
+    margin-left: 1vh;
+}
+.button-icon {
+    position: relative;
+    background-color: rgb(64, 70, 88);
+    padding: 1vh;
+}
+
+
+.main-info-crew {
+    position: absolute;
+    right: 5vh;
+    top: 10vh;
+    
+    align-items: flex-end;
+    flex-direction: column;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.member {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5vh;
+    width: fit-content;
+
+    margin-bottom: 0.5vh;
+    border-bottom: white solid 0.2vh;
+
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+.member-icon {
+    position: relative;
+    width: 5vh;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    height: 5vh;
+    background-color: rgb(95, 123, 146);
+
+    align-items: center;
+    font-size: 2vh;
+    display: flex;
+    color: white;
+    font-family: "chivo";
+    justify-content: center;
+}
+
+.member-data {
+    margin-right: 1vh;
+}
+
+.member-name {
+    font-size: 1.6vh;
+
+    color: white;
+    font-family: "chivo";
+}
+.member-phone {
+    font-size: 1.1vh;
+
+    color: white;
+    font-family: "chivo";
+}

@@ -1,0 +1,1 @@
+exports['zero-core']:object(function(O) Zero = O end)

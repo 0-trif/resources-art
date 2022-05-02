@@ -1,0 +1,141 @@
+.inventory-edit-settings {
+    position: absolute;
+    left: 0vh;
+    top: 0vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.100);
+}
+
+.edit-top-bar {
+    position: relative;
+    top: 0vh;
+    left: 0vh;
+    
+    height: 6vh;
+}   
+
+.title-top {
+    
+    position: relative;
+    margin-left: 3vh;
+    height: fit-content;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700 !important;
+    color: white;
+    font-size: 2vh;
+}
+
+.settings-container {
+    position: relative;
+    display: flex;
+    top: 10vh;
+    margin-right: 2vh;
+}
+.settings-container .edit-top-bar > .title-top {
+    font-size: 1.3vh;
+}
+
+.inventory-option-container {
+    position: relative;
+    margin-left: 3vh;
+
+    width: 28vh;
+    height: 4vh;
+    border-radius: 1rem;
+    background-color: rgb(136, 38, 25);
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+.inventory-option-slider {
+    position: relative;
+    margin-left: 3vh;
+
+    width: 28vh;
+    height: fit-content;
+    border-radius: 3rem;
+    background-color: rgb(136, 38, 25);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1vh;
+}
+
+.option-checkbox {
+    position: relative;
+    transition: 1s;
+    width: 2vh;
+    height: 2vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.1rem;
+    margin-left: 2vh;
+
+}
+.option-title {
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 400 !important;
+    color: white;
+    margin-left: 2vh;
+    font-size: 1.2vh;
+}
+.inventory-option-slider > .option-title {
+    margin-top: 1vh;
+}
+.inventory-option-slider > .slider {
+    position: relative;
+    margin-bottom: 1vh;
+    width: 90%;
+    transform: translate(-50%);
+    left: 50%;
+
+    outline: none;
+}
+.input {
+    position: relative;
+    outline:none;
+    margin-left: 2vh;
+    height: 2vh;
+    border: none;
+    max-width: 5vh !important;
+    text-align: center;
+}
+
+
+.settings-previews {
+    position: absolute;
+    width: fit-content;
+    top: 10vh;
+    right: 10vh;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.preview {
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+input[type=range]::-webkit-slider-runnable-track {
+    background: #fcfcfc;
+    border-radius: 3rem;
+    height: fit-content;
+}
+
+
+.selected-checkbox {
+    background-color: rgb(100, 100, 100);
+}
